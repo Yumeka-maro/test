@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.header {
+    height: rem(80);
+    z-index: 1000;
+    background-color: $green-accent;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s;
+    @include mq("md"){
+        height: rem(90);
+    }
+}
