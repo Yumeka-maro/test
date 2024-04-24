@@ -1,0 +1,64 @@
+@use 'global' as *;
+
+.footer {
+    background-color: $green-accent;
+}
+
+.footer__header {
+    @include mq("md"){
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.footer__inner.category__inner {
+    padding: rem(48) rem(15) rem(56) rem(15);
+}
+
+.footer__sns {
+    display: flex;
+    margin-top: rem(16);
+    @include mq("md"){
+        margin-top: 0;
+        padding-bottom: rem(5);
+        margin-left: rem(40);
+    }
+}
+
+.footer__link {
+    display: block;
+    width: rem(120);
+    @include mq("md"){
+        width: rem(200);
+    }
+}
+
+.facebook,
+.instagram {
+    display: block;
+    width: rem(24);
+}
+
+.instagram {
+    margin-left: rem(16);
+}
+
+.facebook img,
+.instagram img {
+    width: 100%;
+}
+
+.footer__copyright {
+    text-align: center;
+    margin-top: rem(40);
+    font-size: rem(12);
+    line-height: 1.5;
+    font-family: $third-font-family;
+    @include mq("md"){
+        font-size: rem(14);
+        margin-top: rem(80);
+    }
+}
+
+
+

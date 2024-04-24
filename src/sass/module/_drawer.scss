@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+.drawer__inner {
+    padding-top: rem(21);
+}
+
+.drawer__link {
+    display: block;
+    width: rem(120);
+    @include mq("md"){
+        width: rem(200);
+    }
+}

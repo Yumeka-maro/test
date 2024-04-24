@@ -1,0 +1,73 @@
+@use 'global' as *;
+
+.category__inner {
+    background-color: $green-accent;
+    color: $white;
+    padding-right: rem(15);
+    padding-left: rem(15);
+}
+
+.category__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(16);
+    @include mq("md"){
+        column-gap: 0;
+    }
+}
+
+.category__grid-left,
+.category__grid-right {
+    @include mq("md"){
+        display: flex;
+    }
+}
+
+.category__item:not(:first-child) {
+    @include mq("md"){
+        margin-left: rem(120);
+    }
+}
+
+.category__contain {
+    width: rem(168);
+    margin-top: rem(40);
+    @include mq("md"){
+        width: rem(182);
+        margin-top: rem(24);
+    }
+}
+
+.category__link {
+    display: flex;
+    align-items: flex-start;
+}
+
+.category__title {
+    display: flex;
+}
+
+.category__main {
+    font-size: rem(16);
+    line-height: calc(9 / 8);
+    font-weight: $bold;
+}
+
+.category__sub {
+    font-size: rem(16);
+    text-indent: 1em;
+    margin-top: rem(24);
+    line-height: calc(9 / 8);
+}
+
+.hitode {
+    display: block;
+    width: rem(18);
+    height: rem(18);
+    padding-right: rem(4);
+}
+
+.hitode img {
+    width: 100%;
+    height: 100%;
+}
