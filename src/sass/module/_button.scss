@@ -36,3 +36,7 @@
 .button:hover::after {
     transform: scale(1, 1);
 }
+
+.button__wrapper {
+    text-align: center;
+}

@@ -13,8 +13,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
     });
 
-    //スライダー
-    const swiper = new Swiper(".swiper", {
+    //メインビュースワイパー
+    var swiper = new Swiper(".js-mv-swiper", {
     loop: true,
     effect: "fade",
     speed: 3000,
@@ -22,6 +22,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     autoplay: {
     delay: 3000,
     },
-});
+  });
+
+  // キャンペーンスワイパー
+
 
 });

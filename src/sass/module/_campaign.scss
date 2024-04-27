@@ -1,0 +1,75 @@
+@use 'global' as *;
+
+.campaign {
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(120);
+    }
+}
+
+.campaign__card {
+    width: rem(280);
+    @include mq("md"){
+        width: rem(334);
+    }
+}
+
+.title--campaign {
+    margin-top: rem(4);
+}
+
+.body__sub--campaign {
+    padding-bottom: rem(8);
+}
+
+.body__main--campaign {
+    text-align: center;
+    padding: rem(8) rem(18);
+}
+
+.campaign__price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: rem(8);
+}
+
+.discount {
+    color: $green;
+    font-weight: $bold;
+    font-family: $fourth-font-family;
+    line-height: 1;
+    font-size: rem(20);
+    text-decoration: line-through rem(3) $red ;
+    @include mq("md"){
+        font-size: rem(24);
+    }
+}
+
+.price {
+    color: $green-accent;
+    font-weight: $bold;
+    font-family: $fourth-font-family;
+    line-height: 1;
+    font-size: rem(32);
+    @include mq("md"){
+        font-size: rem(40);
+    }
+}
+
+.campaign__swiper {
+    margin-top: rem(24);
+    @include mq("md"){
+        margin-top: rem(40);
+    }
+}
+
+.campaign__button {
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
+
+
+

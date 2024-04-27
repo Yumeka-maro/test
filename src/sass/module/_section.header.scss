@@ -26,9 +26,21 @@
     }
 }
 
+.section-header__ja-title.header-white,
+.section-header__en-title.header-white {
+    @include mq("md"){
+        color: $white;
+    }
+}
+
 .section-header__en-title span {
     color: $green-accent;
-    text-transform: uppercase;
+}
+
+.section-header__en-title.header-white span {
+    @include mq("md"){
+        color: $green2;
+    }
 }
 
 .section-header__ja-title.header--large {

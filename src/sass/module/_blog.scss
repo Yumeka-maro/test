@@ -1,0 +1,46 @@
+@use 'global' as *;
+
+.blog {
+    padding: rem(80) 0;
+    @include mq("md"){
+        padding: rem(100);
+        background-image: url(../images/common/blog-bg.png);
+        background-repeat: no-repeat;
+        background-position: centter;
+        background-size: contain;
+        height: 50%;
+        width: 100%;
+    }
+}
+
+.blog__contents {
+    margin-top: rem(24);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    column-gap: rem(40);
+    row-gap: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
+
+.blog__card {
+    background-color: $white;
+}
+
+.blog__img {
+    padding: rem(16) rem(16) rem(8) rem(16);
+    aspect-ratio: 301 / 201;
+}
+
+.text--blog {
+    padding-top: rem(16);
+    padding-bottom: rem(8);
+}
+
+.blog__button {
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
