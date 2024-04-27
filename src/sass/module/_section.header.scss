@@ -10,6 +10,7 @@
     line-height: 1.5;
     margin-top: rem(4);
     color: $green-accent;
+    font-weight: $regular;
     @include mq("md"){
         margin-top: rem(8);
     }
@@ -20,6 +21,7 @@
     line-height: 1.25;
     font-family: $third-font-family;
     color: $green;
+    font-weight: $regular;
     @include mq("md"){
         font-size: rem(40);
         line-height: 1;
@@ -45,10 +47,12 @@
 
 .section-header__ja-title.header--large {
     margin-top: 0;
+    text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 
 .section-header__en-title.header--large {
     font-size: rem(80);
     line-height: 1;
+    text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 

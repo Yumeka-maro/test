@@ -1,0 +1,37 @@
+@use 'global' as *;
+
+.back-to-top {
+    @include mq("md"){
+        display: none;
+        position: fixed;
+        right: rem(50);
+        bottom: rem(120);
+        color: $green-accent;
+        border-radius: 50%;
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+.back-to-top::before {
+    @include mq("md"){
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47%, -50%);
+        display: inline-block;
+        width: rem(70);
+        height: rem(70);
+        background-color: $white;
+        border: 1.5px solid $green-accent;
+        border-radius: 50%;
+        box-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+        z-index: -1;
+    }
+}
+
+.arrow__img {
+    width: rem(6);
+    height: rem(40);
+}

@@ -1,0 +1,86 @@
+@use 'global' as *;
+
+.price {
+    padding: rem(80) 0;
+    background-color: $green2;
+    @include mq("md"){
+        padding: rem(100) 0;
+    }
+}
+
+.price__contents {
+    margin-top: rem(24);
+    @include mq("md"){
+        margin-top: rem(40);
+        display: flex;
+        flex-direction: row-reverse;
+        gap: rem(93);
+    }
+}
+
+.price__img {
+    aspect-ratio: 345 / 227;
+    @include mq("md"){
+        aspect-ratio: 746 / 492;
+    }
+}
+
+.price__img picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.price__lists-item {
+    margin-top: rem(40);
+}
+
+.price__list-title,
+.price__lists-item dt,
+.price__lists-item dd {
+    font-family: $base-font-family;
+}
+
+.price__list-title {
+    color: $green;
+    font-size: rem(16);
+    line-height: 1.5;
+    font-weight: $bold;
+    border-bottom: 1px solid $green-accent;
+    padding-bottom: rem(4);
+}
+
+.price__lists-item dl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price__lists-item dt {
+    width: 76%;
+}
+
+.price__lists-item dd {
+    width: 24%;
+    text-align: right;
+}
+
+.price__lists-item dt,
+.price__lists-item dd {
+    color: $green;
+    font-size: rem(14);
+    line-height: 1.7142;
+    font-weight: $regular;
+    margin-top: rem(8);
+    @include mq("md"){
+        font-size: rem(16);
+        line-height: 1.5;
+    }
+}
+
+.price__button {
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
