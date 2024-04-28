@@ -1,6 +1,7 @@
 @use 'global' as *;
 
 .back-to-top {
+    display: none;
     @include mq("md"){
         display: none;
         position: fixed;
@@ -21,10 +22,10 @@
         left: 50%;
         transform: translate(-47%, -50%);
         display: inline-block;
-        width: rem(70);
-        height: rem(70);
+        width: rem(80);
+        height: rem(80);
         background-color: $white;
-        border: 1.5px solid $green-accent;
+        border: 1px solid $green-accent;
         border-radius: 50%;
         box-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
         z-index: -1;

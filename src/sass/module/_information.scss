@@ -5,9 +5,13 @@
     background-color: $green2;
     padding: rem(80) 0;
     @include mq("md"){
-        margin-top: rem(74);
+        margin-top: rem(164);
         padding: rem(100) 0;
     }
+}
+
+.information__inner {
+    max-width: rem(600);
 }
 
 .information__contents {

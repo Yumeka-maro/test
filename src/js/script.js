@@ -14,7 +14,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
     //メインビュースワイパー
-    var swiper = new Swiper(".js-mv-swiper", {
+    const swiper1 = new Swiper(".swiper1", {
     loop: true,
     effect: "fade",
     speed: 3000,
@@ -25,6 +25,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // キャンペーンスワイパー
+  const swiper2 = new Swiper(".swiper2", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    breakpoints:{
+      768:{
+        spaceBetween: 40,
+      }
+    },
+    autoplay: {
+    delay: 0,
+    },
+    loop: true,
+    speed: 3500,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+})
+
 
   //アニメーション
   var box = $('.colorbox'),
@@ -52,4 +72,3 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 });
 
 
-});

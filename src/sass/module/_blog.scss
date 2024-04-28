@@ -13,6 +13,10 @@
     }
 }
 
+.blog__inner {
+    max-width: rem(600);
+}
+
 .blog__contents {
     margin-top: rem(24);
     display: grid;
@@ -21,6 +25,21 @@
     row-gap: rem(40);
     @include mq("md"){
         margin-top: rem(80);
+        position: relative;
+    }
+}
+
+.blog__contents::before {
+    @include mq("md"){
+        position: absolute;
+        content: "";
+        width: rem(437);
+        height: rem(201);
+        background-image: url(../images/common/fish-white.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -50%;
+        left: -10%;
     }
 }
 

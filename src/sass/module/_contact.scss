@@ -9,8 +9,30 @@
     }
 }
 
+.contact__inner {
+    max-width: rem(600);
+}
+
+.contact__contents::before {
+    content: "";
+    position: absolute;
+    width: rem(109);
+    height: rem(50);
+    background-image: url(../images/common/fish-left.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -5%;
+    right: -3%;
+    @include mq("md"){
+        width: rem(301);
+        height: rem(138);
+        right: -10%;
+    }
+}
+
 .contact__contents {
     text-align: center;
+    position: relative;
     @include mq("md"){
         display: flex;
         justify-content: space-between;

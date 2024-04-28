@@ -2,15 +2,23 @@
 
 .campaign {
     margin-top: rem(40);
+    overflow: hidden;
     @include mq("md"){
         margin-top: rem(120);
+        padding-bottom: rem(10);
+    }
+}
+
+.campaign__inner {
+    @include mq("md"){
+        position: relative;
     }
 }
 
 .campaign__card {
-    width: rem(280);
+    max-width: rem(280);
     @include mq("md"){
-        width: rem(334);
+        max-width: rem(334);
     }
 }
 
@@ -59,10 +67,13 @@
 
 .campaign__swiper {
     margin-top: rem(24);
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
     @include mq("md"){
         margin-top: rem(40);
     }
 }
+
 
 .campaign__button {
     margin-top: rem(40);
@@ -70,6 +81,59 @@
         margin-top: rem(80);
     }
 }
+
+.swiper__controll {
+    @include mq("md"){
+        position: absolute;
+        top: rem(25);
+        right: 0;
+        width: rem(240);
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    @include mq("md"){
+        width: rem(80);
+        height: rem(80);
+        color: $green-accent;
+        background-color: $white;
+        border: 1px solid $green-accent;
+        border-radius: 50%;
+    }
+}
+
+.swiper-button-next::after {
+    @include mq("md"){
+        content: "";
+        width: rem(40);
+        height: rem(6);
+        background-image: url(../images/common/button-arrow2.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.swiper-button-prev::after {
+    @include mq("md"){
+        content: "";
+        width: rem(40);
+        height: rem(6);
+        background-image: url(../images/common/button-arrow3.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    @include mq("md"){
+        opacity: 0.7;
+    }
+}
+
 
 
 

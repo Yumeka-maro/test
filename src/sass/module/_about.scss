@@ -7,11 +7,30 @@
     }
 }
 
+.about__inner {
+    max-width: rem(600);
+}
+
 .about__contents {
     margin-top: rem(24);
     @include mq("md"){
         margin-top: rem(40);
         position: relative;
+    }
+}
+
+.about__contents::before {
+    @include mq("md"){
+        position: absolute;
+        content: "";
+        width: rem(194);
+        height: rem(181);
+        background-image: url(../images/common/sango.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -15%;
+        right: -10%;
+        z-index: 3;
     }
 }
 
