@@ -45,7 +45,14 @@
     }
 }
 
-.section-header__ja-title.header--large {
+.section-header__ja-title.header--large1 {
+    margin-top: 0;
+    text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+}
+
+.section-header__ja-title.header--large2 {
+    font-size: rem(14);
+    line-height: calc(9 / 7);
     margin-top: 0;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }

@@ -22,11 +22,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     top: -5%;
-    right: -3%;
+    right: -5%;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        right: -10%;
+        top: -9%;
+        right: -12%;
     }
 }
 
@@ -35,7 +36,6 @@
     position: relative;
     @include mq("md"){
         display: flex;
-        justify-content: space-between;
         box-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
         padding: rem(80) rem(50);
         align-items: center;
@@ -45,7 +45,7 @@
 .contact__map {
     @include mq("md"){
         border-right: 1px solid $green-accent;
-        padding-right: rem(82);
+        padding-right: rem(65);
     }
 }
 
@@ -60,6 +60,9 @@
 
 .contact__logo {
     width: rem(174);
+    @include mq("md"){
+        width: rem(205);
+    }
 }
 
 .contact__text-wrap {
@@ -71,11 +74,21 @@
     }
 }
 
+.contact__text {
+    @include mq("md"){
+        text-align: left;
+    }
+}
+
 .contact__text p {
     line-height: 1.5;
     font-size: rem(16);
     color: $green;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+}
+
+.contact__text p:not(:first-child) {
+    margin-top: rem(4);
 }
 
 .contact__text-wrap iframe {
@@ -89,7 +102,9 @@
     margin-top: rem(40);
     @include mq("md"){
         margin-top: 0;
-        padding-right: rem(32);
+        padding-top: rem(20);
+        padding-bottom: rem(20);
+        padding-left: rem(80);
     }
 }
 

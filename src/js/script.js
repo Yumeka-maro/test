@@ -1,6 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-    //ドロワーメニュー
+    //ハンバーガー
     $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass('is-active')){
         $('.js-hamburger').removeClass("is-active");
@@ -12,6 +12,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-sp-nav").fadeIn();
     }
     });
+
+    //ドロワーメニュー
+    $(".js-sp-nav a").click(function () {
+      $(".js-hamburger").removeClass("is-active");
+      //$("html").toggleClass("is-fixed");
+      $(".js-sp-nav").fadeOut(300);
+
+      var target = $(this).attr("href");
+      setTimeout(function () {
+          window.location.href = target;
+      }, 300);
+  });
+});
+
+
+  //ヘッダー高さ分下げる
+  $('a[href^="#"]').on('click', function(event) {
+    // リンク先の要素を取得
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        // ページのスクロール位置をリンク先の要素の位置 - ヘッダーの高さ に調整
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top - $('.header').outerHeight()
+        }, 1000);
+    }
+});
 
     //メインビュースワイパー
     const swiper1 = new Swiper(".swiper1", {
@@ -43,7 +70,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       prevEl: ".swiper-button-prev",
     },
   });
-})
+
 
 
   //アニメーション

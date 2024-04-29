@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .card {
-    box-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
+    box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
 }
 
 .card__img {
@@ -50,7 +50,7 @@
     border: rem(1) solid $green-accent;
     display: inline-block;
     @include mq("md"){
-        padding: rem(6) rem(16);
+        padding: rem(5) rem(15);
     }
 }
 

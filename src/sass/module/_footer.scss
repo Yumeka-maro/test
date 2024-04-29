@@ -2,6 +2,10 @@
 
 .footer {
     background-color: $green-accent;
+    @include mq("md"){
+        height: rem(600);
+        padding: rem(80) rem(180);
+    }
 }
 
 .footer__header {
@@ -13,6 +17,9 @@
 
 .footer__inner.category__inner {
     padding: rem(48) rem(15) rem(56) rem(15);
+    @include mq("md"){
+        padding: 0;
+    }
 }
 
 .footer__sns {
@@ -20,7 +27,7 @@
     margin-top: rem(16);
     @include mq("md"){
         margin-top: 0;
-        padding-bottom: rem(5);
+        padding-bottom: rem(10);
         margin-left: rem(40);
     }
 }
@@ -37,6 +44,14 @@
 .instagram {
     display: block;
     width: rem(24);
+    @include mq("md"){
+        width: rem(32);
+    }
+}
+
+.facebook:hover,
+.instagram:hover {
+    opacity: 0.7;
 }
 
 .instagram {
@@ -48,7 +63,8 @@
     width: 100%;
 }
 
-.footer__copyright {
+.footer__copyright small {
+    display: block;
     text-align: center;
     margin-top: rem(40);
     font-size: rem(12);
@@ -56,6 +72,7 @@
     font-family: $third-font-family;
     @include mq("md"){
         font-size: rem(14);
+        line-height: calc(9 / 7);
         margin-top: rem(80);
     }
 }

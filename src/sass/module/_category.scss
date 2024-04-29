@@ -12,7 +12,8 @@
     grid-template-columns: 1fr 1fr;
     column-gap: rem(16);
     @include mq("md"){
-        column-gap: 0;
+        column-gap: rem(50);
+        text-align: left;
     }
 }
 
@@ -25,7 +26,7 @@
 
 .category__item:not(:first-child) {
     @include mq("md"){
-        margin-left: rem(120);
+        margin-left: rem(110);
     }
 }
 
@@ -34,13 +35,23 @@
     margin-top: rem(40);
     @include mq("md"){
         width: rem(182);
-        margin-top: rem(24);
+    }
+}
+
+.category__contain:nth-of-type(1) {
+    @include mq("md"){
+        margin-top: rem(18);
     }
 }
 
 .category__link {
     display: flex;
     align-items: flex-start;
+}
+
+.category__main:hover,
+.category__link:hover {
+    opacity: 0.7;
 }
 
 .category__title {

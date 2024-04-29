@@ -1,15 +1,13 @@
 @use 'global' as *;
 
 .blog {
-    padding: rem(80) 0;
+    padding-top: rem(80);
     @include mq("md"){
-        padding: rem(100);
+        padding-top: rem(100);
         background-image: url(../images/common/blog-bg.png);
         background-repeat: no-repeat;
-        background-position: centter;
+        background-position: center top;
         background-size: contain;
-        height: 50%;
-        width: 100%;
     }
 }
 
@@ -22,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
     column-gap: rem(40);
-    row-gap: rem(40);
+    row-gap: rem(35);
     @include mq("md"){
         margin-top: rem(80);
         position: relative;
@@ -38,8 +36,8 @@
         background-image: url(../images/common/fish-white.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        top: -50%;
-        left: -10%;
+        top: -49%;
+        left: -7.5%;
     }
 }
 
@@ -48,12 +46,20 @@
 }
 
 .blog__img {
-    padding: rem(16) rem(16) rem(8) rem(16);
+    padding: rem(16) rem(16) 0 rem(16);
     aspect-ratio: 301 / 201;
 }
 
+.blog__img:hover {
+    opacity: 0.7;
+}
+
+.card__body.blog__body {
+    padding-top: rem(8);
+}
+
 .text--blog {
-    padding-top: rem(16);
+    padding-top: rem(13);
     padding-bottom: rem(8);
 }
 

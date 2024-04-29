@@ -28,6 +28,10 @@
     position: relative;
 }
 
+.nav__contain:hover {
+    opacity: 0.7;
+}
+
 .nav__main {
     font-size: rem(18);
     font-family: $third-font-family;

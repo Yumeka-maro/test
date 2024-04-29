@@ -1,10 +1,10 @@
 @use 'global' as *;
 
 .campaign {
-    margin-top: rem(40);
+    padding-top: rem(40);
     overflow: hidden;
     @include mq("md"){
-        margin-top: rem(120);
+        padding-top: rem(120);
         padding-bottom: rem(10);
     }
 }
@@ -16,9 +16,23 @@
 }
 
 .campaign__card {
-    max-width: rem(280);
+    width: rem(280);
+    height: rem(366);
     @include mq("md"){
-        max-width: rem(334);
+        width: rem(333);
+        height: rem(445);
+    }
+}
+
+.campaign__card:hover {
+    opacity: 0.7;
+}
+
+.card__body.campaign__body {
+    padding-bottom: rem(24);
+    @include mq("md"){
+        padding-top: rem(24);
+        padding-bottom: rem(40);
     }
 }
 
@@ -26,20 +40,34 @@
     margin-top: rem(4);
 }
 
-.body__sub--campaign {
-    padding-bottom: rem(8);
-}
 
 .body__main--campaign {
     text-align: center;
-    padding: rem(8) rem(18);
+    margin-inline: auto;
+    padding-top: rem(8);
+    width: rem(211);
+    @include mq("md"){
+        padding-top: rem(16);
+        width: rem(264);
+    }
 }
 
 .campaign__price {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
     margin-top: rem(8);
+}
+
+.card__text.text--campaign {
+    text-align: left;
+    font-size: rem(14);
+    line-height: calc(12 / 7);
+    margin-left: rem(30);
+    @include mq("md"){
+        font-size: rem(16);
+        line-height: 1.5;
+        margin-left: rem(38);
+    }
 }
 
 .discount {
@@ -59,14 +87,16 @@
     font-weight: $bold;
     font-family: $fourth-font-family;
     line-height: 1;
+    margin-left: rem(16);
     font-size: rem(32);
     @include mq("md"){
         font-size: rem(40);
+        margin-left: rem(24);
     }
 }
 
 .campaign__swiper {
-    margin-top: rem(24);
+    margin-top: rem(26);
     width: 100vw;
     margin-right: calc(50% - 50vw);
     @include mq("md"){
@@ -86,8 +116,8 @@
     @include mq("md"){
         position: absolute;
         top: rem(25);
-        right: 0;
-        width: rem(240);
+        right: rem(13);
+        width: rem(260);
     }
 }
 
@@ -110,7 +140,7 @@
         height: rem(6);
         background-image: url(../images/common/button-arrow2.svg);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
     }
 }
@@ -122,7 +152,7 @@
         height: rem(6);
         background-image: url(../images/common/button-arrow3.svg);
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
     }
 }
