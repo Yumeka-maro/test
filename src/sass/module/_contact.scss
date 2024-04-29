@@ -21,8 +21,8 @@
     background-image: url(../images/common/fish-left.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -5%;
-    right: -5%;
+    top: -4%;
+    right: 0%;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
