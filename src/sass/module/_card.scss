@@ -4,18 +4,15 @@
     box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
 }
 
-.card__img {
-    aspect-ratio: calc(280 / 188);
-    @include mq("md"){
-        aspect-ratio: calc(333 / 223);
-    }
-}
-
 .card__img img {
+    aspect-ratio: calc(280 / 188);
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    @include mq("md"){
+        aspect-ratio: calc(333 / 223);
+    }
 }
 
 .card__body {

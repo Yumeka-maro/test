@@ -13,5 +13,10 @@
 
 .sp-nav.is-active {
     display: block;
+    height: 100vh;
+    overflow-y: auto;
+    @include mq("md"){
+        display: none;
+    }
 }
 

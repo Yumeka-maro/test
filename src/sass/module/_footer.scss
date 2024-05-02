@@ -2,9 +2,11 @@
 
 .footer {
     background-color: $green-accent;
+    padding-top: rem(48);
+    padding-bottom: rem(56);
     @include mq("md"){
-        height: rem(600);
-        padding: rem(80) rem(180);
+        padding-top: rem(80);
+        padding-bottom: rem(80);
     }
 }
 
@@ -12,13 +14,6 @@
     @include mq("md"){
         display: flex;
         align-items: flex-end;
-    }
-}
-
-.footer__inner.category__inner {
-    padding: rem(48) rem(15) rem(56) rem(15);
-    @include mq("md"){
-        padding: 0;
     }
 }
 

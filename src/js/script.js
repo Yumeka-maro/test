@@ -26,6 +26,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 });
 
+window.addEventListener('resize', function() {
+  var drawer = document.querySelector('.js-sp-nav');
+  if (window.innerWidth > 768) {
+      drawer.style.display = 'none';
+  } else {
+      drawer.style.display = 'block'; 
+  }
+});
+
+window.addEventListener('resize', function() {
+  var drawer = document.querySelector('.js-sp-nav');
+  if (window.innerWidth <= 768) {
+      drawer.style.height = '100vh';
+      drawer.style.overflowY = 'auto';
+  } else {
+      drawer.style.height = '';
+      drawer.style.overflowY = '';
+  }
+});
+
 
   //ヘッダー高さ分下げる
   $('a[href^="#"]').on('click', function(event) {

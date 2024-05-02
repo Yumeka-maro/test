@@ -25,13 +25,13 @@
 }
 
 .information__img {
-    aspect-ratio: 345 / 227;
     @include mq("md"){
         width: 50%;
     }
 }
 
 .information__img img {
+    aspect-ratio: 345 / 227;
     width: 100%;
     height: 100%;
     object-fit: cover;

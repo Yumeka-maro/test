@@ -9,6 +9,7 @@
     border-radius: 50%;
     display: inline-block;
     text-decoration: none;
+    z-index: 10;
     @include mq("md"){
         display: none;
         position: fixed;

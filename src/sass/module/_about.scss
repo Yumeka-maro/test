@@ -19,20 +19,20 @@
     }
 }
 
-.about__contents::before {
-    @include mq("md"){
-        position: absolute;
-        content: "";
-        width: rem(194);
-        height: rem(181);
-        background-image: url(../images/common/sango.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        bottom: -14%;
-        right: -9%;
-        z-index: 3;
+    .about__contents::after {
+        @include mq("md"){
+            position: absolute;
+            content: "";
+            width: rem(194);
+            height: rem(181);
+            background-image: url(../images/common/sango.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: -14%;
+            right: calc(50% - min(48.5vw, rem(638)));
+            z-index: 3;
+        }
     }
-}
 
 .about__img {
     aspect-ratio: 1.627;
