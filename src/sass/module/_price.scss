@@ -60,7 +60,6 @@
 
 .price__text {
     @include mq("md"){
-        padding-bottom: rem(98);
         width: 50%;
     }
 }
