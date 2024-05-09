@@ -1,11 +1,11 @@
 @use 'global' as *;
 
 .campaign {
-    padding-top: rem(40);
+    margin-top: rem(40);
     overflow: hidden;
+    padding-bottom: rem(10);
     @include mq("md"){
-        padding-top: rem(120);
-        padding-bottom: rem(10);
+        margin-top: rem(120);
     }
 }
 
@@ -17,6 +17,7 @@
 
 .campaign__card {
     width: rem(280);
+    height: 100%;
     @include mq("md"){
         width: rem(333);
     }
@@ -111,10 +112,14 @@
     }
 }
 
+.swiper2 {
+    padding-bottom: rem(10);
+}
+
 .swiper__controll {
     @include mq("md"){
         position: absolute;
-        top: rem(25);
+        top: rem(30);
         right: rem(13);
         width: rem(260);
     }

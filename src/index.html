@@ -119,10 +119,10 @@
 
       <nav class="header__sp-nav sp-nav js-sp-nav">
         <div class="category__inner drawer__inner">
-          <div class="drawer__name">
-            <a href="#" class="drawer__link  category__link">
-              <img src="./assets/images/common/logo-white.svg" alt="ロゴ">
-            </a>
+          <div class="header__name">
+              <a href="#" class="header__link">
+                <img src="./assets/images/common/logo-white.svg" alt="ヘッダーロゴ">
+              </a>
           </div>
           <div class="category__grid">
             <div class="category__grid-left">
@@ -161,18 +161,22 @@
                 </div>
               </div>
             </div>
-            <div class="categoty__grid-right">
+            <div class="category__grid-right">
               <div class="category__item">
                 <div class="category__contain">
                   <div class="category__title">
-                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
-                    <a href="#voice" class="category__main">お客様の声</a>
+                    <a href="#voice" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
+                      <a href="#voice" class="category__main">お客様の声</a>
+                    </a>
                   </div>
                 </div>
                 <div class="category__contain">
                   <div class="category__title">
-                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
-                    <a href="#price" class="category__main">料金一覧</a>
+                    <a href="#price" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
+                      <a href="#price" class="category__main">料金一覧</a>
+                    </a>
                   </div>
                   <a href="#price" class="category__link"><p class="category__sub">ライセンス講習</p></a>
                   <a href="#price" class="category__link"><p class="category__sub">体験ダイビング</p></a>
@@ -182,26 +186,34 @@
               <div class="category__item">
                 <div class="category__contain">
                   <div class="category__title">
-                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
-                    <a href="#" class="category__main">よくある質問</a>
+                    <a href="#faq" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
+                      <a href="#faq" class="category__main">よくある質問</a>
+                    </a>
                   </div>
                 </div>
                 <div class="category__contain">
                   <div class="category__title">
-                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
-                    <a href="#" class="category__main">プライバシー<br>ポリシー</a>
+                    <a href="#" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
+                      <a href="#" class="category__main">プライバシー<br class="u-mobile">ポリシー</a>
+                    </a>
                   </div>
                 </div>
                 <div class="category__contain">
                   <div class="category__title">
-                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
-                    <a href="#" class="category__main">利用規約</a>
+                    <a href="#" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
+                      <a href="#" class="category__main">利用規約</a>
+                    </a>
                   </div>
                 </div>
                 <div class="category__contain">
                   <div class="category__title">
-                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
-                    <a href="#contact" class="category__main">お問合せ</a>
+                    <a href="#contact" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="hitode">
+                      <a href="#contact" class="category__main">お問合せ</a>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -255,7 +267,7 @@
     <section class="campaign" id="campaign">
       <div class="campaign__inner inner">
         <div class="campaign__title section-header">
-          <p class="section-header__en-title"><span>C</span>ampaign</p>
+          <p class="section-header__en-title">Campaign</p>
           <h2 class="section-header__ja-title">キャンペーン</h2>
         </div>
         <div class="campaign__swiper">
@@ -348,20 +360,25 @@
             <div class="swiper-button-prev"></div>
           </div>
         </div>
+        <div class="campaign__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
       </div>
-      <div class="campaign__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
     </section>
 
     <!-- アバウト -->
     <section class="about" id="about">
       <div class="about__inner inner">
         <div class="about__title section-header">
-          <p class="section-header__en-title"><span>A</span>bout us</p>
+          <p class="section-header__en-title">About us</p>
           <h2 class="section-header__ja-title">私たちについて</h2>
         </div>
         <div class="about__contents">
-          <div class="about__img">
-            <img src="./assets/images/common/about.jpg" alt="屋根の上のシーサーと海の中の熱帯魚">
+          <div class="about__img-wrapper">
+            <div class="about__img01">
+              <img src="./assets/images/common/about01.jpg" alt="屋根の上のシーサー">
+            </div>
+            <div class="about__img02">
+              <img src="./assets/images/common/about02.jpg" alt="海の中の熱帯魚">
+            </div>
           </div>
           <div class="about__text-wrapper">
             <h3 class="about__text-title">Dive into <br>the Ocean</h3>
@@ -379,7 +396,7 @@
     <section class="information" id="information">
       <div class="information__inner inner">
         <div class="information__title section-header">
-          <p class="section-header__en-title"><span>I</span>nformation</p>
+          <p class="section-header__en-title">Information</p>
           <h2 class="section-header__ja-title">ダイビング情報</h2>
         </div>
         <div class="information__contents">
@@ -402,7 +419,7 @@
     <section class="blog" id="blog">
       <div class="blog__inner inner">
         <div class="blog__title section-header">
-          <p class="section-header__en-title header-white"><span>B</span>log</p>
+          <p class="section-header__en-title header-white">Blog</p>
           <h2 class="section-header__ja-title header-white">ブログ</h2>
         </div>
         <div class="blog__contents">
@@ -446,15 +463,15 @@
             </div>
           </a>
         </div>
+        <div class="blog__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
       </div>
-      <div class="blog__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
     </section>
 
     <!-- ボイス -->
     <section class="voice" id="voice">
       <div class="voice__inner inner">
         <div class="voice__title section-header">
-          <p class="section-header__en-title"><span>V</span>oice</p>
+          <p class="section-header__en-title">Voice</p>
           <h2 class="section-header__ja-title">お客様の声</h2>
         </div>
         <div class="voice__contents">
@@ -466,7 +483,7 @@
                     <p class="old">20代(女性)</p>
                     <div class="card__tag">ライセンス講習</div>
                   </div>
-                  <div class="voice__title card__title title--large">ここにタイトルが入ります。ここにタイトルここにタイトルここにタイトルここにタイトル</div>
+                  <div class="voice__title card__title title--large">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
                 <div class="voice__img card__img colorbox">
                   <img src="./assets/images/common/voice1.jpg" alt="帽子を被った女の人">
@@ -505,7 +522,7 @@
     <section class="price" id="price">
       <div class="price__inner inner">
         <div class="price__title section-header">
-          <p class="section-header__en-title"><span>P</span>rice</h>
+          <p class="section-header__en-title">Price</h>
           <h2 class="section-header__ja-title">料金一覧</h2>
         </div>
         <div class="price__contents">
@@ -588,7 +605,7 @@
           </div>
           <div class="contact__title-wrap">
             <div class="contact__title section-header">
-              <p class="section-header__en-title header--large"><span>C</span>ontact</h>
+              <p class="section-header__en-title header--large">Contact</h>
               <h2 class="section-header__ja-title header--large1">お問合せ</h2>
               <p class="section-header__ja-title header--large2">ご予約・お問合せはコチラ</p>
               <div class="contact__button button__wrapper"><a href="#" class="button">Contact us<span></span></a></div>

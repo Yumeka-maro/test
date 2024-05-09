@@ -26,33 +26,31 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 });
 
+//ドロワー横向き
 window.addEventListener('resize', function() {
-  var drawer = document.querySelector('.js-sp-nav');
-  if (window.innerWidth > 768) {
-      drawer.style.display = 'none';
+  const drawerInner = document.querySelector('.drawer__inner');
+  if (window.innerHeight < window.innerWidth) {
+      drawerInner.style.maxHeight = '100vh';
   } else {
-      drawer.style.display = 'block'; 
+      drawerInner.style.maxHeight = '100vh';
   }
 });
 
+//ドロワー768px以上のとき閉じる
 window.addEventListener('resize', function() {
-  var drawer = document.querySelector('.js-sp-nav');
-  if (window.innerWidth <= 768) {
-      drawer.style.height = '100vh';
-      drawer.style.overflowY = 'auto';
-  } else {
-      drawer.style.height = '';
-      drawer.style.overflowY = '';
-  }
+    const drawer = document.querySelector('.js-sp-nav');
+
+    if (window.innerWidth >= 768) {
+        drawer.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
 });
 
 
   //ヘッダー高さ分下げる
   $('a[href^="#"]').on('click', function(event) {
-    // リンク先の要素を取得
     var target = $(this.getAttribute('href'));
     if( target.length ) {
-        // ページのスクロール位置をリンク先の要素の位置 - ヘッダーの高さ に調整
         event.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top - $('.header').outerHeight()
@@ -117,5 +115,25 @@ window.addEventListener('resize', function() {
           }
     });
 });
+
+//トップに戻るボタン
+$(function () {
+  const toTopButton = $(".js-to-top");
+  const scrollHeight = 100;
+  toTopButton.hide();
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+      toTopButton.fadeIn();
+      } else {
+      toTopButton.fadeOut();
+      }
+  });
+
+  toTopButton.click(function () {
+      $("body,html").animate({ scrollTop: 0 }, 800);
+      return false;
+  });
+});
+
 
 

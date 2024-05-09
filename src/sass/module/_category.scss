@@ -17,12 +17,7 @@
     }
 }
 
-.category__grid-left {
-    @include mq("md"){
-        display: flex;
-    }
-}
-
+.category__grid-left,
 .category__grid-right {
     @include mq("md"){
         display: flex;

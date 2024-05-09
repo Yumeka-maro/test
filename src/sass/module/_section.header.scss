@@ -35,11 +35,11 @@
     }
 }
 
-.section-header__en-title span {
+.section-header__en-title::first-letter {
     color: $green-accent;
 }
 
-.section-header__en-title.header-white span {
+.section-header__en-title.header-white::first-letter {
     @include mq("md"){
         color: $green2;
     }

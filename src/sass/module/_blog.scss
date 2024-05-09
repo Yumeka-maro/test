@@ -32,16 +32,17 @@
 .blog__contents {
     margin-top: rem(24);
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns: 1fr;
     column-gap: rem(40);
     row-gap: rem(35);
     @include mq("md"){
+        grid-template-columns: 1fr 1fr 1fr;
         margin-top: rem(80);
         position: relative;
     }
 }
 
-.blog__contents::before {
+.blog::after {
     @include mq("md"){
         position: absolute;
         content: "";
@@ -50,17 +51,19 @@
         background-image: url(../images/common/fish-white.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        top: -25%;
+        top: 3%;
         left: calc(50% - min(48.5vw, rem(638)));
+        z-index: 5;
     }
 }
 
 
 .blog__card {
     background-color: $white;
-    width: rem(333);
+    aspect-ratio: 333 / 447;
+    max-width: rem(333);
     display: block;
-    margin-inline: auto;
+    height: 100%;
 }
 
 .blog__card:hover {

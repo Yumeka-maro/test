@@ -4,10 +4,7 @@
     padding-top: rem(21);
 }
 
-.drawer__link {
-    display: block;
-    width: rem(120);
-    @include mq("md"){
-        width: rem(200);
-    }
+.drawer__inner {
+    max-height: 100vh;
+    overflow-y: auto;
 }

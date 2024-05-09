@@ -1,9 +1,11 @@
 @use 'global' as *;
 
 .price {
+    margin-top: rem(80);
     padding: rem(80) 0;
     background-color: $green2;
     @include mq("md"){
+        margin-top: rem(140);
         padding: rem(100) 0;
     }
 }
@@ -37,6 +39,7 @@
         flex-direction: row-reverse;
         gap: rem(93);
         padding: 0 rem(2);
+        aspect-ratio: 1.443;
     }
 }
 

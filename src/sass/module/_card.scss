@@ -24,10 +24,6 @@
     font-size: rem(16);
     line-height: 1.5;
     font-weight: $medium;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
     border-bottom: 1px solid $green-accent;
     padding-bottom: rem(4);
 }
