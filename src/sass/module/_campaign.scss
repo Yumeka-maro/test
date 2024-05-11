@@ -1,14 +1,5 @@
 @use 'global' as *;
 
-.campaign {
-    margin-top: rem(40);
-    overflow: hidden;
-    padding-bottom: rem(10);
-    @include mq("md"){
-        margin-top: rem(120);
-    }
-}
-
 .campaign__inner {
     @include mq("md"){
         position: relative;
@@ -17,38 +8,33 @@
 
 .campaign__card {
     width: rem(280);
-    height: 100%;
     @include mq("md"){
         width: rem(333);
     }
 }
 
-.campaign__card:hover {
-    opacity: 0.7;
-}
 
-
-.card__body.campaign__body {
+.campaign__body {
     padding-bottom: rem(24);
+    display: flex;
+    flex-direction: column;
     @include mq("md"){
         padding-top: rem(24);
         padding-bottom: rem(40);
     }
 }
 
-.title--campaign {
+.campaign__title {
     margin-top: rem(4);
+    padding-bottom: rem(4);
 }
 
 
-.body__main--campaign {
-    text-align: center;
+.campaign__body-sub {
     margin-inline: auto;
-    padding-top: rem(8);
-    width: rem(211);
+    margin-top: rem(8);
     @include mq("md"){
-        padding-top: rem(16);
-        width: rem(264);
+        margin-top: rem(16);
     }
 }
 
@@ -104,13 +90,6 @@
     }
 }
 
-
-.campaign__button {
-    margin-top: rem(40);
-    @include mq("md"){
-        margin-top: rem(80);
-    }
-}
 
 .swiper2 {
     padding-bottom: rem(10);

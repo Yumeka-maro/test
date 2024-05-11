@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     height: inherit;
+    gap: rem(40);
 }
 
 .pc-nav__item,
@@ -16,19 +17,12 @@
     display: flex;
     align-items: center;
     color: $white;
-    padding-right: rem(20);
-    padding-left: rem(20);
-}
-
-.pc-nav__item:last-child a {
-    padding-right: 0;
 }
 
 .nav__contain {
     text-align: center;
     position: relative;
 }
-
 
 .nav__main {
     font-size: rem(18);

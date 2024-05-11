@@ -1,14 +1,5 @@
 @use 'global' as *;
 
-.price {
-    margin-top: rem(80);
-    padding: rem(80) 0;
-    background-color: $green2;
-    @include mq("md"){
-        margin-top: rem(140);
-        padding: rem(100) 0;
-    }
-}
 
 .price__inner {
     max-width: rem(600);
@@ -113,12 +104,5 @@
     @include mq("md"){
         font-size: rem(16);
         line-height: 1.5;
-    }
-}
-
-.price__button {
-    margin-top: rem(40);
-    @include mq("md"){
-        margin-top: rem(80);
     }
 }

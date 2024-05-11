@@ -1,30 +1,5 @@
 @use 'global' as *;
 
-.blog {
-    padding-top: rem(80);
-    @include mq("md"){
-        padding-top: rem(100);
-        position: relative;
-    }
-}
-
-
-.blog::before {
-    @include mq("md"){
-        background-image: url(../images/common/blog-bg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        z-index: -1;
-    }
-}
-
 .blog__inner {
     max-width: rem(600);
 }
@@ -42,64 +17,24 @@
     }
 }
 
-.blog::after {
-    @include mq("md"){
-        position: absolute;
-        content: "";
-        width: rem(437);
-        height: rem(201);
-        background-image: url(../images/common/fish-white.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        top: 3%;
-        left: calc(50% - min(48.5vw, rem(638)));
-        z-index: 5;
-    }
-}
-
-
-.blog__card {
-    background-color: $white;
-    aspect-ratio: 333 / 447;
-    max-width: rem(333);
-    display: block;
-    height: 100%;
-}
-
-.blog__card:hover {
-    opacity: 0.9;
-    background-color: rgba(255, 255, 255, 1);
-}
 
 .card__inner--blog {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 
 .blog__img {
     padding: rem(16) rem(16) 0 rem(16);
     aspect-ratio: 301 / 201;
-    height: 50%;
 }
 
 .card__body.blog__body {
     padding-top: rem(8);
-    height: 50%;
 }
 
 .text--blog {
     padding-top: rem(13);
     padding-bottom: rem(8);
-    box-sizing: border-box;
-    padding: rem(4);
-    height: calc(1.6em * 5 + rem(8));
 }
 
-.blog__button {
-    margin-top: rem(40);
-    @include mq("md"){
-        margin-top: rem(80);
-    }
-}

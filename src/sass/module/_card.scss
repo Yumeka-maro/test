@@ -2,6 +2,15 @@
 
 .card {
     box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
+    background-color: $white;
+}
+
+.card:hover {
+    opacity: 0.8;
+}
+
+.card__img {
+    flex-grow: 1;
 }
 
 .card__img img {
@@ -17,6 +26,8 @@
 
 .card__body {
     padding: rem(16);
+    display: flex;
+    flex-direction: column;
 }
 
 .card__title {
@@ -26,12 +37,12 @@
     font-weight: $medium;
     border-bottom: 1px solid $green-accent;
     padding-bottom: rem(4);
+    flex-grow: 1;
 }
 
 .card__title.title--large {
     @include mq("md"){
         font-size: rem(24);
-        -webkit-line-clamp: 2;
     }
 }
 
@@ -51,10 +62,7 @@
     font-size: rem(16);
     line-height: 1.5;
     color: $green;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    flex-grow: 1;
 }
 
 .card__date {

@@ -13,6 +13,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
     });
 
+    //ハンバーガー開いている時背景スクロールしない
+    $(".js-hamburger").click(function () {
+      $("body").toggleClass('no-scroll');
+  });
+
     //ドロワーメニュー
     $(".js-sp-nav a").click(function () {
       $(".js-hamburger").removeClass("is-active");
@@ -58,6 +63,17 @@ window.addEventListener('resize', function() {
     }
 });
 
+//ヘッダー色変わる
+$(function () {
+  $(window).on('scroll', function () {
+      if ($('.mv').height() < $(this).scrollTop()) {
+          $('.js-header').addClass('change-color');
+    } else {
+          $('.js-header').removeClass('change-color');
+    }
+  });
+});
+
     //メインビュースワイパー
     const swiper1 = new Swiper(".swiper1", {
     loop: true,
@@ -78,9 +94,9 @@ window.addEventListener('resize', function() {
         spaceBetween: 40,
       }
     },
-    autoplay: {
-    delay: 0,
-    },
+    // autoplay: {
+    // delay: 0,
+    // },
     loop: true,
     speed: 3500,
     navigation: {

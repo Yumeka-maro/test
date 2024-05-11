@@ -34,7 +34,7 @@
 
 <body>
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header layout-header js-header">
     <div class="header__inner">
       <h1 class="header__name">
         <a href="#" class="header__link">
@@ -119,11 +119,6 @@
 
       <nav class="header__sp-nav sp-nav js-sp-nav">
         <div class="category__inner drawer__inner">
-          <div class="header__name">
-              <a href="#" class="header__link">
-                <img src="./assets/images/common/logo-white.svg" alt="ヘッダーロゴ">
-              </a>
-          </div>
           <div class="category__grid">
             <div class="category__grid-left">
               <div class="category__item">
@@ -232,25 +227,25 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/top-sp1.jpg" media="(max-width: 768px)">
+                <source srcset="./assets/images/common/top-sp1.jpg" media="(max-width: 767px)">
                 <img src="./assets/images/common/top-pc1.jpg" alt="ターコイズブルーの海の中で茶色の亀が泳いでいる様子">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/top-sp2.jpg" media="(max-width: 768px)">
+                <source srcset="./assets/images/common/top-sp2.jpg" media="(max-width: 767px)">
                 <img src="./assets/images/common/top-pc2.jpg" alt="海の中で左側に亀、右側に人がダイビングしている様子">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/top-sp3.jpg" media="(max-width: 786px)">
+                <source srcset="./assets/images/common/top-sp3.jpg" media="(max-width: 767px)">
                 <img src="./assets/images/common/top-pc3.jpg" alt="晴れた空と海と白い船">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/top-sp4.jpg" media="(max-width: 768px)">
+                <source srcset="./assets/images/common/top-sp4.jpg" media="(max-width: 767px)">
                 <img src="./assets/images/common/top-pc4.jpg" alt="晴れた空とターコイズブルーの海辺">
               </picture>
             </div>
@@ -264,7 +259,7 @@
     </div>
 
     <!-- キャンペーン -->
-    <section class="campaign" id="campaign">
+    <section class="campaign layout-campaign" id="campaign">
       <div class="campaign__inner inner">
         <div class="campaign__title section-header">
           <p class="section-header__en-title">Campaign</p>
@@ -272,18 +267,18 @@
         </div>
         <div class="campaign__swiper">
           <div class="swiper swiper2 js-campaign-swiper">
-            <div class="swiper-wrapper">
-              <a href="#" class="swiper-slide campaign__card">
-                <div class="card">
+            <div class="swiper-wrapper campaign__contents">
+              <a href="#" class="swiper-slide campaign__card card">
+                <div class="card__inner card__inner--campaign">
                   <div class="campaign__img card__img">
                     <img src="./assets/images/common/campaign1.png" alt="ターコイズブルーの海の中で蛍光色の魚たちが泳いでいる様子">
                   </div>
                   <div class="card__body campaign__body">
-                    <div class="body__sub--campaign">
+                    <div class="campaign__body-main">
                       <p class="campaign__tag card__tag">ライセンス講習</p>
-                      <p class="card__title title--campaign">ライセンス取得</p>
+                      <p class="campaign__title card__title">ライセンス取得</p>
                     </div>
-                    <div class="body__main--campaign">
+                    <div class="campaign__body-sub">
                       <p class="card__text text--campaign">全部コミコミ(お一人様)</p>
                       <div class="campaign__price">
                         <div class="discount">¥56,000</div>
@@ -293,17 +288,17 @@
                   </div>
                 </div>
               </a>
-              <a href="#" class="swiper-slide campaign__card">
-                <div class="card">
+              <a href="#" class="swiper-slide campaign__card card">
+                <div class="card__inner card__inner--campaign">
                   <div class="campaign__img card__img">
                     <img src="./assets/images/common/campaign2.png" alt="空と島と海と船が両脇に2つある様子">
                   </div>
                   <div class="card__body campaign__body">
-                    <div class="body__sub--campaign">
+                    <div class="campaign__body-main">
                       <p class="campaign__tag card__tag">体験ダイビング</p>
-                      <p class="card__title title--campaign">貸切体験ダイビング</p>
+                      <p class="campaign__title card__title">貸切体験ダイビング</p>
                     </div>
-                    <div class="body__main--campaign">
+                    <div class="campaign__body-sub">
                       <p class="card__text text--campaign">全部コミコミ(お一人様)</p>
                       <div class="campaign__price">
                         <div class="discount">¥24,000</div>
@@ -313,17 +308,17 @@
                   </div>
                 </div>
               </a>
-              <a href="#" class="swiper-slide campaign__card">
-                <div class="card">
+              <a href="#" class="swiper-slide campaign__card card">
+                <div class="card__inner card__inner--campaign">
                   <div class="campaign__img card__img">
                     <img src="./assets/images/common/campaign3.png" alt="紺色の夜の海の中でクラゲが泳いでいる様子">
                   </div>
                   <div class="card__body campaign__body">
-                    <div class="body__sub--campaign">
+                    <div class="campaign__body-main">
                       <p class="campaign__tag card__tag">体験ダイビング</p>
-                      <p class="card__title title--campaign">ナイトダイビング</p>
+                      <p class="campaign__title card__title">ナイトダイビング</p>
                     </div>
-                    <div class="body__main--campaign">
+                    <div class="campaign__body-sub">
                       <p class="card__text text--campaign">全部コミコミ(お一人様)</p>
                       <div class="campaign__price">
                         <div class="discount">¥10,000</div>
@@ -333,17 +328,17 @@
                   </div>
                 </div>
               </a>
-              <a href="#" class="swiper-slide campaign__card">
-                <div class="card">
+              <a href="#" class="swiper-slide campaign__card card">
+                <div class="card__inner card__inner--campaign">
                   <div class="campaign__img card__img">
                     <img src="./assets/images/common/campaign4.png" alt="海の中で4人がダイビングをしている様子">
                   </div>
                   <div class="card__body campaign__body">
-                    <div class="body__sub--campaign">
+                    <div class="campaign__body-main">
                       <p class="campaign__tag card__tag">ファンダイビング</p>
-                      <p class="card__title title--campaign">貸切ファンダイビング</p>
+                      <p class="campaign__title card__title">貸切ファンダイビング</p>
                     </div>
-                    <div class="body__main--campaign">
+                    <div class="campaign__body-sub">
                       <p class="card__text text--campaign">全部コミコミ(お一人様)</p>
                       <div class="campaign__price">
                         <div class="discount">¥20,000</div>
@@ -365,7 +360,7 @@
     </section>
 
     <!-- アバウト -->
-    <section class="about" id="about">
+    <section class="about layout-about" id="about">
       <div class="about__inner inner">
         <div class="about__title section-header">
           <p class="section-header__en-title">About us</p>
@@ -385,7 +380,7 @@
             <div class="about__text">
               <p class="about__sub">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-              <div class="about__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
+              <div class="about__button"><a href="#" class="button">View more<span></span></a></div>
             </div>
           </div>
         </div>
@@ -393,7 +388,7 @@
     </section>
 
     <!-- インフォメーション -->
-    <section class="information" id="information">
+    <section class="information layout-information" id="information">
       <div class="information__inner inner">
         <div class="information__title section-header">
           <p class="section-header__en-title">Information</p>
@@ -416,7 +411,7 @@
     </section>
 
     <!-- ブログ -->
-    <section class="blog" id="blog">
+    <section class="blog layout-blog" id="blog">
       <div class="blog__inner inner">
         <div class="blog__title section-header">
           <p class="section-header__en-title header-white">Blog</p>
@@ -432,7 +427,7 @@
                   <time class="card__date" datetime="2023-11-17">2023.11.17</time>
                   <p class="card__title">ライセンス取得</p>
                   <p class="card__text text--blog">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                    ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               </div>
             </div>
           </a>
@@ -463,12 +458,12 @@
             </div>
           </a>
         </div>
-        <div class="blog__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
+        <div class="button__wrapper"><a href="#" class="button">View more<span></span></a></div>
       </div>
     </section>
 
     <!-- ボイス -->
-    <section class="voice" id="voice">
+    <section class="voice layout-voice" id="voice">
       <div class="voice__inner inner">
         <div class="voice__title section-header">
           <p class="section-header__en-title">Voice</p>
@@ -476,14 +471,14 @@
         </div>
         <div class="voice__contents">
           <a href="#" class="voice__card card">
-            <div class="card__body voice__body">
-              <div class="body__main--voice">
-                <div class="main__left">
-                  <div class="left__sub">
+            <div class="card__inner card__inner--voice">
+              <div class="card__title-wrap">
+                <div class="title-wrap-sub">
+                  <div class="title-wrap-sub__contain">
                     <p class="old">20代(女性)</p>
                     <div class="card__tag">ライセンス講習</div>
                   </div>
-                  <div class="voice__title card__title title--large">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="title-wrap-main card__title title--large">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
                 <div class="voice__img card__img colorbox">
                   <img src="./assets/images/common/voice1.jpg" alt="帽子を被った女の人">
@@ -495,17 +490,17 @@
             </div>
           </a>
           <a href="#" class="voice__card card">
-            <div class="card__body voice__body">
-              <div class="body__main--voice">
-                <div class="main__left">
-                  <div class="left__sub">
+            <div class="card__inner card__inner--voice">
+              <div class="card__title-wrap">
+                <div class="title-wrap-sub">
+                  <div class="title-wrap-sub__contain">
                     <p class="old">20代(男性)</p>
                     <div class="card__tag">ファンダイビング</div>
                   </div>
-                  <div class="voice__title card__title title--large">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="title-wrap-main card__title title--large">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
                 <div class="voice__img card__img colorbox">
-                  <img src="./assets/images/common/voice2.jpg" alt="親指を立てている笑顔の男の人">
+                  <img src="./assets/images/common/voice2.jpg" alt="親指を立てている笑顔の男の人ひと">
                 </div>
               </div>
               <div class="voice__text card__text">
@@ -514,12 +509,12 @@
             </div>
           </a>
         </div>
-      <div class="voice__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
+      <div class="button__wrapper"><a href="#" class="button">View more<span></span></a></div>
       </div>
     </section>
 
     <!-- プライス -->
-    <section class="price" id="price">
+    <section class="price layout-price" id="price">
       <div class="price__inner inner">
         <div class="price__title section-header">
           <p class="section-header__en-title">Price</h>
@@ -528,7 +523,7 @@
         <div class="price__contents">
           <div class="price__img colorbox">
             <picture>
-              <source srcset="./assets/images/common/price.jpg" media="(max-width: 768px)">
+              <source srcset="./assets/images/common/price.jpg" media="(max-width: 767px)">
               <img src="./assets/images/common/price-pc.png" alt="ターコイズブルーの海の中でサンゴ礁とたくさんの魚が泳いでいる様子">
             </picture>
           </div>
@@ -583,12 +578,12 @@
             </ul>
           </div>
         </div>
-        <div class="price__button button__wrapper"><a href="#" class="button">View more<span></span></a></div>
+        <div class="button__wrapper"><a href="#" class="button">View more<span></span></a></div>
       </div>
     </section>
 
     <!-- コンタクト -->
-    <section class="contact" id="contact">
+    <section class="contact layout-contact" id="contact">
       <div class="contact__inner inner">
         <div class="contact__contents">
           <div class="contact__map">
@@ -618,7 +613,7 @@
 
   </main>
   <!-- フッター -->
-  <footer class="footer">
+  <footer class="footer layout-footer">
     <div class="category__inner footer__inner inner">
       <div class="footer__header">
         <div class="footer__name category__name">
