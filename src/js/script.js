@@ -1,34 +1,19 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-    //ハンバーガー
-    $(".js-hamburger").click(function () {
+  //ハンバーガーメニュー
+  $(".js-hamburger,.js-sp-nav").click(function () {
     if ($(".js-hamburger").hasClass('is-active')){
         $('.js-hamburger').removeClass("is-active");
-      //$("html").toggleClass("is-fixed");
         $(".js-sp-nav").fadeOut();
     } else {
         $('.js-hamburger').addClass("is-active");
-      //$("html").toggleClass("is-fixed");
         $(".js-sp-nav").fadeIn();
     }
     });
 
-    //ハンバーガー開いている時背景スクロールしない
-    $(".js-hamburger").click(function () {
-      $("body").toggleClass('no-scroll');
-  });
-
-    //ドロワーメニュー
-    $(".js-sp-nav a").click(function () {
-      $(".js-hamburger").removeClass("is-active");
-      //$("html").toggleClass("is-fixed");
-      $(".js-sp-nav").fadeOut(300);
-
-      var target = $(this).attr("href");
-      setTimeout(function () {
-          window.location.href = target;
-      }, 300);
-  });
+//ハンバーガー開いている時背景スクロールしない
+$(".js-hamburger").click(function () {
+  $("body").toggleClass('no-scroll');
 });
 
 //ドロワー横向き
@@ -75,7 +60,7 @@ $(function () {
 });
 
     //メインビュースワイパー
-    const swiper1 = new Swiper(".swiper1", {
+    const swiper1 = new Swiper(".js-mv-swiper", {
     loop: true,
     effect: "fade",
     speed: 3000,
@@ -86,21 +71,23 @@ $(function () {
   });
 
   // キャンペーンスワイパー
-  const swiper2 = new Swiper(".swiper2", {
+  const swiper2 = new Swiper(".js-campaign-swiper", {
     slidesPerView: "auto",
     spaceBetween: 24,
+    allowSlideNext: true,
+    allowSlidePrev: true,
     breakpoints:{
       768:{
         spaceBetween: 40,
       }
     },
-    // autoplay: {
-    // delay: 0,
-    // },
+    autoplay: {
+    delay: 1000,
+    },
     loop: true,
     speed: 3500,
     navigation: {
-      nextEl: ".swiper-button-next",
+      nextEl: ".arrow__campaign",
       prevEl: ".swiper-button-prev",
     },
   });
@@ -152,4 +139,4 @@ $(function () {
 });
 
 
-
+})

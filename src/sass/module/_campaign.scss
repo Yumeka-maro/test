@@ -8,16 +8,24 @@
 
 .campaign__card {
     width: rem(280);
+    display: block;
     @include mq("md"){
         width: rem(333);
     }
 }
 
+.card__inner--campaign {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
-.campaign__body {
+
+.card__body.campaign__body {
     padding-bottom: rem(24);
     display: flex;
     flex-direction: column;
+    height: 100%;
     @include mq("md"){
         padding-top: rem(24);
         padding-bottom: rem(40);
@@ -27,6 +35,7 @@
 .campaign__title {
     margin-top: rem(4);
     padding-bottom: rem(4);
+    flex-grow: 1;
 }
 
 
@@ -37,6 +46,8 @@
         margin-top: rem(16);
     }
 }
+
+
 
 .campaign__price {
     display: flex;
@@ -99,7 +110,7 @@
     @include mq("md"){
         position: absolute;
         top: rem(30);
-        right: rem(13);
+        right: 0;
         width: rem(260);
     }
 }
