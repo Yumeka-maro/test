@@ -1,5 +1,12 @@
 @use 'global' as *;
 
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: rem(40);
+
+}
+
 .card {
     box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
     background-color: $white;

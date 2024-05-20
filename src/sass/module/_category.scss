@@ -19,6 +19,7 @@
 
 .category__grid-left,
 .category__grid-right {
+    margin-top: rem(-40);
     @include mq("md"){
         display: flex;
     }

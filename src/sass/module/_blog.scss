@@ -6,9 +6,6 @@
 
 .blog__contents {
     margin-top: rem(24);
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: rem(40);
     row-gap: rem(35);
     @include mq("md"){
         grid-template-columns: 1fr 1fr 1fr;

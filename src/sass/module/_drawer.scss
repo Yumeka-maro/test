@@ -1,8 +1,9 @@
 @use 'global' as *;
 
 .drawer__inner {
-    padding-top: rem(40);
-    max-height: 100vh;
+    margin-top: rem(80);
     overflow-y: auto;
+    height: calc(100% - 5rem);
+    padding-bottom: rem(32);
 }
 
