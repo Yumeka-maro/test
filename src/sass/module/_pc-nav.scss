@@ -19,24 +19,24 @@
     color: $white;
 }
 
-.nav__contain {
+.pc-nav__contain {
     text-align: center;
     position: relative;
 }
 
-.nav__main {
+.pc-nav__main {
     font-size: rem(18);
     font-family: $third-font-family;
     line-height: 1;
 }
 
-.nav__sub {
+.pc-nav__sub {
     font-size: rem(10);
     line-height: 1.5;
     margin-top: rem(4);
 }
 
-.nav__contain::after {
+.pc-nav__contain::after {
     content: '';
     position: absolute;
     bottom: rem(-4);
@@ -49,7 +49,7 @@
     transform-origin: center top;
 }
 
-.nav__contain:hover::after {
+.pc-nav__contain:hover::after {
     transform: scale(1, 1);
 }
 

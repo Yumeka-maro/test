@@ -11,6 +11,16 @@
     background-color: $green-accent;
 }
 
+.sp-nav__inner {
+    color: $white;
+    padding-right: rem(15);
+    padding-left: rem(15);
+    margin-top: rem(80);
+    overflow-y: auto;
+    height: calc(100% - 5rem);
+    padding-bottom: rem(32);
+}
+
 .sp-nav.is-active {
     display: block;
     height: 100vh;

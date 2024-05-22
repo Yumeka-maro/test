@@ -106,7 +106,6 @@
 }
 
 .contact__button {
-    @include mq("md"){
-        margin-top: rem(40);
-    }
+    text-align: center;
+    margin-top: rem(40);
 }

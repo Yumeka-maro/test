@@ -5,6 +5,9 @@
 }
 
 .blog__contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: rem(40);
     margin-top: rem(24);
     row-gap: rem(35);
     @include mq("md"){
@@ -15,24 +18,10 @@
 }
 
 
-.card__inner--blog {
-    display: flex;
-    flex-direction: column;
+.blog__button {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
 }
-
-
-
-.blog__img {
-    padding: rem(16) rem(16) 0 rem(16);
-    aspect-ratio: 301 / 201;
-}
-
-.card__body.blog__body {
-    padding-top: rem(8);
-}
-
-.text--blog {
-    padding-top: rem(13);
-    padding-bottom: rem(8);
-}
-

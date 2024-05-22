@@ -1,13 +1,6 @@
 @use 'global' as *;
 
-.category__inner {
-    background-color: $green-accent;
-    color: $white;
-    padding-right: rem(15);
-    padding-left: rem(15);
-}
-
-.category__grid {
+.category {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: rem(16);
@@ -22,6 +15,7 @@
     margin-top: rem(-40);
     @include mq("md"){
         display: flex;
+        margin-top: 0;
     }
 }
 
