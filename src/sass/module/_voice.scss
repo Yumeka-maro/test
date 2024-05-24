@@ -38,12 +38,7 @@
 
 .voice__contents {
     margin-top: rem(40);
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: rem(40);
-    row-gap: rem(40);
     @include mq("md"){
-        grid-template-columns: 1fr 1fr;
         margin-top: rem(30);
     }
 }

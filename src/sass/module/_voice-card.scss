@@ -26,14 +26,14 @@
     }
 }
 
-.title-sub {
+.voice-card__title-sub {
     width: 50%;
     @include mq("md"){
         width: 65%;
     }
 }
 
-.sub-contain {
+.voice-card__sub-contain {
     @include mq("md"){
         display: flex;
         justify-content: space-between;
@@ -41,7 +41,7 @@
     }
 }
 
-.old {
+.voice-card__old {
     font-size: rem(12);
     color: $green;
     line-height: 1.5;
@@ -60,7 +60,7 @@
     }
 }
 
-.title-main {
+.voice-card__title-main {
     color: $green;
     font-size: rem(16);
     line-height: 1.5;

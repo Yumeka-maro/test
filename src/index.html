@@ -223,7 +223,7 @@
     <!-- メインビュー -->
     <div class="mv">
       <div class="mv__inner">
-        <div class="swiper swiper1 js-mv-swiper">
+        <div class="swiper mv__swiper js-mv-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
@@ -265,8 +265,8 @@
           <p class="section-header__en-title">Campaign</p>
           <h2 class="section-header__ja-title">キャンペーン</h2>
         </div>
-        <div class="campaign__swiper">
-          <div class="swiper swiper2 js-campaign-swiper">
+        <div class="campaign__wrapper">
+          <div class="swiper campaign__swiper js-campaign-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide campaign-card">
                 <div class="campaign-card__inner">
@@ -279,8 +279,8 @@
                     <div class="campaign-card__sub">
                       <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                       <div class="campaign-card__price">
-                        <div class="discount">¥56,000</div>
-                        <div class="cost">¥46,000</div>
+                        <div class="campaign-card__discount">¥56,000</div>
+                        <div class="campaign-card__cost">¥46,000</div>
                       </div>
                     </div>
                   </div>
@@ -297,8 +297,8 @@
                     <div class="campaign-card__sub">
                       <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                       <div class="campaign-card__price">
-                        <div class="discount">¥24,000</div>
-                        <div class="cost">¥18,000</div>
+                        <div class="campaign-card__discount">¥24,000</div>
+                        <div class="campaign-card__cost">¥18,000</div>
                       </div>
                     </div>
                   </div>
@@ -315,8 +315,8 @@
                     <div class="campaign-card__sub">
                       <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                       <div class="campaign-card__price">
-                        <div class="discount">¥10,000</div>
-                        <div class="cost">¥8,000</div>
+                        <div class="campaign-card__discount">¥10,000</div>
+                        <div class="campaign-card__cost">¥8,000</div>
                       </div>
                     </div>
                   </div>
@@ -333,8 +333,8 @@
                     <div class="campaign-card__sub">
                       <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                       <div class="campaign-card__price">
-                        <div class="discount">¥20,000</div>
-                        <div class="cost">¥16,000</div>
+                        <div class="campaign-card__discount">¥20,000</div>
+                        <div class="campaign-card__cost">¥16,000</div>
                       </div>
                     </div>
                   </div>
@@ -406,10 +406,10 @@
     <section class="blog layout-blog" id="blog">
       <div class="blog__inner inner">
         <div class="blog__title section-header">
-          <p class="section-header__en-title header-white">Blog</p>
-          <h2 class="section-header__ja-title header-white">ブログ</h2>
+          <p class="section-header__en-title--white">Blog</p>
+          <h2 class="section-header__ja-title--white">ブログ</h2>
         </div>
-        <div class="blog__contents">
+        <div class="blog__contents blog-cards">
           <a href="#" class="blog-card">
             <div class="blog-card__inner">
               <div class="blog-card__img">
@@ -461,13 +461,13 @@
           <p class="section-header__en-title">Voice</p>
           <h2 class="section-header__ja-title">お客様の声</h2>
         </div>
-        <div class="voice__contents">
+        <div class="voice__contents voice-cards">
           <a href="#" class="voice-card">
             <div class="voice-card__inner">
               <div class="voice-card__title-wrap">
-                <div class="title-sub">
-                  <div class="sub-contain">
-                    <p class="old">20代(女性)</p>
+                <div class="voice-card__title-sub">
+                  <div class="voice-card__sub-contain">
+                    <p class="voice-card__old">20代(女性)</p>
                     <div class="voice-card__tag">ライセンス講習</div>
                   </div>
                   <div class="title-main">ここにタイトルが入ります。ここにタイトル</div>
@@ -484,12 +484,12 @@
           <a href="#" class="voice-card">
             <div class="voice-card__inner">
               <div class="voice-card__title-wrap">
-                <div class="title-sub">
-                  <div class="sub-contain">
-                    <p class="old">20代(男性)</p>
+                <div class="voice-card__title-sub">
+                  <div class="voice-card__sub-contain">
+                    <p class="voice-card__old">20代(男性)</p>
                     <div class="voice-card__tag">ライセンス講習</div>
                   </div>
-                  <div class="title-main">ここにタイトルが入ります。ここにタイトル</div>
+                  <div class="voice-card__title-main">ここにタイトルが入ります。ここにタイトル</div>
                 </div>
                 <div class="voice-card__img colorbox">
                   <img src="./assets/images/common/voice2.jpg" alt="親指を立てている笑顔の男の人">
@@ -523,7 +523,7 @@
             <ul class="price__lists">
               <li class="price__lists-item">
                 <h3 class="price__list-title">ライセンス講習</h3>
-                <dl>
+                <dl class="price__list-inner">
                   <dt>オープンウォーターダイバーコース</dt>
                   <dd>¥50,000</dd>
                   <dt>アドバンスドオープンウォーターコース</dt>
@@ -534,7 +534,7 @@
               </li>
               <li class="price__lists-item">
                 <h3 class="price__list-title">体験ダイビング</h3>
-                <dl>
+                <dl class="price__list-inner">
                   <dt>ビーチ体験ダイビング(半日)</dt>
                   <dd>¥7,000</dd>
                   <dt>ビーチ体験ダイビング(1日)</dt>
@@ -547,7 +547,7 @@
               </li>
               <li class="price__lists-item">
                 <h3 class="price__list-title">ファンダイビング</h3>
-                <dl>
+                <dl class="price__list-inner">
                   <dt>ビーチダイビング(2ダイブ)</dt>
                   <dd>¥14,000</dd>
                   <dt>ボートダイビング(2ダイブ)</dt>
@@ -560,7 +560,7 @@
               </li>
               <li class="price__lists-item">
                 <h3 class="price__list-title">スペシャルダイビング</h3>
-                <dl>
+                <dl class="price__list-inner">
                   <dt>貸切ダイビング(2ダイブ)</dt>
                   <dd>¥24,000</dd>
                   <dt>1日ダイビング(3ダイブ)</dt>
@@ -592,9 +592,9 @@
           </div>
           <div class="contact__title-wrap">
             <div class="contact__title section-header">
-              <p class="section-header__en-title header--large">Contact</h>
-              <h2 class="section-header__ja-title header--large1">お問合せ</h2>
-              <p class="section-header__ja-title header--large2">ご予約・お問合せはコチラ</p>
+              <p class="section-header__en-title--large">Contact</h>
+              <h2 class="section-header__ja-title--large1">お問合せ</h2>
+              <p class="section-header__ja-title--large2">ご予約・お問合せはコチラ</p>
               <div class="contact__button"><a href="#" class="button">Contact us<span></span></a></div>
             </div>
           </div>

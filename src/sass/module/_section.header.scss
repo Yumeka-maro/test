@@ -28,8 +28,8 @@
     }
 }
 
-.section-header__ja-title.header-white,
-.section-header__en-title.header-white {
+.section-header__ja-title--white,
+.section-header__en-title--white {
     @include mq("md"){
         color: $white;
     }
@@ -39,25 +39,25 @@
     color: $green-accent;
 }
 
-.section-header__en-title.header-white::first-letter {
+.section-header__en-title--white::first-letter {
     @include mq("md"){
         color: $green2;
     }
 }
 
-.section-header__ja-title.header--large1 {
+.section-header__ja-title--large1 {
     margin-top: 0;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 
-.section-header__ja-title.header--large2 {
+.section-header__ja-title--large2 {
     font-size: rem(14);
     line-height: calc(9 / 7);
     margin-top: 0;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 
-.section-header__en-title.header--large {
+.section-header__en-title--large {
     font-size: rem(80);
     line-height: 1;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);

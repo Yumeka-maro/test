@@ -5,13 +5,8 @@
 }
 
 .blog__contents {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: rem(40);
     margin-top: rem(24);
-    row-gap: rem(35);
     @include mq("md"){
-        grid-template-columns: 1fr 1fr 1fr;
         margin-top: rem(80);
         position: relative;
     }

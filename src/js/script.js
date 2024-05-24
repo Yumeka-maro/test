@@ -61,7 +61,7 @@ $(function () {
 });
 
     //メインビュースワイパー
-    const swiper1 = new Swiper(".js-mv-swiper", {
+    const mv__swiper = new Swiper(".js-mv-swiper", {
     loop: true,
     effect: "fade",
     speed: 3000,
@@ -72,7 +72,7 @@ $(function () {
   });
 
   // キャンペーンスワイパー
-  const swiper2 = new Swiper(".js-campaign-swiper", {
+  const campaign__swiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: "auto",
     spaceBetween: 24,
     allowSlideNext: true,
