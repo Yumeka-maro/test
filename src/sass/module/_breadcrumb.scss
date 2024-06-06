@@ -1,0 +1,27 @@
+@use 'global' as *;
+
+.breadcrumb {
+    padding: rem(8) 0;
+}
+
+.breadcumb__text {
+    font-size: rem(14);
+    font-family: $base-font-family;
+    color: $green;
+    font-weight: $regular;
+    display: flex;
+    align-items: center;
+}
+
+.breadcumb__text--white {
+    color: $white;
+}
+
+.breadcrumb img {
+    width: rem(4);
+    height: rem(8);
+    margin: 0 rem(8);
+    display: block;
+}
+
+

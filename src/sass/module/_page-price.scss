@@ -1,0 +1,108 @@
+@use 'global' as *;
+
+.page-price__inner {
+    width: 100%;
+    @include mq("md"){
+        max-width: rem(700);
+    }
+}
+
+.page-price__list {
+    font-size: rem(16);
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    margin-top: rem(40);
+    @include mq("md"){
+        display: flex;
+    }
+}
+
+.page-price__list-main {
+    background-color: $green-accent;
+    text-align: center;
+    padding: rem(8) rem(77);
+    display: flex;
+    justify-content: center;
+    @include mq("md"){
+        flex-direction: column-reverse;
+        padding: rem(70) rem(10);
+        width: 28%;
+    }
+}
+
+.page-price__list-title {
+    margin-left: rem(8);
+    color: $white;
+    font-weight: $bold;
+    @include mq("md"){
+        margin-left: 0;
+    }
+}
+
+.page-price__img {
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    @include mq("md"){
+        width: rem(64);
+        height: rem(64);
+    }
+}
+
+.page-price__list-inner {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq("md"){
+        width: 72%;
+    }
+}
+
+.page-price__list-inner dt,
+.page-price__list-inner dd {
+    border-right: solid rem(1) $green-accent;
+    border-bottom: solid rem(1) $green-accent;
+    color: $green;
+}
+
+.page-price__list-inner dd {
+    padding: rem(16) rem(18);
+}
+
+.page-price__list-inner dt {
+    border-left: solid rem(1) $green-accent;
+    padding: rem(7) rem(20);
+}
+
+.page-price__lists dt {
+    width: 70%;
+}
+
+.page-price__list dd {
+    width: 30%;
+    text-align: right;
+}
+
+
+
+
+// .page-price__item {
+//     @include mq("md"){
+//         display: block;
+//     }
+// }
+
+// .page-price__item tr {
+//     @include mq("md"){
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
+
+// .page-price__item th,
+// .page-price__item td {
+//     @include mq("md"){
+//         flex: 1;
+//         text-align: center;
+//     }
+// }

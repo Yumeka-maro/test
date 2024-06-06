@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.thanks__inner {
+    position: relative;
+}
+
+.thanks__inner::before {
+    content: "";
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/fish-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -2%;
+    left: 0;
+    @include mq("md"){
+        width: rem(301);
+        height: rem(138);
+        top: -7%;
+        left: calc(50% - min(50vw, 38.75rem));
+    }
+}
+
+.thanks__contents {
+    padding-top: rem(24);
+    @include mq("md"){
+        padding-top: rem(70);
+    }
+}
+
+.thanks__text-wrapper {
+    margin-top: rem(40);
+}
+
+.thanks__text {
+    font-size: rem(16);
+    font-weight: $regular;
+    text-align: center;
+}
+

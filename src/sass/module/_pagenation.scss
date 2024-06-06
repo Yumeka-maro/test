@@ -1,0 +1,50 @@
+@use 'global' as *;
+
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+
+.pagination-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: rem(38);
+    height: rem(38);
+    background: $white;
+    border: solid rem(1) $green-accent;
+    font-size: rem(16);
+    font-family: $fourth-font-family;
+    color: $green-accent;
+    font-weight: bold;
+    transition: all 0.15s linear;
+}
+
+.pagination-item-link-icon {
+    width: rem(20);
+}
+
+.pagination-item-link.isActive {
+    background: $green-accent;
+    color: $white;
+    pointer-events: none;
+}
+
+.pagination-item-link:not(.isActive):hover {
+    background: $green-accent;
+    color: $white;
+}
+
+.pagination > * + * {
+    margin-left: rem(12);
+}
+
+.pagination-item--first-item {
+    margin-right: rem(28);
+}
+
+.pagination-item--last-item {
+    margin-left: rem(40);
+}

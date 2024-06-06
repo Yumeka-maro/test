@@ -30,6 +30,7 @@
 
 .section-header__ja-title--white,
 .section-header__en-title--white {
+    
     @include mq("md"){
         color: $white;
     }
@@ -45,19 +46,19 @@
     }
 }
 
-.section-header__ja-title--large1 {
+.section-header__ja-title.section-header__ja-title--sub1 {
     margin-top: 0;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 
-.section-header__ja-title--large2 {
+.section-header__ja-title.section-header__ja-title--sub2 {
     font-size: rem(14);
     line-height: calc(9 / 7);
     margin-top: 0;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);
 }
 
-.section-header__en-title--large {
+.section-header__en-title.section-header__en-title--large {
     font-size: rem(80);
     line-height: 1;
     text-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);

@@ -1,0 +1,57 @@
+@use 'global' as *;
+
+.page-404 {
+    background-color: $green-accent;
+}
+
+.page-404__img {
+    width: rem(345);
+    height: rem(345);
+    @include mq("md"){
+        width: rem(698);
+        height: rem(698);
+    }
+}
+
+.page-404__inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.page-404__contents {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-family: $fourth-font-family;
+    color: $white;
+}
+
+.page-404__title {
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    font-size: rem(80);
+    @include mq("md"){
+        font-size: rem(160);
+    }
+}
+
+.page-404__text {
+    font-size: rem(16);
+    line-height: 2;
+    font-weight: $regular;
+    @include mq("md"){
+        margin-top: rem(24);
+    }
+}
+
+.page-404__button {
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}

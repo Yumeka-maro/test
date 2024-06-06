@@ -1,0 +1,70 @@
+@use 'global' as *;
+
+.tab {
+    width: 100%;
+}
+
+.tab__list {
+    display: flex;
+}
+
+.tab__button {
+    width: rem(102);
+    padding: rem(10) rem(16);
+    cursor: pointer;
+    background-color: $green2;
+    color: $green-accent;
+    font-size: rem(14);
+    font-weight: $regular;
+    box-shadow: rem(2) rem(2) rem(4) rem(0) rgba($color: #000, $alpha: 0.25);
+}
+
+.tab__button:not(:first-child) {
+    margin-left: rem(20);
+}
+
+.tab__button.active {
+    color: $white;
+    background-color: $green-accent;
+}
+
+.tab__contents {
+    margin-top: rem(16);
+    @include mq("md"){
+        margin-top: rem(24);
+    }
+}
+
+.tab__content {
+    display: none;
+    padding: rem(24);
+    border: solid rem(1) $green-accent;
+    // @include mq("md"){
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     gap: rem(48);
+    // }
+}
+
+.tab__content.active {
+    display: block;
+}
+
+.tab__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    border-bottom: solid rem(1) $green-accent;
+    padding-bottom: rem(8);
+    @include mq("md"){
+        font-weight: $regular;
+    }
+}
+
+.tab__text {
+    padding-top: rem(8);
+    font-size: rem(16);
+    line-height: 1.5;
+    font-weight: $regular;
+}
+

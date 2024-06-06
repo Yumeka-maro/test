@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>CodeUps</title>
+  <meta name="description" content="diving" />
+  <meta name="keywords" content="diving" />
+  <!-- ogp -->
+  <meta property="og:title" content="diving" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://hogehoge.com/" />
+  <meta property="og:image" content="http://hogehoge.com/images/ogp-img.jpg" />
+  <meta property="og:site_name" content="diving" />
+  <meta property="og:description" content="diving" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header layout-header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#" class="header__link">
+          <img src="./assets/images/common/logo-white.svg" alt="ヘッダーロゴ">
+        </a>
+      </h1>
+
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item">
+            <a href="#campaign">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">Campaign</p>
+                <p class="pc-nav__sub">キャンペーン</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#about">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">About us</p>
+                <p class="pc-nav__sub">私たちについて</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#information">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">Information</p>
+                <p class="pc-nav__sub">ダイビング情報</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#blog">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">Blog</p>
+                <p class="pc-nav__sub">ブログ</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#voice">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">Voice</p>
+                <p class="pc-nav__sub">お客様の声</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#price">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">Price</p>
+                <p class="pc-nav__sub">料金一覧</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">FAQ</p>
+                <p class="pc-nav__sub">よくある質問</p>
+              </div>
+            </a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#contact">
+              <div class="pc-nav__contain">
+                <p class="pc-nav__main">Contact</p>
+                <p class="pc-nav__sub">お問合せ</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="header__sp-nav sp-nav js-sp-nav">
+        <div class="sp-nav__inner">
+          <div class="sp-nav__grid category">
+            <div class="category__grid-left">
+              <div class="category__item">
+                <div class="category__contain">
+                  <div class="category__title">
+                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                    <a href="#campaign" class="category__main">キャンペーン</a>
+                  </div>
+                  <a href="#campaign" class="category__link"><p class="category__sub">ライセンス取得</p></a>
+                  <a href="#campaign" class="category__link"><p class="category__sub">貸切体験ダイビング</p></a>
+                  <a href="#campaign" class="category__link"><p class="category__sub">ナイトダイビング</p></a>
+                </div>
+                <div class="category__contain">
+                  <div class="category__title">
+                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                    <a href="#about" class="category__main">私たちについて</a>
+                  </div>
+                </div>
+              </div>
+              <div class="category__item">
+                <div class="category__contain">
+                  <div class="category__title">
+                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                    <a href="#information" class="category__main">ダイビング情報</a>
+                  </div>
+                  <a href="#information" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+                  <a href="#information" class="category__link"><p class="category__sub">体験ダイビング</p></a>
+                  <a href="#information" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+                </div>
+                <div class="category__contain">
+                  <div class="category__title">
+                    <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                    <a href="#blog" class="category__main">ブログ</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="category__grid-right">
+              <div class="category__item">
+                <div class="category__contain">
+                  <div class="category__title">
+                    <a href="#voice" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                      <a href="#voice" class="category__main">お客様の声</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="category__contain">
+                  <div class="category__title">
+                    <a href="#price" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                      <a href="#price" class="category__main">料金一覧</a>
+                    </a>
+                  </div>
+                  <a href="#price" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+                  <a href="#price" class="category__link"><p class="category__sub">体験ダイビング</p></a>
+                  <a href="#price" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+                </div>
+              </div>
+              <div class="category__item">
+                <div class="category__contain">
+                  <div class="category__title">
+                    <a href="#faq" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                      <a href="#faq" class="category__main">よくある質問</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="category__contain">
+                  <div class="category__title">
+                    <a href="#" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                      <a href="#" class="category__main">プライバシー<br class="u-mobile">ポリシー</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="category__contain">
+                  <div class="category__title">
+                    <a href="#" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                      <a href="#" class="category__main">利用規約</a>
+                    </a>
+                  </div>
+                </div>
+                <div class="category__contain">
+                  <div class="category__title">
+                    <a href="#contact" class="category__link">
+                      <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                      <a href="#contact" class="category__main">お問合せ</a>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+  <main>
+    <!-- メインビュー -->
+    <div class="page-mv">
+      <div class="page-mv__inner">
+          <div class="page-mv__img">
+              <picture>
+                  <source srcset="./assets/images/common/aboutusTop-sp.jpg" media="(max-width: 767px)">
+                  <img src="./assets/images/common/aboutusTop-pc.jpg" alt="青い空とシーサー">
+              </picture>
+              <div class="page-mv__title">About us</div>
+          </div>
+      </div>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumb">
+          <div class="inner">
+              <div class="breadcumb__text"><p>TOP</p><img src="./assets/images/common/breadcrumb.svg" alt="矢印"><p>私たちについて</p></div>
+          </div>
+    </div>
+
+    <!-- キャンペーン -->
+    <div class="page-campaign layout-campaign">
+      <div class="page-campaign__contents">
+        <div class="campaign-card">
+          <div class="campaign-card__inner">
+            <div class="campaign-card__img">
+              <img src="./assets/images/common/campaign1.png" alt="ターコイズブルーの海の中で蛍光色の魚たちが泳いでいる様子">
+            </div>
+            <div class="campaign-card__body">
+                <p class="campaign-card__tag">ライセンス講習</p>
+                <p class="campaign-card__title">ライセンス取得ライセンス取得ライセンス取得ライセンス取得</p>
+              <div class="campaign-card__sub">
+                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                <div class="campaign-card__price">
+                  <div class="campaign-card__discount">¥56,000</div>
+                  <div class="campaign-card__cost">¥46,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="campaign-card">
+          <div class="campaign-card__inner">
+            <div class="campaign-card__img">
+              <img src="./assets/images/common/campaign2.png" alt="ターコイズブルーの浜辺と両脇に船がある様子">
+            </div>
+            <div class="campaign-card__body">
+                <p class="campaign-card__tag">体験ダイビング</p>
+                <p class="campaign-card__title">貸切体験ダイビング</p>
+              <div class="campaign-card__sub">
+                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                <div class="campaign-card__price">
+                  <div class="campaign-card__discount">¥24,000</div>
+                  <div class="campaign-card__cost">¥18,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="campaign-card">
+          <div class="campaign-card__inner">
+            <div class="campaign-card__img">
+              <img src="./assets/images/common/campaign3.png" alt="藍色の海の中で白いクラゲが泳いでいる様子">
+            </div>
+            <div class="campaign-card__body">
+                <p class="campaign-card__tag">体験ダイビング</p>
+                <p class="campaign-card__title">ナイトダイビング</p>
+              <div class="campaign-card__sub">
+                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                <div class="campaign-card__price">
+                  <div class="campaign-card__discount">¥10,000</div>
+                  <div class="campaign-card__cost">¥8,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="campaign-card">
+          <div class="campaign-card__inner">
+            <div class="campaign-card__img">
+              <img src="./assets/images/common/campaign4.png" alt="青い空と青い海の中でダイビングしている様子">
+            </div>
+            <div class="campaign-card__body">
+                <p class="campaign-card__tag">ファンダイビング</p>
+                <p class="campaign-card__title">貸切ファンダイビング</p>
+              <div class="campaign-card__sub">
+                <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                <div class="campaign-card__price">
+                  <div class="campaign-card__discount">¥20,000</div>
+                  <div class="campaign-card__cost">¥16,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="pagination">
+      <li class="pagination-item pagination-item--first-item">
+          <a class="pagination-item-link" href="/pages/1/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 19l-7-7 7-7" />
+            </svg>
+          </a>
+      </li>
+      <li class="pagination-item">
+          <a class="pagination-item-link isActive" href="/pages/1/"><span>1</span></a>
+      </li>
+      <li class="pagination-item">
+          <a class="pagination-item-link" href="/pages/2/"><span>2</span></a>
+      </li>
+      <li class="pagination-item">
+          <a class="pagination-item-link" href="/pages/3/"><span>3</span></a>
+      </li>
+      <li class="pagination-item">
+          <a class="pagination-item-link" href="/pages/4/"><span>4</span></a>
+      </li>
+      <li class="pagination-item u-desktop">
+          <a class="pagination-item-link" href="/pages/5/"><span>5</span></a>
+      </li>
+      <li class="pagination-item u-desktop">
+        <a class="pagination-item-link" href="/pages/6/"><span>6</span></a>
+      </li>
+      <li class="pagination-item pagination-item--last-item">
+          <a class="pagination-item-link" href="/pages/5/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 5l7 7-7 7" />
+            </svg>
+          </a>
+      </li>
+  </ul>
+  <!-- コンタクト -->
+  <section class="contact layout-contact" id="contact">
+    <div class="contact__inner inner">
+      <div class="contact__contents">
+        <div class="contact__map">
+          <h3 class="contact__logo-wrap"><img src="./assets/images/common/logo-green.svg" class="contact__logo" alt="ロゴ"></h3>
+          <div class="contact__text-wrap">
+            <div class="contact__text">
+              <p>沖縄県那覇市1-1</p>
+              <p>TEL:0120-000-0000</p>
+              <p>営業時間:8:30-19:00</p>
+              <p>定休日:毎週火曜日</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57272.98530030893!2d127.64350223082273!3d26.21093643736236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1714199998793!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="contact__title-wrap">
+          <div class="contact__title section-header">
+            <p class="section-header__en-title section-header__en-title--large">Contact</h>
+            <h2 class="section-header__ja-title section-header__ja-title--sub1">お問合せ</h2>
+            <p class="section-header__ja-title section-header__ja-title--sub2">ご予約・お問合せはコチラ</p>
+            <div class="contact__button"><a href="#" class="button">Contact us<span></span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- フッター -->
+  <footer class="footer layout-footer">
+    <div class="footer__inner inner">
+      <div class="footer__header">
+        <div class="footer__logo">
+          <a href="#" class="footer__link">
+            <img src="./assets/images/common/logo-white.svg" alt="フッターロゴ">
+          </a>
+        </div>
+        <div class="footer__sns">
+          <a href="#" class="footer__sns--facebook"><img src="./assets/images/common/FacebookLogo.png" alt="フェイスブック"></a>
+          <a href="#" class="footer__sns--instagram"><img src="./assets/images/common/InstagramLogo.png" alt="インスタグラム"></a>
+        </div>
+      </div>
+      <div class="footer__grid category">
+        <div class="category__grid-left">
+          <div class="category__item">
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#campaign" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#campaign" class="category__main">キャンペーン</a>
+                </a>
+              </div>
+              <a href="#campaign" class="category__link"><p class="category__sub">ライセンス取得</p></a>
+              <a href="#campaign" class="category__link"><p class="category__sub">貸切体験ダイビング</p></a>
+              <a href="#campaign" class="category__link"><p class="category__sub">ナイトダイビング</p></a>
+            </div>
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#about" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#about" class="category__main">私たちについて</a>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="category__item">
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#information" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#information" class="category__main">ダイビング情報</a>
+                </a>
+              </div>
+              <a href="#information" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+              <a href="#information" class="category__link"><p class="category__sub">体験ダイビング</p></a>
+              <a href="#information" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+            </div>
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#blog" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#blog" class="category__main">ブログ</a>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="category__grid-right">
+          <div class="category__item">
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#voice" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#voice" class="category__main">お客様の声</a>
+                </a>
+              </div>
+            </div>
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#price" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#price" class="category__main">料金一覧</a>
+                </a>
+              </div>
+              <a href="#price" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+              <a href="#price" class="category__link"><p class="category__sub">体験ダイビング</p></a>
+              <a href="#price" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+            </div>
+          </div>
+          <div class="category__item">
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#faq" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#faq" class="category__main">よくある質問</a>
+                </a>
+              </div>
+            </div>
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#" class="category__main">プライバシー<br class="u-mobile">ポリシー</a>
+                </a>
+              </div>
+            </div>
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#" class="category__main">利用規約</a>
+                </a>
+              </div>
+            </div>
+            <div class="category__contain">
+              <div class="category__title">
+                <a href="#contact" class="category__link">
+                  <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
+                  <a href="#contact" class="category__main">お問合せ</a>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top js-to-top"><img src="./assets/images/common/arrow.png" alt="矢印" class="arrow__img"></a>
+</body>
+
+</html>

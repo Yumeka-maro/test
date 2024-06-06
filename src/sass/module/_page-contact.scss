@@ -1,0 +1,176 @@
+@use 'global' as *;
+
+.page-contact__inner {
+    position: relative;
+}
+
+.page-contact__inner::before {
+    content: "";
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/fish-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -2%;
+    left: 0;
+    z-index: -1;
+    @include mq("md"){
+        width: rem(301);
+        height: rem(138);
+        top: -7%;
+        left: calc(50% - min(50vw, 38.75rem));
+    }
+}
+
+.page-contact__contents {
+    @include mq("md"){
+        max-width: rem(700);
+        width: 100%;
+        margin-inline: auto;
+    }
+}
+
+.page-contact__list {
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+    border-bottom: dashed rem(1) $green-accent;
+    @include mq("md"){
+        padding-top: rem(40);
+        padding-bottom: rem(40);
+    }
+}
+
+.page-contact__item {
+    @include mq("md"){
+        display: flex;
+    }
+}
+
+.page-contact__item dt {
+    color: $green;
+    font-weight: $bold;
+    font-size: rem(16);
+    @include mq("md"){
+        width: 31%;
+    }
+}
+
+.page-contact__item span {
+    color: $white;
+    background-color: $red;
+    font-size: rem(12);
+    font-weight: $regular;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+    padding: rem(2) rem(16);
+    display: inline-block;
+    margin-left: rem(8);
+}
+
+.page-contact__item dd {
+    @include mq("md"){
+        width: 69%;
+        padding-left: 7%;
+    }
+}
+
+.page-contact__input::placeholder {
+    font-size: rem(16);
+    color: $green2;
+    font-weight: $regular;
+}
+
+.page-contact__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em 2em;
+    border: none;
+}
+
+.page-contact__checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 0 .5em;
+    position: relative;
+    cursor: pointer;
+}
+
+.page-contact__checkbox label::before {
+    width: rem(18);
+    height: rem(18);
+    border: rem(1) solid $green-accent;
+    content: '';
+}
+
+.page-contact__checkbox label:has(:checked)::after {
+    position: absolute;
+    top: rem(5);
+    left: rem(7);
+    transform: rotate(45deg);
+    width: rem(5);
+    height: rem(10);
+    border: solid $red;
+    border-width: 0 3px 3px 0;
+    content: '';
+}
+
+.page-contact__checkbox input {
+    display: none;
+}
+
+.page-contact__selectbox {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.page-contact__selectbox::after {
+    position: absolute;
+    right: rem(15);
+    width: rem(10);
+    height: rem(7);
+    background-color: $green-accent;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.page-contact__selectbox select {
+    appearance: none;
+    min-width: rem(400);
+    width: 100%;
+    height: 2.8em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border: 1px solid $green-accent;
+    background-color: $white;
+    color: $green;
+    font-size: rem(12);
+    font-weight: $regular;
+    cursor: pointer;
+}
+
+.page-contact__text {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq("md"){
+        margin-top: rem(80);
+    }
+}
+
+.page-contact__text {
+
+}
+
+
+.page-contact__button {
+    text-align: center;
+    margin-top: rem(24);
+    @include mq("md"){
+        margin-top: rem(40);
+    }
+}
+
+
+
+

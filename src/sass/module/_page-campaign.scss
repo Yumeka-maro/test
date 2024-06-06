@@ -1,0 +1,9 @@
+@use 'global' as *;
+
+.page-campaign__contents {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include mq("md"){
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+.sitemap__inner {
+    color: $green;
+    padding-right: rem(15);
+    padding-left: rem(15);
+    position: relative;
+}
+
+.sitemap__inner::before {
+    content: "";
+    position: absolute;
+    width: rem(109);
+    height: rem(50);
+    background-image: url(../images/common/fish-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -4%;
+    left: 0;
+    @include mq("md"){
+        display: none;
+    }
+}

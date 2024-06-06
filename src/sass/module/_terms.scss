@@ -1,0 +1,55 @@
+@use 'global' as *;
+
+.terms__inner {
+    position: relative;
+    @include mq("md"){
+        max-width: rem(850);
+    }
+}
+
+.terms__inner::before {
+    content: "";
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/fish-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -2%;
+    left: 0;
+    @include mq("md"){
+        width: rem(301);
+        height: rem(138);
+        top: -7%;
+        left: calc(50% - min(50vw, 38.75rem));
+    }
+}
+
+.terms__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $green;
+    @include mq("md"){
+        font-size: rem(32);
+    }
+}
+
+.terms__contents {
+    margin-top: rem(32);
+}
+
+.terms__text,
+.terms__text-indent {
+    font-size: rem(16);
+    line-height: 2;
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $green;
+    text-align: justify;
+}
+
+.terms__text-indent {
+    padding-left: rem(17);
+    text-indent: rem(-17);
+}

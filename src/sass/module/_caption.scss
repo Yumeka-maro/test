@@ -1,0 +1,21 @@
+@use 'global' as *;
+
+.caption {
+    border-left: solid rem(8) $green-accent;
+    display: flex;
+    align-items: center;
+}
+
+.caption__img {
+    width: rem(50);
+    height: rem(50);
+    margin-left: rem(16);
+}
+
+.caption__text {
+    margin-left: rem(8);
+    font-size: rem(24);
+    color: $green;
+    font-weight: $regular;
+    font-family: $base-font-family
+}

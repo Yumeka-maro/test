@@ -141,3 +141,44 @@ $(function () {
 
 
 })
+
+//アコーディオン
+$(function () {
+  $(".js-accordion__item .js-accordion__content").css(
+    "display",
+    "block"
+  );
+  $(".js-accordion__item .js-accordion__title").addClass("is-open");
+  $(".js-accordion__title").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
+});
+
+
+//モーダル
+$(".gallery__img").click(function () {
+  $("#grayDisplay").html($(this).prop("outerHTML"));
+  $("#grayDisplay").fadeIn(200);
+  return false;
+});
+
+$("#grayDisplay").click(function () {
+  $("#grayDisplay").fadeOut(200);
+  return false;
+});
+
+//タブ
+$(function () {
+  const tabButton = $(".js-tab-button"),
+    tabContent = $(".js-tab-content");
+    tabButton.on("click", function () {
+    let index = tabButton.index(this);
+
+    tabButton.removeClass("active");
+    $(this).addClass("active");
+    tabContent.removeClass("active");
+    tabContent.eq(index).addClass("active");
+  });
+});
+
