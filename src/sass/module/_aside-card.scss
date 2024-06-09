@@ -1,0 +1,97 @@
+@use 'global' as *;
+
+.aside-card {
+    width: rem(294);
+    display: block;
+    box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
+    background-color: $white;
+    height: auto;
+}
+
+.aside-card:first-child {
+    margin-top: rem(24);
+}
+
+.aside-card:not(:first-child) {
+    margin-top: rem(40);
+}
+
+.aside-card__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.aside-card__inner:hover {
+    opacity: 0.8;
+}
+
+.aside-card__img {
+    flex-grow: 1;
+}
+
+.aside-card__img img {
+    aspect-ratio: 1.5638;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.aside-card__body {
+    padding: rem(16) rem(23) rem(24) rem(23);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.aside-card__title {
+    color: $green;
+    font-size: rem(16);
+    line-height: 1.5;
+    font-weight: $medium;
+    border-bottom: rem(1) solid $green-accent;
+    padding-bottom: rem(4);
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.aside-card__sub {
+    margin-inline: auto;
+    margin-top: rem(8);
+}
+
+.aside-card__text {
+    text-align: center;
+    font-size: rem(14);
+    line-height: 1.7142;
+    flex-grow: 1;
+}
+
+.aside-card__price {
+    display: flex;
+    align-items: flex-end;
+    margin-top: rem(8);
+}
+
+.aside-card__discount {
+    color: $green;
+    font-weight: $bold;
+    font-family: $fourth-font-family;
+    line-height: 1;
+    font-size: rem(20);
+    text-decoration: line-through rem(3) $red ;
+}
+
+.aside-card__cost {
+    color: $green-accent;
+    font-weight: $bold;
+    font-family: $fourth-font-family;
+    line-height: 1;
+    margin-left: rem(16);
+    font-size: rem(32);
+}
+

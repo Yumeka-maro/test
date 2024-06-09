@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.aside__accordion {
+    margin-top: rem(24);
+}
+
+details {
+    color: $green-accent;
+    font-weight: $regular;
+    font-size: rem(24);
+}
+
+summary {
+	cursor: pointer;
+}
+
+.details__inner {
+    text-indent: rem(24);
+}
+

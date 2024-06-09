@@ -1,0 +1,36 @@
+@use 'global' as *;
+
+.tag {
+    max-width: rem(744);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(21);
+    @include mq("md"){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: rem(32);
+    }
+}
+
+.tag__button {
+    width: rem(162);
+    padding: rem(6) 0;
+    cursor: pointer;
+    background-color: $white;
+    color: $green-accent;
+    font-size: rem(14);
+    line-height: 11/7;
+    font-weight: $regular;
+    border: rem(1) solid $green-accent;
+}
+
+
+.tag__button.isActive {
+    background: $green-accent;
+    color: $white;
+    pointer-events: none;
+}
+
+.tag__button:not(.isActive):hover {
+    background: $green-accent;
+    color: $white;
+}

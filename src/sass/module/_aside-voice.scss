@@ -1,0 +1,33 @@
+@use 'global' as *;
+
+.aside__voice {
+    margin-top: rem(24);
+}
+
+.aside-voice__img {
+    aspect-ratio: 1.3486;
+    max-width: rem(294);
+}
+
+.aside-voice__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.aside-voice__age {
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1.5;
+    margin-top: rem(16);
+    color: $green;
+}
+
+.aside-voice__title {
+    font-weight: $medium;
+    font-size: rem(24);
+    margin-top: rem(8);
+    color: $green;
+}
+

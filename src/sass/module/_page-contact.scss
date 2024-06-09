@@ -75,11 +75,32 @@
     }
 }
 
-.page-contact__input::placeholder {
+.page-contact__input,
+.page-contact__textarea {
+    border: rem(1) solid $green-accent;
+    width: 100%;
     font-size: rem(16);
-    color: $green2;
+    color: $green;
     font-weight: $regular;
+    padding: rem(8) rem(16);
 }
+
+.page-contact__input::placeholder {
+    color: $green2;
+}
+
+.page-contact__input,
+.page-contact__textarea {
+    color: $green;
+    &:focus {
+        color: $green;
+    }
+}
+
+.page-contact__textarea {
+    height: rem(200);
+}
+
 
 .page-contact__checkbox {
     display: flex;
@@ -111,7 +132,7 @@
     width: rem(5);
     height: rem(10);
     border: solid $red;
-    border-width: 0 3px 3px 0;
+    border-width: 0 rem(2) rem(2) 0;
     content: '';
 }
 
@@ -123,6 +144,7 @@
     display: inline-flex;
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .page-contact__selectbox::after {
@@ -138,11 +160,10 @@
 
 .page-contact__selectbox select {
     appearance: none;
-    min-width: rem(400);
     width: 100%;
     height: 2.8em;
     padding: .4em calc(.8em + 30px) .4em .8em;
-    border: 1px solid $green-accent;
+    border: rem(1) solid $green-accent;
     background-color: $white;
     color: $green;
     font-size: rem(12);
@@ -151,15 +172,36 @@
 }
 
 .page-contact__text {
-    text-align: center;
+    text-align: left;
     margin-top: rem(40);
     @include mq("md"){
+        text-align: center;
         margin-top: rem(80);
+        margin-inline: auto;
     }
 }
 
-.page-contact__text {
 
+.page-contact__text fieldset {
+    display: flex;
+    align-items: flex-start;
+    @include mq("md"){
+        align-items: center;
+    }
+}
+
+.page-contact__text label {
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+    @include mq("md"){
+        align-items: center;
+        margin-inline: auto;
+    }
+}
+
+.page-contact__text input[type="checkbox"] {
+    margin-right: rem(10);
 }
 
 
@@ -169,6 +211,22 @@
     @include mq("md"){
         margin-top: rem(40);
     }
+}
+
+.input-error {
+    border: rem(1) solid $red;
+    background-color: rgba($red, 0.2);
+}
+
+.input-error::placeholder {
+    color: $white;
+}
+
+.error-message {
+    color: $red;
+    text-align: center;
+    margin-bottom: rem(40);
+    display: none;
 }
 
 

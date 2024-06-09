@@ -1,14 +1,14 @@
 @use 'global' as *;
 
-.page-information__inner {
+.page-blog__inner {
     position: relative;
-    padding-top: rem(80);
     @include mq("md"){
-        padding-top: rem(150);
+        display: flex;
+        gap: rem(80);
     }
 }
 
-.page-information__inner::before {
+.page-blog__inner::before {
     content: "";
     position: absolute;
     width: rem(120);
@@ -16,13 +16,23 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: 0;
+    top: -0.3%;
     left: auto;
-    z-index: -1;
+    z-index: 2;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -7%;
+        top: 0;
         left: calc(50% - min(50vw, 38.75rem));
+        z-index: -1;
     }
+}
+
+.page-blog__main {
+    max-width: rem(706);
+    width: 100%;
+}
+
+.page-blog__pagination {
+    margin-top: rem(80);
 }

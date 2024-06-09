@@ -1,0 +1,7 @@
+@use 'global' as *;
+
+.layout-page-campaign {
+    @include mq("md"){
+        margin-top: rem(100);
+    }
+}

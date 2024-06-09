@@ -246,6 +246,7 @@
               <form action="">
                 <ul class="page-contact__lists">
                   <li class="page-contact__list">
+                    <div id="error-message" class="error-message"></div>
                     <dl class="page-contact__item">
                       <dt>お名前<span>必須</span></dt>
                       <dd><input type="text" name="お名前" placeholder="沖縄　太郎" class="page-contact__input"></dd>
@@ -260,7 +261,7 @@
                   <li class="page-contact__list">
                     <dl class="page-contact__item">
                       <dt>電話番号<span>必須</span></dt>
-                      <dd><input type="text" name="電話番号" placeholder="000-0000-0000" class="page-contact__input"></dd>
+                      <dd><input type="tel" name="電話番号" placeholder="000-0000-0000" class="page-contact__input"></dd>
                     </dl>
                   </li>
                   <li class="page-contact__list">
@@ -315,7 +316,7 @@
                   </label>
                 </fieldset>
               </div>
-              <div class="page-contact__button"><a href="#" class="button">Send<span></span></a></div>
+              <div class="page-contact__button"><button href="#" class="button" id="submitBtn">Send<span></span></button></div>
             </div>
         </div>
     </div>

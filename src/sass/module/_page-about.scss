@@ -2,13 +2,29 @@
 
 .page-about__inner {
     max-width: rem(600);
+    position: relative;
 }
 
-.page-about__contents {
+.page-about__inner::before {
+    content: "";
+    position: absolute;
+    width: rem(120);
+    height: rem(55);
+    background-image: url(../images/common/fish-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -5%;
+    left: calc(50% - min(50vw, 38.75rem));
+    z-index: 2;
     @include mq("md"){
-        position: relative;
+        width: rem(301);
+        height: rem(138);
+        top: -10.5%;
+        left: calc(50% - min(50vw, 38.75rem));
+        z-index: -1;
     }
 }
+
 
 .page-about__img-wrapper {
     position: relative;
@@ -71,10 +87,14 @@
     font-family: $third-font-family;
     color: $green-accent;
     font-weight: $regular;
+    color: $white;
+    top: rem(24);
+    left: rem(24);
+    position: absolute;
     @include mq("md"){
+        display: initial;
         font-size: rem(80);
         line-height: calc(5 / 4);
-        color: $white;
         width: 50%;
     }
 }

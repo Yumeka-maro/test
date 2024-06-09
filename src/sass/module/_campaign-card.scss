@@ -125,3 +125,43 @@
         margin-left: rem(24);
     }
 }
+
+.campaign-card__text {
+    font-size: rem(16);
+    line-height: 1.5;
+    color: $green;
+    flex-grow: 1;
+    padding-top: rem(13);
+    padding-bottom: rem(8);
+}
+
+.campaign-card__comment {
+    font-size: rem(16);
+    font-weight: $regular;
+    margin-top: rem(24);
+}
+
+.campaign-card__note {
+    color: $green-accent;
+    margin-top: rem(32);
+    text-align: center;
+}
+
+.campaign-card__date {
+    font-weight: $bold;
+    font-size: rem(16);
+    line-height: 1.125;
+    font-family: $fourth-font-family;
+}
+
+.campaign-card__booking {
+    font-weight: $regular;
+    font-size: rem(14);
+    line-height: 1.2857;
+    margin-top: rem(7);
+}
+
+.campaign-card__button {
+    text-align: center;
+    margin-top: rem(16);
+}
