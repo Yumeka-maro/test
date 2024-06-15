@@ -21,18 +21,13 @@
     aspect-ratio: 301 / 201;
     cursor: pointer;
     overflow: hidden;
-    transform: translateZ(0);
-    will-change: transform;
 }
 
 .blog-card__img img {
     height: auto;
     width: 100%;
-    display: block;
     transition: transform .6s ease;
     backface-visibility: hidden;
-    transform-style: preserve-3d;
-    perspective: 1000px;
 }
 
 .blog-card:hover .blog-card__img img {
