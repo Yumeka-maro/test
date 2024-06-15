@@ -4,13 +4,23 @@
     box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
     background-color: $white;
     height: auto;
-    margin-top: rem(16);
+    margin-left: rem(16);
+}
+
+.aside-article:not(:first-child) {
+    margin-top: rem(24);
+    @include mq("md"){
+        margin-top: rem(21);
+    }
 }
 
 .aside-article__inner {
     display: flex;
-    gap: rem(16);
     padding: rem(16);
+    gap: rem(16);
+    @include mq("md"){
+        gap: rem(3);
+    }
 }
 
 .aside-article__inner:hover {
@@ -39,5 +49,4 @@
     font-size: rem(16);
     font-weight: $medium;
     color: $green;
-    margin-top: rem(4);
 }

@@ -2,10 +2,6 @@
 
 .page-information__inner {
     position: relative;
-    padding-top: rem(80);
-    @include mq("md"){
-        padding-top: rem(150);
-    }
 }
 
 .page-information__inner::before {
@@ -16,13 +12,13 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: 0;
+    top: -15%;
     left: auto;
     z-index: -1;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -7%;
+        top: -15%;
         left: calc(50% - min(50vw, 38.75rem));
     }
 }

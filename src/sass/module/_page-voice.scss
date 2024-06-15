@@ -13,20 +13,29 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -2%;
-    left: 0;
+    top: -0.8%;
+    left: auto;
     z-index: -1;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -7%;
+        top: -5%;
         left: calc(50% - min(50vw, 38.75rem));
     }
 }
 
 .page-voice__contents {
-    margin-top: rem(40);
+    margin-top: rem(37);
     @include mq("md"){
-        margin-top: rem(30);
+        margin-top: rem(37);
+    }
+}
+
+.page-voice__pagination {
+    margin-top: rem(72);
+    margin-bottom: rem(105);
+    @include mq("md"){
+        margin-top: rem(71);
+        margin-bottom: 0;
     }
 }

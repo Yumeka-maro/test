@@ -21,6 +21,8 @@
     aspect-ratio: 301 / 201;
     cursor: pointer;
     overflow: hidden;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .blog-card__img img {
@@ -28,6 +30,9 @@
     width: 100%;
     display: block;
     transition: transform .6s ease;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .blog-card:hover .blog-card__img img {
@@ -35,7 +40,7 @@
 }
 
 .blog-card__body {
-    padding: rem(8) rem(16) rem(16) rem(16);
+    padding: rem(8) rem(24) rem(24) rem(24);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -46,6 +51,13 @@
     line-height: 1.5;
     font-family: $third-font-family;
     color: $green;
+    margin-top: rem(10);
+}
+
+.blog-card__date--page {
+    @include mq("md"){
+        margin-top: rem(17);
+    }
 }
 
 .blog-card__title {

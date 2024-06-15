@@ -1,7 +1,7 @@
 @use 'global' as *;
 
-.layout-page-blog-detail {
-    margin-top: rem(52);
+.layout-page-detail {
+    margin-top: rem(45);
     @include mq("md"){
         margin-top: rem(140);
     }

@@ -1,8 +1,8 @@
 @use 'global' as *;
 
-.layout-page-detail {
-    margin-top: rem(28);
+.layout-page-blog {
+    margin-top: rem(44);
     @include mq("md"){
-        margin-top: rem(80);
+        margin-top: rem(144);
     }
 }

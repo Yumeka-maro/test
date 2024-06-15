@@ -24,6 +24,7 @@
     @include mq("md"){
         width: rem(300);
         padding: rem(13) 0;
+        font-size: rem(24);
     }
 }
 
@@ -61,7 +62,7 @@
 
 .tab__content {
     display: none;
-    padding: rem(24);
+    padding: rem(16);
     border: solid rem(1) $green-accent;
     @include mq("md"){
         display: flex;
@@ -83,17 +84,22 @@
     font-size: rem(24);
     font-weight: $medium;
     border-bottom: solid rem(1) $green-accent;
-    padding-bottom: rem(8);
+    color: $green;
+    text-indent: rem(8);
     @include mq("md"){
         font-weight: $medium;
     }
 }
 
 .tab__text {
-    padding-top: rem(8);
     font-size: rem(16);
     line-height: 1.5;
     font-weight: $regular;
+    color: $green;
+    margin-top: rem(8);
+    text-indent: rem(8);
+    padding-left: rem(8);
+    letter-spacing: 0.01em;
 }
 
 .tab__img {

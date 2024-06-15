@@ -17,7 +17,7 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: 0.8%;
+    top: 1%;
     z-index: -1;
     @include mq("md"){
         width: rem(301);
@@ -32,7 +32,10 @@
     grid-template-columns: 1fr;
     margin-top: rem(40);
     row-gap: rem(40);
-    @include mq("md"){
+    max-width: rem(280);
+    margin-inline: auto;
+    @include mq("sm"){
+        max-width: rem(1080);
         grid-template-columns: 1fr 1fr;
         column-gap: rem(40);
         row-gap: rem(80);
@@ -46,7 +49,7 @@
 .page-campaign__pagination {
     padding: rem(80) 0;
     @include mq("md"){
-        padding: rem(80) 0 0 0;
+        padding: rem(85) 0 0 0;
     }
 }
 

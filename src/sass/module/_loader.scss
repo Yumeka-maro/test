@@ -1,0 +1,18 @@
+@use 'global' as *;
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.loaderline {
+    width: calc((100% / 2) + 1px);
+    margin-left: -1px;
+    height: 100%;
+}
+.loadertext {
+    color: $green;
+}

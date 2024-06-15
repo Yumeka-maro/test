@@ -15,8 +15,8 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -2%;
-    left: 0;
+    top: -1.5%;
+    left: 4.3%;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
@@ -36,7 +36,7 @@
 }
 
 .terms__contents {
-    margin-top: rem(32);
+    margin-top: rem(35);
 }
 
 .terms__text,
@@ -47,6 +47,7 @@
     font-family: $base-font-family;
     color: $green;
     text-align: justify;
+    letter-spacing: 0.02em;
 }
 
 .terms__text-indent {

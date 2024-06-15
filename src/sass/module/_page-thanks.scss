@@ -12,12 +12,12 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -2%;
-    left: 0;
+    top: 0;
+    left: 4%;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -7%;
+        top: 0;
         left: calc(50% - min(50vw, 38.75rem));
     }
 }
@@ -30,7 +30,7 @@
 }
 
 .thanks__text-wrapper {
-    margin-top: rem(40);
+    margin-top: rem(33);
 }
 
 .thanks__text {

@@ -3,9 +3,11 @@
 .page-detail__inner {
     max-width: rem(600);
     position: relative;
+    margin-bottom: rem(112);
     @include mq("md"){
         display: flex;
         gap: rem(80);
+        margin-bottom: 0;
     }
 }
 
@@ -17,13 +19,13 @@
     background-image: url(../images/common/fish-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -0.5%;
+    top: -0.7%;
     left: auto;
     z-index: 2;
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -2.7%;
+        top: -2.8%;
         left: calc(50% - min(50vw, 38.75rem));
         z-index: -1;
     }
@@ -42,6 +44,9 @@
     border-bottom: solid rem(1) $green-accent;
     padding-bottom: rem(4);
     color: $green;
+    @include mq("md"){
+        font-size: rem(32);
+    }
 }
 
 .page-detail__content {

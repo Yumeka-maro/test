@@ -10,6 +10,24 @@
     }
 }
 
+.footer__404 {
+    padding-top: rem(12);
+    @include mq("md"){
+        padding-top: rem(41);
+    }
+}
+
+.footer-privacy {
+    padding-top: rem(37);
+}
+
+.footer-terms {
+    padding-top: rem(40);
+    @include mq("md"){
+        padding-top: rem(60);
+    }
+}
+
 .footer__inner {
     background-color: $green-accent;
     color: $white;
@@ -20,8 +38,7 @@
 .footer__header {
     @include mq("md"){
         display: flex;
-        align-items: flex-end;
-        padding-bottom: rem(20);
+        align-items: center;
     }
 }
 
@@ -30,7 +47,7 @@
     margin-top: rem(16);
     @include mq("md"){
         margin-top: 0;
-        padding-bottom: rem(10);
+        // padding-bottom: rem(10);
         margin-left: rem(40);
     }
 }

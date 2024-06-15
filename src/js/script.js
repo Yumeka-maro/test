@@ -192,6 +192,73 @@ $(function () {
   });
 });
 
+// $(window).on("hashchange", function () {
+//             activateTabFromHash();
+//         });
+//         function activateTabFromHash() {
+//             var hash = window.location.hash;
+//             var index = getIndexFromHash(hash);
+//             $(".js-tab-button").removeClass("is-action");
+//             $(".js-tab-button").removeClass("is-action");
+//             if (hash) {
+//                 $("#tab-" + hash.replace("#", "")).addClass("is-action");
+//                 $(hash).addClass("is-action");
+//                 var contentId = hash.replace("#tab-", "#");
+//                 $(contentId).addClass("is-action");
+//                 var index = getIndexFromHash(hash);
+//             } else {
+//               $(".js-tab-button:first").addClass("is-action");
+//               $(".js-tab-content:first").addClass("is-action");
+//             }
+//         }
+//         $(window).on("load", function () {
+//             var hash = window.location.hash;
+//             var index = getIndexFromHash(hash);
+//         });
+//         $(".js-tab-content:first-of-type").css("display", "block");
+//         var hash = window.location.hash;
+//         var index = getIndexFromHash(hash);
+//         showCategory(index);
+//         $(".js-tab-button").on("click", function () {
+//             var index = $(this).index();
+//             showCategory(index);
+//         });
+// function showCategory(index) {
+//             $(".js-tab-button").removeClass("is-action");
+//             $(".js-tab-button").eq(index).addClass("is-action");
+//             $(".js-tab-content").hide().eq(index).fadeIn(300);
+//         }
+//         function getIndexFromHash(hash) {
+//             var defaultIndex = 0;
+//             if (!hash.startsWith("#info")) {
+//                 return defaultIndex;
+//             }
+//             var index = parseInt(hash.replace("#info", ""), 10) - 1;
+//             if (isNaN(index) || index < 0 index >= $(".js-tab-button").length) {
+//                 return defaultIndex;
+//             }
+//             return index;
+//         }
+//         $('a[href^="#"]').click(function () {
+//             const speed = 600;
+//             let href = $(this).attr("href");
+//             let target = $(href == "#" || href == "" ? "html" : href);
+//             $("html, body").animate(
+//                 {
+//                     scrollTop: target.offset().top,
+//                 },
+//                 speed
+//             );
+//             return false;
+//         });
+//         function scrollToSection(index) {
+//             const headerHeight = $(".js-header").height();
+//             let target = $(".js-tab-button").eq(index);
+//             let targetTop = target.offset().top;
+//             let position = targetTop - headerHeight;
+//             $("body,html").animate({ scrollTop: position }, 500, "swing");
+//         }
+
 //入力なしエラーコンタクトページ
 document.getElementById('submitBtn').addEventListener('click', function(event) {
   const inputs = document.querySelectorAll('.page-contact__input, .page-contact__textarea');
@@ -224,14 +291,15 @@ if (phoneInput && !/^\+?(\d{1,3})?[-. ]?\(?\d{1,3}\)?[-. ]?\d{3,4}[-. ]?\d{4}$/.
 
   // エラーメッセージの表示
   if (!isValid) {
-    errorMessageDiv.textContent = '※必須項目が入力されていません。または、入力形式が正しくありません。';
+    document.querySelector('.error-prefix').textContent = '※必須項目が入力されていません。';
+    document.querySelector('.error-main').textContent = '入力してください。';
     errorMessageDiv.style.display = 'block';
     event.preventDefault();
   } else {
-    errorMessageDiv.textContent = '';
+    document.querySelector('.error-prefix').textContent = '';
+    document.querySelector('.error-main').textContent = '';
     errorMessageDiv.style.display = 'none';
   }
-});
 
 
 //入力したとき文字色変更
@@ -249,30 +317,32 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+
 //タグ
-document.addEventListener('DOMContentLoaded', function() {
-  const buttons = document.querySelectorAll('.js-tag-button');
-  console.log("Buttons:", buttons);
+// document.addEventListener('DOMContentLoaded', function() {
+//   const buttons = document.querySelectorAll('.js-tag-button');
+//   console.log("Buttons:", buttons);
 
-  buttons.forEach(button => {
-      button.addEventListener('click', function() {
-          console.log("Button clicked:", button.textContent);
-          buttons.forEach(btn => {
-              btn.classList.remove('tag__button--active');
-              console.log("Removed active class from:", btn.textContent);
-          });
-          button.classList.add('tag__button--active');
-          console.log("Added active class to:", button.textContent);
-      });
-  });
+//   buttons.forEach(button => {
+//       button.addEventListener('click', function() {
+//           console.log("Button clicked:", button.textContent);
+//           buttons.forEach(btn => {
+//               btn.classList.remove('isActive');
+//               console.log("Removed active class from:", btn.textContent);
+//           });
+//           button.classList.add('isActive');
+//           console.log("Added active class to:", button.textContent);
 
-  // 初期状態で「ALL」ボタンをアクティブにする
-  const initialButton = document.querySelector('.js-tag-button');
-  if (initialButton) {
-      initialButton.classList.add('tag__button--active');
-      console.log("Initial button styled:", initialButton.textContent);
-  }
-});
+//   });
+
+//   // 初期状態で「ALL」ボタンをアクティブにする
+//   const initialButton = document.querySelector('.js-tag-button');
+//   if (initialButton) {
+//       initialButton.classList.add('isActive');
+//       console.log("Initial button styled:", initialButton.textContent);
+//   }
+// });
 
 //ローディングアニメーション
   var op = gsap.timeline();
@@ -294,4 +364,4 @@ document.addEventListener('DOMContentLoaded', function() {
     display: "none"
   }, ">");
 
-
+})

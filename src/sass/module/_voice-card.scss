@@ -29,7 +29,7 @@
 .voice-card__title-sub {
     width: 50%;
     @include mq("md"){
-        width: 65%;
+        width: 58%;
     }
 }
 
@@ -82,7 +82,7 @@
     flex-grow: 1;
     @include mq("md"){
         aspect-ratio: 9 / 7;
-        width: 35%;
+        width: 42%;
     }
 }
 
@@ -101,7 +101,7 @@
     flex-grow: 1;
     color: $green;
     @include mq("md"){
-        margin-top: rem(44);
+        margin-top: rem(36);
     }
 }
 

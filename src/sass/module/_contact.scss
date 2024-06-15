@@ -1,5 +1,10 @@
 @use 'global' as *;
 
+.contact-about {
+    @include mq("md"){
+        margin-top: rem(124);
+    }
+}
 
 .contact__inner {
     max-width: rem(600);
@@ -18,8 +23,8 @@
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -9%;
-        right: calc(50% - min(50vw, rem(638)));
+        top: -10%;
+        right: calc(50% - min(50vw, rem(670)));
     }
 }
 
@@ -38,7 +43,7 @@
     @include mq("md"){
         border-right: 1px solid $green-accent;
         margin-inline: auto;
-        width: 55%;
+        width: 50%;
         padding: 0 rem(50);
     }
 }
@@ -101,7 +106,7 @@
     @include mq("md"){
         margin-top: 0;
         margin-inline: auto;
-        width: 45%;
+        width: 50%;
     }
 }
 

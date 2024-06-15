@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr;
     column-gap: rem(40);
-    row-gap: rem(35);
+    row-gap: rem(32);
     @include mq("md"){
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -13,5 +13,7 @@
 .blog-cards--page {
     @include mq("md"){
         grid-template-columns: 1fr 1fr;
+        row-gap: rem(80);
+        column-gap: rem(40);
     }
 }

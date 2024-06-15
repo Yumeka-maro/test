@@ -2,6 +2,7 @@
 
 .aside__voice {
     margin-top: rem(24);
+    margin-left: rem(15);
 }
 
 .aside-voice__img {
@@ -20,8 +21,11 @@
     font-size: rem(12);
     font-weight: $regular;
     line-height: 1.5;
-    margin-top: rem(16);
+    margin-top: rem(20);
     color: $green;
+    @include mq("md"){
+        margin-top: rem(32);
+    }
 }
 
 .aside-voice__title {
@@ -29,5 +33,6 @@
     font-size: rem(24);
     margin-top: rem(8);
     color: $green;
+    letter-spacing: 0.01em;
 }
 

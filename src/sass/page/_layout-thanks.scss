@@ -1,8 +1,16 @@
 @use 'global' as *;
 
 .layout-thanks {
-    margin-top: rem(28);
+    margin-top: rem(18);
+    margin-bottom: rem(141);
     @include mq("md"){
-        margin-top: rem(80);
+        margin-top: rem(70);
+        margin-bottom: 0;
+    }
+}
+
+.layout-footer--thanks {
+    @include mq("md"){
+        margin-top: rem(112);
     }
 }

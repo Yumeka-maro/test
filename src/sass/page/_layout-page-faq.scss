@@ -1,8 +1,9 @@
 @use 'global' as *;
 
 .layout-page-faq {
-    margin: rem(52) 0 rem(80) 0;
+    margin-top: rem(27);
+    margin-bottom: rem(105);
     @include mq("md"){
-        margin: rem(150) 0 rem(100) 0;
+        margin-top: rem(141);
     }
 }

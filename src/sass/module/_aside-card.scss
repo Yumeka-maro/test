@@ -6,6 +6,10 @@
     box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
     background-color: $white;
     height: auto;
+    margin-inline: auto;
+    @include mq("md"){
+        margin-left: auto;
+    }
 }
 
 .aside-card:first-child {
