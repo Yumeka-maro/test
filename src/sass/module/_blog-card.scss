@@ -6,14 +6,18 @@
     height: auto;
 }
 
+.blog-card a {
+    display: block;
+}
+
 .blog-card__inner {
     display: flex;
     flex-direction: column;
 }
 
-.blog-card__inner:hover {
-    opacity: 0.8;
-}
+// .blog-card__inner:hover {
+//     opacity: 0.8;
+// }
 
 .blog-card__img {
     flex-grow: 1;

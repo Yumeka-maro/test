@@ -10,6 +10,10 @@
     }
 }
 
+.blog-cards a {
+    display: block;
+}
+
 .blog-cards--page {
     @include mq("md"){
         grid-template-columns: 1fr 1fr;
