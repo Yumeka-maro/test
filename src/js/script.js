@@ -42,7 +42,7 @@ window.addEventListener('resize', function() {
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
-        event.preventDefault();
+        // event.preventDefault();
         $('html, body').stop().animate({
             scrollTop: target.offset().top - $('.header').outerHeight()
         }, 1000);
@@ -174,23 +174,78 @@ $(function () {
         tabContent = $(".js-tab-content"),
         tabIcons = $(".tab__icon");
 
-  tabButton.first().addClass("is-action");
-  tabContent.hide().first().show();
-  tabIcons.attr("src", "./assets/images/common/whale-green.svg");
-  tabButton.first().find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
-
-  tabButton.on("click", function () {
-    let index = tabButton.index(this);
-
-    tabButton.removeClass("is-action");
-    $(this).addClass("is-action");
+  // 初期設定
+  function initializeTabs() {
     tabContent.hide();
-    tabContent.eq(index).show();
-
     tabIcons.attr("src", "./assets/images/common/whale-green.svg");
-    $(this).find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
+    const activeTab = tabButton.filter(".is-action").first();
+    if (activeTab.length) {
+      const activeIndex = tabButton.index(activeTab);
+      tabContent.eq(activeIndex).show();
+      setActiveIcon(activeTab);
+    } else {
+      tabButton.first().addClass("is-action");
+      tabContent.first().show();
+      tabButton.first().find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
+    }
+  }
+
+  function setActiveIcon(tab) {
+    const tabId = tab.attr("id");
+    tabButton.find(".tab__icon").attr("src", "./assets/images/common/whale-green.svg");
+    if (tabId === "license-cource") {
+      tab.find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
+    } else if (tabId === "fan-diving") {
+      tab.find(".tab__icon").attr("src", "./assets/images/common/whaleleft-white.svg");
+    } else if (tabId === "expericence-diving") {
+      tab.find(".tab__icon").attr("src", "./assets/images/common/fishicon-white.svg");
+    }
+  }
+
+  // タブがクリックされたときの処理
+  $(function () {
+    const tabButton = $(".js-tab-button"),
+          tabContent = $(".js-tab-content"),
+          tabIcons = $(".tab__icon");
+  
+    // 初期設定
+    function initializeTabs() {
+      tabContent.hide();
+      tabButton.removeClass("is-action");
+      $("#license-cource").addClass("is-action");
+      $("#license-cource").find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
+      tabContent.first().show();
+    }
+  
+    // タブがクリックされたときの処理
+    tabButton.on("click", function () {
+      let index = tabButton.index(this);
+  
+      tabButton.removeClass("is-action");
+      $(this).addClass("is-action");
+      tabContent.hide();
+      tabContent.eq(index).show();
+  
+      // 全てのアイコンをデフォルトに戻す
+      $("#license-cource").find(".tab__icon").attr("src", "./assets/images/common/whale-green.svg");
+      $("#fan-diving").find(".tab__icon").attr("src", "./assets/images/common/whaleleft-green.svg");
+      $("#expericence-diving").find(".tab__icon").attr("src", "./assets/images/common/fishicon-green.svg");
+  
+      // クリックされたタブに応じてアイコンを変更
+      if (this.id === "license-cource") {
+        $(this).find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
+      } else if (this.id === "fan-diving") {
+        $(this).find(".tab__icon").attr("src", "./assets/images/common/whaleleft-white.svg");
+      } else if (this.id === "expericence-diving") {
+        $(this).find(".tab__icon").attr("src", "./assets/images/common/fishicon-white.svg");
+      }
+    });
+  
+    // ページロード時の初期化
+    initializeTabs();
   });
-});
+
+
 
 // $(window).on("hashchange", function () {
 //             activateTabFromHash();
@@ -364,4 +419,5 @@ document.addEventListener('DOMContentLoaded', function() {
     display: "none"
   }, ">");
 
+})
 })

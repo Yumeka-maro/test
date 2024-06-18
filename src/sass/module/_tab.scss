@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: center;
     gap: rem(8);
+    transition: all 0.5s ease;
     @include mq("md"){
         width: rem(300);
         padding: rem(13) 0;
@@ -64,6 +65,7 @@
     display: none;
     padding: rem(16);
     border: solid rem(1) $green-accent;
+    transition: all 0.5s ease;
     @include mq("md"){
         display: flex;
         justify-content: center;

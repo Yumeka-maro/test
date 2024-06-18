@@ -67,7 +67,7 @@
     display: none;
     padding: rem(24) rem(16);
     border: solid rem(1) $green-accent;
-
+    transition: all 0.5s ease;
     @include mq("md"){
         padding: rem(40);
         margin-top: rem(16);
