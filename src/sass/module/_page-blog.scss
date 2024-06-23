@@ -4,7 +4,7 @@
     position: relative;
     @include mq("md"){
         display: flex;
-        gap: rem(64);
+        gap: rem(30);
     }
 }
 
@@ -29,11 +29,18 @@
 }
 
 .page-blog__main {
-    max-width: rem(600);
     width: 100%;
     margin-inline: auto;
-    @include mq("sm"){
+    max-width: rem(600);
+    @include mq("md"){
         max-width: rem(706);
+    }
+}
+
+.page-blog__aside {
+    max-width: rem(600);
+    @include mq("md"){
+        max-width: rem(344);
     }
 }
 

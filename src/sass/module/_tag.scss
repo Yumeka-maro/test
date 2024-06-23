@@ -12,15 +12,18 @@
 }
 
 .tag__button {
+    display: block;
     width: rem(162);
     padding: rem(6) 0;
     cursor: pointer;
     background-color: $white;
     color: $green-accent;
     font-size: rem(14);
-    line-height: 11/7;
+    line-height: calc(11/7);
+    text-align: center;
     font-weight: $regular;
     border: rem(1) solid $green-accent;
+    transition: background-color 0.15s,color 0.15s linear;
 }
 
 

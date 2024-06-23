@@ -1,25 +1,35 @@
 @use 'global' as *;
 
 .aside__accordion {
-    margin-top: rem(27);
-    margin-left: rem(24);
-    @include mq("md"){
-        margin-top: rem(30);
-        margin-left: rem(8);
-    }
+    margin-top: rem(24);
 }
 
 details {
     color: $green-accent;
     font-weight: $regular;
     font-size: rem(24);
+    transition: transform 0.3s;
 }
 
 summary {
 	cursor: pointer;
 }
 
-.details__inner {
-    text-indent: rem(24);
+.accordion__toggle {
+    display: flex;
+    align-items: center;
+    margin-left: rem(24);
+}
+
+.accordion__triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent $green-accent;
+    border-width: rem(8) 0 rem(8) rem(13.86);
+}
+
+.accordion__month {
+    margin-left: rem(8);
 }
 

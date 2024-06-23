@@ -1,20 +1,17 @@
 @use 'global' as *;
 
-.aside__voice {
+.aside-voice__inner {
     margin-top: rem(24);
-    margin-left: rem(15);
 }
 
 .aside-voice__img {
-    aspect-ratio: 1.3486;
-    max-width: rem(294);
+    aspect-ratio: 294 / 218;
 }
 
 .aside-voice__img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .aside-voice__age {

@@ -44,8 +44,6 @@
     flex-direction: column;
     height: 100%;
     @include mq("md"){
-        // padding-top: rem(24);
-        // padding-bottom: rem(40);
         padding: rem(24) rem(24) rem(40) rem(24);
     }
 }
@@ -85,7 +83,13 @@
     margin-inline: auto;
     margin-top: rem(8);
     @include mq("md"){
-        // margin-top: rem(16);
+        margin-top: rem(16);
+    }
+}
+
+.campaign-card__sub--page {
+    @include mq("md"){
+        margin-top: rem(24);
     }
 }
 
@@ -129,19 +133,16 @@
     font-size: rem(32);
     @include mq("md"){
         font-size: rem(40);
-        margin-left: rem(40);
-        // margin-left: rem(25);
+        margin-left: rem(24);
     }
 }
 
-// .campaign-card__inner-text {
-//     font-size: rem(16);
-//     line-height: 1.5;
-//     color: $green;
-//     flex-grow: 1;
-//     padding-top: rem(13);
-//     padding-bottom: rem(8);
-// }
+.campaign-card__cost--page {
+    @include mq("md"){
+        margin-left: rem(40);
+    }
+}
+
 
 .campaign-card__comment {
     font-size: rem(16);

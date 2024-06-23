@@ -2,9 +2,7 @@
 
 .layout-page-information {
     margin-top: rem(112);
-    margin-bottom: rem(111);
     @include mq("md"){
         margin-top: rem(144);
-        margin-bottom: 0;
     }
 }

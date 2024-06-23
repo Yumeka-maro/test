@@ -1,20 +1,15 @@
 @use 'global' as *;
 
 .aside {
-    padding-left: rem(10);
-    padding-right: rem(10);
+    padding-left: rem(25);
+    padding-right: rem(25);
+    margin-inline: auto;
 }
 
 .aside__content:not(:first-child) {
     margin-top: rem(80);
 }
 
-.aside--detail {
-    margin-bottom: rem(112);
-    @include mq("md"){
-        margin-bottom: 0;
-    }
-}
 
 .aside__button {
     text-align: center;

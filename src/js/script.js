@@ -88,7 +88,7 @@ $(function () {
     loop: true,
     speed: 3500,
     navigation: {
-      nextEl: ".arrow__campaign",
+      nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
@@ -144,13 +144,12 @@ $(function () {
 
 //アコーディオン
 $(function () {
-  $(".js-accordion__item .js-accordion__content").css(
-    "display",
-    "block"
-  );
+  $(".js-accordion__item .js-accordion__content").show();
   $(".js-accordion__item .js-accordion__title").addClass("is-open");
+
   $(".js-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
+    // 隣接するアコーディオンコンテンツのスライドトグル
     $(this).next().slideToggle(300);
   });
 });
@@ -160,90 +159,31 @@ $(function () {
 $(".gallery__img").click(function () {
   $("#grayDisplay").html($(this).prop("outerHTML"));
   $("#grayDisplay").fadeIn(200);
+  $("body").addClass('no-scroll');
   return false;
 });
 
 $("#grayDisplay").click(function () {
   $("#grayDisplay").fadeOut(200);
+  $("body").removeClass('no-scroll');
   return false;
 });
+
 
 //タブ
 $(function () {
   const tabButton = $(".js-tab-button"),
-        tabContent = $(".js-tab-content"),
-        tabIcons = $(".tab__icon");
-
-  // 初期設定
-  function initializeTabs() {
-    tabContent.hide();
-    tabIcons.attr("src", "./assets/images/common/whale-green.svg");
-    const activeTab = tabButton.filter(".is-action").first();
-    if (activeTab.length) {
-      const activeIndex = tabButton.index(activeTab);
-      tabContent.eq(activeIndex).show();
-      setActiveIcon(activeTab);
-    } else {
-      tabButton.first().addClass("is-action");
-      tabContent.first().show();
-      tabButton.first().find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
-    }
-  }
-
-  function setActiveIcon(tab) {
-    const tabId = tab.attr("id");
-    tabButton.find(".tab__icon").attr("src", "./assets/images/common/whale-green.svg");
-    if (tabId === "license-cource") {
-      tab.find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
-    } else if (tabId === "fan-diving") {
-      tab.find(".tab__icon").attr("src", "./assets/images/common/whaleleft-white.svg");
-    } else if (tabId === "expericence-diving") {
-      tab.find(".tab__icon").attr("src", "./assets/images/common/fishicon-white.svg");
-    }
-  }
-
-  // タブがクリックされたときの処理
-  $(function () {
-    const tabButton = $(".js-tab-button"),
-          tabContent = $(".js-tab-content"),
-          tabIcons = $(".tab__icon");
-  
-    // 初期設定
-    function initializeTabs() {
-      tabContent.hide();
-      tabButton.removeClass("is-action");
-      $("#license-cource").addClass("is-action");
-      $("#license-cource").find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
-      tabContent.first().show();
-    }
-  
-    // タブがクリックされたときの処理
+    tabContent = $(".js-tab-content");
     tabButton.on("click", function () {
-      let index = tabButton.index(this);
-  
-      tabButton.removeClass("is-action");
-      $(this).addClass("is-action");
-      tabContent.hide();
-      tabContent.eq(index).show();
-  
-      // 全てのアイコンをデフォルトに戻す
-      $("#license-cource").find(".tab__icon").attr("src", "./assets/images/common/whale-green.svg");
-      $("#fan-diving").find(".tab__icon").attr("src", "./assets/images/common/whaleleft-green.svg");
-      $("#expericence-diving").find(".tab__icon").attr("src", "./assets/images/common/fishicon-green.svg");
-  
-      // クリックされたタブに応じてアイコンを変更
-      if (this.id === "license-cource") {
-        $(this).find(".tab__icon").attr("src", "./assets/images/common/whale-white.svg");
-      } else if (this.id === "fan-diving") {
-        $(this).find(".tab__icon").attr("src", "./assets/images/common/whaleleft-white.svg");
-      } else if (this.id === "expericence-diving") {
-        $(this).find(".tab__icon").attr("src", "./assets/images/common/fishicon-white.svg");
-      }
-    });
-  
-    // ページロード時の初期化
-    initializeTabs();
+    let index = tabButton.index(this);
+
+    tabButton.removeClass("is-action");
+    $(this).addClass("is-action");
+    tabContent.removeClass("is-action");
+    tabContent.eq(index).addClass("is-action");
   });
+});
+
 
 
 
@@ -374,50 +314,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//タグ
-// document.addEventListener('DOMContentLoaded', function() {
-//   const buttons = document.querySelectorAll('.js-tag-button');
-//   console.log("Buttons:", buttons);
-
-//   buttons.forEach(button => {
-//       button.addEventListener('click', function() {
-//           console.log("Button clicked:", button.textContent);
-//           buttons.forEach(btn => {
-//               btn.classList.remove('isActive');
-//               console.log("Removed active class from:", btn.textContent);
-//           });
-//           button.classList.add('isActive');
-//           console.log("Added active class to:", button.textContent);
-
-//   });
-
-//   // 初期状態で「ALL」ボタンをアクティブにする
-//   const initialButton = document.querySelector('.js-tag-button');
-//   if (initialButton) {
-//       initialButton.classList.add('isActive');
-//       console.log("Initial button styled:", initialButton.textContent);
-//   }
-// });
-
 //ローディングアニメーション
-  var op = gsap.timeline();
-  op.fromTo(".loadertext", {
-    opacity: 1
-  }, {
-    opacity: 0
-  }, "+=1");
-  op.fromTo(".loaderline", {
-    yPercent: 0
-  }, {
-    yPercent: -100,
-    duration: 1,
-    stagger: {
-      each: 0.2,
-      ease: Power4.easeInOut
-    }
-  }).to(".loader", {
-    display: "none"
-  }, ">");
+    let op = gsap.timeline();
+    op.fromTo(
+        ".loader__text--loader",
+        {
+            opacity: 1,
+        },
+        {
+            opacity: 0,
+        },
+        "+=1"
+    );
+    op.fromTo(
+        ".loader__line",
+        {
+            yPercent: 0,
+        },
+        {
+            yPercent: -100,
+            duration: 2,
+            stagger: {
+                each: 0.2,
+                ease: Power4.easeInOut,
+            },
+        }
+    ).to(
+        ".loader",
+        {
+            display: "none",
+        },
+        ">"
+    );}
 
-})
-})
+)

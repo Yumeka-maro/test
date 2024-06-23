@@ -1,16 +1,13 @@
 @use 'global' as *;
 
-.contact-about {
-    @include mq("md"){
-        margin-top: rem(124);
-    }
-}
+
 
 .contact__inner {
     max-width: rem(600);
+    position: relative;
 }
 
-.contact__contents::before {
+.contact__inner::before {
     content: "";
     position: absolute;
     width: rem(109);
@@ -23,14 +20,14 @@
     @include mq("md"){
         width: rem(301);
         height: rem(138);
-        top: -10%;
+        top: 0;
         right: calc(50% - min(50vw, rem(670)));
     }
 }
 
+
 .contact__contents {
     text-align: center;
-    position: relative;
     @include mq("md"){
         display: flex;
         box-shadow: rem(0) rem(4) rem(4) rgba($color: #000, $alpha: 0.25);

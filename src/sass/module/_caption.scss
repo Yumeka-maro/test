@@ -3,11 +3,7 @@
 .caption {
     border-left: solid rem(8) $green-accent;
     display: flex;
-    align-items: end;
-    margin-left: rem(16);
-    @include mq("md"){
-        margin-left: rem(3);
-    }
+    align-items: center;
 }
 
 .caption__img {

@@ -1,22 +1,15 @@
 @use 'global' as *;
 
-.aside-card {
-    width: rem(294);
-    display: block;
+.aside__card {
     box-shadow: rem(2) rem(2) rem(10) rem(0) rgba($color: #000, $alpha: 0.25);
     background-color: $white;
-    height: auto;
-    margin-inline: auto;
-    @include mq("md"){
-        margin-left: auto;
-    }
 }
 
-.aside-card:first-child {
+.aside__card:first-child {
     margin-top: rem(24);
 }
 
-.aside-card:not(:first-child) {
+.aside__card:not(:first-child) {
     margin-top: rem(40);
 }
 

@@ -89,33 +89,35 @@
     }
 }
 
-.page-price__list-inner dt,
-.page-price__list-inner dd {
+.page-price__list-name,
+.page-price__list-cost {
     border-right: solid rem(1) $green-accent;
     border-bottom: solid rem(1) $green-accent;
     color: $green;
 }
 
-.page-price__list-inner dd {
+.page-price__list-cost {
     padding: rem(16) rem(15);
 }
 
-.page-price__list-inner dt {
+.page-price__list-name {
     border-left: solid rem(1) $green-accent;
     padding: rem(14);
 }
 
-.page-price__list dt {
+.page-price__list-name {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     @include mq("md"){
         justify-content: flex-start;
+        text-align: left;
     }
 }
 
-.page-price__list dd {
+.page-price__list-cost {
     width: 30%;
     display: flex;
     align-items: center;

@@ -2,6 +2,10 @@
 
 .page-contact__inner {
     position: relative;
+    max-width: rem(600);
+    @include mq("md"){
+        max-width: rem(700);
+    }
 }
 
 .page-contact__inner::before {
@@ -23,13 +27,6 @@
     }
 }
 
-.page-contact__contents {
-    @include mq("md"){
-        max-width: rem(700);
-        width: 100%;
-        margin-inline: auto;
-    }
-}
 
 .page-contact__list {
     padding-top: rem(22);
@@ -141,6 +138,7 @@
     gap: 0 .5em;
     position: relative;
     cursor: pointer;
+    margin-left: rem(16);
 }
 
 .page-contact__checkbox label::before {
