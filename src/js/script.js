@@ -173,8 +173,21 @@ $("#grayDisplay").click(function () {
 //タブ
 $(function () {
   const tabButton = $(".js-tab-button"),
-    tabContent = $(".js-tab-content");
-    tabButton.on("click", function () {
+        tabContent = $(".js-tab-content");
+
+  // タブの切り替えを行う関数
+  function activateTab(targetId) {
+    let targetButton = $("#" + targetId);
+    let index = tabButton.index(targetButton);
+
+    tabButton.removeClass("is-action");
+    targetButton.addClass("is-action");
+    tabContent.removeClass("is-action");
+    tabContent.eq(index).addClass("is-action");
+  }
+
+  // タブボタンのクリックイベント
+  tabButton.on("click", function () {
     let index = tabButton.index(this);
 
     tabButton.removeClass("is-action");
@@ -182,7 +195,27 @@ $(function () {
     tabContent.removeClass("is-action");
     tabContent.eq(index).addClass("is-action");
   });
+
+  // ページ読み込み時にハッシュをチェックしてタブを切り替える
+  $(window).on("load", function () {
+    let hash = window.location.hash;
+    if (hash) {
+      activateTab(hash.substring(1)); // '#'を取り除いてIDを取得
+    }
+  });
+
+  // ドロワーメニューのリンクのクリックイベント
+  $(".category__link").on("click", function (e) {
+    e.preventDefault(); // デフォルトのリンク動作を防止
+    let targetId = $(this).data("target");
+    activateTab(targetId);
+    window.location.href = $(this).attr("href"); // ターゲットの位置にスクロール
+  });
 });
+
+
+
+
 
 
 
@@ -315,36 +348,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //ローディングアニメーション
-    let op = gsap.timeline();
-    op.fromTo(
-        ".loader__text--loader",
-        {
-            opacity: 1,
-        },
-        {
-            opacity: 0,
-        },
-        "+=1"
-    );
-    op.fromTo(
-        ".loader__line",
-        {
-            yPercent: 0,
-        },
-        {
-            yPercent: -100,
-            duration: 2,
-            stagger: {
-                each: 0.2,
-                ease: Power4.easeInOut,
-            },
-        }
-    ).to(
-        ".loader",
-        {
-            display: "none",
-        },
-        ">"
-    );}
+//     let op = gsap.timeline();
+//     op.fromTo(
+//         ".loader__text--loader",
+//         {
+//             opacity: 1,
+//         },
+//         {
+//             opacity: 0,
+//         },
+//         "+=1"
+//     );
+//     op.fromTo(
+//         ".loader__line",
+//         {
+//             yPercent: 0,
+//         },
+//         {
+//             yPercent: -100,
+//             duration: 2,
+//             stagger: {
+//                 each: 0.2,
+//                 ease: Power4.easeInOut,
+//             },
+//         }
+//     ).to(
+//         ".loader",
+//         {
+//             display: "none",
+//         },
+//         ">"
+//     );}
 
-)
+// )
+
+})
