@@ -42,9 +42,9 @@ window.addEventListener('resize', function() {
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
     if( target.length ) {
-        // event.preventDefault();
+        event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top - $('.header').outerHeight()
+            scrollTop: target.offset().top - $('.header').outerHeight() - 100
         }, 1000);
     }
 });
@@ -59,6 +59,39 @@ $(function () {
     }
   });
 });
+
+//ローディングアニメーション
+let op = gsap.timeline();
+op.fromTo(
+    ".loader__text--loader",
+    {
+        opacity: 1,
+    },
+    {
+        opacity: 1,
+    },
+    "+=1"
+);
+op.fromTo(
+    ".loader__line",
+    {
+        yPercent: 0,
+    },
+    {
+        yPercent: -100,
+        duration: 2,
+        stagger: {
+            each: 0.2,
+            ease: Power4.easeInOut,
+        },
+    }
+).to(
+    ".loader",
+    {
+        display: "none",
+    },
+    ">"
+);
 
     //メインビュースワイパー
     const mv__swiper = new Swiper(".js-mv-swiper", {
@@ -345,41 +378,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+});
 
 
-//ローディングアニメーション
-//     let op = gsap.timeline();
-//     op.fromTo(
-//         ".loader__text--loader",
-//         {
-//             opacity: 1,
-//         },
-//         {
-//             opacity: 0,
-//         },
-//         "+=1"
-//     );
-//     op.fromTo(
-//         ".loader__line",
-//         {
-//             yPercent: 0,
-//         },
-//         {
-//             yPercent: -100,
-//             duration: 2,
-//             stagger: {
-//                 each: 0.2,
-//                 ease: Power4.easeInOut,
-//             },
-//         }
-//     ).to(
-//         ".loader",
-//         {
-//             display: "none",
-//         },
-//         ">"
-//     );}
 
-// )
 
-})
+
+
+
