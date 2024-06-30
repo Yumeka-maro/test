@@ -1,0 +1,55 @@
+@use 'global' as *;
+
+.aside__toggle {
+    margin-top: rem(24);
+}
+
+.toggle {
+    color: $green-accent;
+    font-weight: $regular;
+    font-size: rem(24);
+}
+
+.toggle__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle__content {
+    display: block;
+}
+
+
+.toggle__inner {
+    display: flex;
+    align-items: center;
+    margin-left: rem(24);
+    overflow: hidden;
+}
+
+.toggle__triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: $green-accent transparent transparent transparent;
+    border-width: rem(13.86) rem(8) 0 rem(8);
+    margin-right: rem(8);
+}
+
+.toggle__triangle2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent $green-accent;
+    border-width: rem(8) 0 rem(8) rem(13.86);
+    margin-right: rem(8);
+}
+
+.toggle__header.is-open .toggle__triangle {
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+
+

@@ -6,18 +6,23 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 9999;
     display: flex;
 }
+
 .loader__line {
-    width: calc((100% / 2) + 1px);
-    margin-left: -1px;
+    width: calc(100% / 2);
     height: 100%;
     background: $white;
+    position: relative;
 }
-.loadertext--loading {
+
+.loader__text--loading {
     color: $green-accent;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
-.loader__text {
-    color: $white;
-}
+

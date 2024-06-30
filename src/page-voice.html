@@ -36,11 +36,11 @@
         <!-- ヘッダー -->
         <header class="header layout-header js-header">
             <div class="header__inner">
-              <h1 class="header__logo">
+              <h2 class="header__logo">
                 <a href="index.html" class="header__link">
                   <img src="./assets/images/common/logo-white.svg" alt="ヘッダーロゴ">
                 </a>
-              </h1>
+              </h2>
         
               <div class="header__drawer hamburger js-hamburger">
                 <span></span>
@@ -144,9 +144,9 @@
                             <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
                             <a href="page-information.html" class="category__main">ダイビング情報</a>
                           </div>
-                          <a href="page-information.html#license-cource" class="category__link" data-target="license-course"><p class="category__sub">ライセンス講習</p></a>
-                          <a href="page-information.html#fan-diving" class="category__link" data-target="fan-diving"><p class="category__sub">ファンダイビング</p></a>
-                          <a href="page-information.html#experience-diving" class="category__link" data-target="experience-diving"><p class="category__sub">体験ダイビング</p></a>
+                          <a href="page-information.html?tab=license-course" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+                          <a href="page-information.html?tab=fan-diving" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+                          <a href="page-information.html?tab=experience-diving" class="category__link"><p class="category__sub">体験ダイビング</p></a>
                         </div>
                         <div class="category__contain">
                           <div class="category__title">
@@ -373,42 +373,42 @@
                             </div>
                         </div>
                     </div>
+                    <ul class="page-voice__pagination pagination">
+                        <li class="pagination-item pagination-item--first-item">
+                            <a class="pagination-item-link" href="/pages/1/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 19l-7-7 7-7" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-item-link isActive" href="/pages/1/"><span>1</span></a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-item-link" href="/pages/2/"><span>2</span></a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-item-link" href="/pages/3/"><span>3</span></a>
+                        </li>
+                        <li class="pagination-item">
+                            <a class="pagination-item-link" href="/pages/4/"><span>4</span></a>
+                        </li>
+                        <li class="pagination-item u-desktop">
+                            <a class="pagination-item-link" href="/pages/5/"><span>5</span></a>
+                        </li>
+                        <li class="pagination-item u-desktop">
+                            <a class="pagination-item-link" href="/pages/6/"><span>6</span></a>
+                        </li>
+                        <li class="pagination-item pagination-item--last-item">
+                            <a class="pagination-item-link" href="/pages/5/">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <ul class="page-voice__pagination pagination">
-                <li class="pagination-item pagination-item--first-item">
-                    <a class="pagination-item-link" href="/pages/1/">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 19l-7-7 7-7" />
-                        </svg>
-                    </a>
-                </li>
-                <li class="pagination-item">
-                    <a class="pagination-item-link isActive" href="/pages/1/"><span>1</span></a>
-                </li>
-                <li class="pagination-item">
-                    <a class="pagination-item-link" href="/pages/2/"><span>2</span></a>
-                </li>
-                <li class="pagination-item">
-                    <a class="pagination-item-link" href="/pages/3/"><span>3</span></a>
-                </li>
-                <li class="pagination-item">
-                    <a class="pagination-item-link" href="/pages/4/"><span>4</span></a>
-                </li>
-                <li class="pagination-item u-desktop">
-                    <a class="pagination-item-link" href="/pages/5/"><span>5</span></a>
-                </li>
-                <li class="pagination-item u-desktop">
-                    <a class="pagination-item-link" href="/pages/6/"><span>6</span></a>
-                </li>
-                <li class="pagination-item pagination-item--last-item">
-                    <a class="pagination-item-link" href="/pages/5/">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
 
             <!-- コンタクト -->
             <section class="contact layout-contact" id="contact">
@@ -478,9 +478,9 @@
                     <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
                     <a href="page-information.html" class="category__main">ダイビング情報</a>
                   </div>
-                  <a href="page-information.html#license-cource" class="category__link" data-target="license-course"><p class="category__sub">ライセンス講習</p></a>
-                  <a href="page-information.html#experience-diving" class="category__link" data-target="experience-diving"><p class="category__sub">体験ダイビング</p></a>
-                  <a href="page-information.html#fan-diving" class="category__link" data-target="fan-diving"><p class="category__sub">ファンダイビング</p></a>
+                  <a href="page-information.html?tab=license-course" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+                  <a href="page-information.html?tab=experience-diving" class="category__link"><p class="category__sub">体験ダイビング</p></a>
+                  <a href="page-information.html?tab=fan-diving" class="category__link"><p class="category__sub">ファンダイビング</p></a>
                 </div>
                 <div class="category__contain">
                   <div class="category__title">

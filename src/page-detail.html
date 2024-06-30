@@ -36,11 +36,11 @@
   <!-- ヘッダー -->
   <header class="header layout-header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <h2 class="header__logo">
         <a href="index.html" class="header__link">
           <img src="./assets/images/common/logo-white.svg" alt="ヘッダーロゴ">
         </a>
-      </h1>
+      </h2>
 
       <div class="header__drawer hamburger js-hamburger">
         <span></span>
@@ -144,9 +144,9 @@
                     <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
                     <a href="page-information.html" class="category__main">ダイビング情報</a>
                   </div>
-                  <a href="page-information.html#license-cource" class="category__link" data-target="license-course"><p class="category__sub">ライセンス講習</p></a>
-                  <a href="page-information.html#fan-diving" class="category__link" data-target="fan-diving"><p class="category__sub">ファンダイビング</p></a>
-                  <a href="page-information.html#experience-diving" class="category__link" data-target="experience-diving"><p class="category__sub">体験ダイビング</p></a>
+                  <a href="page-information.html?tab=license-course" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+                  <a href="page-information.html?tab=fan-diving" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+                  <a href="page-information.html?tab=experience-diving" class="category__link"><p class="category__sub">体験ダイビング</p></a>
                 </div>
                 <div class="category__contain">
                   <div class="category__title">
@@ -236,7 +236,7 @@
                   <source srcset="./assets/images/common/blogTop-sp.jpg" media="(max-width: 767px)">
                   <img src="./assets/images/common/blogTop-pc.jpg" alt="青い海と大量の魚">
               </picture>
-              <h2 class="page-mv__title">Blog</h2>
+              <div class="page-mv__title">Blog</div>
           </div>
       </div>
     </div>
@@ -254,20 +254,18 @@
         <div class="page-blog__main detail">
           <time class="detail__date" datetime="2023-11-17">2023.11.17</time>
           <h1 class="detail__title">ライセンス取得</h1>
+          <img src="./assets/images/common/blog1.jpg" alt="赤いサンゴ礁" class="detail__img">
           <div class="detail__content">
-            <img src="./assets/images/common/blog1.jpg" alt="赤いサンゴ礁" class="detail__img">
-            <p class="detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            <img src="./assets/images/common/blog1.jpg" alt="赤いサンゴ礁">
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            <ul>
+              <li>リスト1</li>
+              <li>リスト2</li>
+              <li>リスト3</li>
+            </ul>
+            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
           </div>
-          <div class="detail__content">
-            <img src="./assets/images/common/blog1.jpg" alt="赤いサンゴ礁" class="detail__img">
-            <p class="detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-          </div>
-          <ul class="detail__list">
-            <li class="detail__list-inner">リスト1</li>
-            <li class="detail__list-inner">リスト2</li>
-            <li class="detail__list-inner">リスト3</li>
-          </ul>
-          <p class="detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
           <ul class="detail__pagination pagination">
             <li class="pagination-item pagination-item--first-item">
                 <a class="pagination-item-link" href="/pages/1/">
@@ -291,7 +289,7 @@
               <div class="caption__img"><img src="./assets/images/common/whale-black.svg" alt="黒鯨"></div>
               <h2 class="caption__text">人気記事</h2>
             </div>
-            <div class="aside__article">
+            <div class="aside__article aside-article">
               <a href="page-detail.html" class="aside-article__inner">
                   <img src="./assets/images/common/blog4.png" alt="イソギンチャクの中のクマノミの写真" class="aside-article__img">
                   <div class="aside-article__text">
@@ -320,7 +318,7 @@
               <div class="caption__img"><img src="./assets/images/common/whale-black.svg" alt="黒鯨"></div>
               <h2 class="caption__text">口コミ</h2>
             </div>
-            <div class="aside__voice">
+            <div class="aside__voice aside-voice">
               <div class="aside-voice__inner">
                 <img src="./assets/images/common/review.jpg" alt="カップルの写真" class="aside-voice__img">
                 <p class="aside-voice__age">30代(カップル)</p>
@@ -335,35 +333,37 @@
               <h2 class="caption__text">キャンペーン</h2>
             </div>
             <div class="aside__campaign">
-              <div class="aside__card">
-                <div class="aside-card__inner">
-                  <div class="aside-card__img">
-                    <img src="./assets/images/common/campaign1.png" alt="ターコイズブルーの海の中で蛍光色の魚たちが泳いでいる様子">
-                  </div>
-                  <div class="aside-card__body">
-                      <p class="aside-card__title">ライセンス取得</p>
-                    <div class="aside-card__sub">
-                      <p class="aside-card__text">全部コミコミ(お一人様)</p>
-                      <div class="aside-card__price">
-                        <div class="aside-card__discount">¥56,000</div>
-                        <div class="aside-card__cost">¥46,000</div>
+              <div class="aside__cards">
+                <div class="aside__card aside-card">
+                  <div class="aside-card__inner">
+                    <div class="aside-card__img">
+                      <img src="./assets/images/common/campaign1.png" alt="ターコイズブルーの海の中で蛍光色の魚たちが泳いでいる様子">
+                    </div>
+                    <div class="aside-card__body">
+                        <p class="aside-card__title">ライセンス取得</p>
+                      <div class="aside-card__sub">
+                        <p class="aside-card__text">全部コミコミ(お一人様)</p>
+                        <div class="aside-card__price">
+                          <div class="aside-card__discount">¥56,000</div>
+                          <div class="aside-card__cost">¥46,000</div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="aside__card">
-                <div class="aside-card__inner">
-                  <div class="aside-card__img">
-                    <img src="./assets/images/common/campaign2.png" alt="ターコイズブルーの海と青い空と船が2艘両脇にある様子">
-                  </div>
-                  <div class="aside-card__body">
-                      <p class="aside-card__title">貸切体験ダイビング</p>
-                    <div class="aside-card__sub">
-                      <p class="aside-card__text">全部コミコミ(お一人様)</p>
-                      <div class="aside-card__price">
-                        <div class="aside-card__discount">¥24,000</div>
-                        <div class="aside-card__cost">¥18,000</div>
+                <div class="aside__card aside-card">
+                  <div class="aside-card__inner">
+                    <div class="aside-card__img">
+                      <img src="./assets/images/common/campaign2.png" alt="ターコイズブルーの海と青い空と船が2艘両脇にある様子">
+                    </div>
+                    <div class="aside-card__body">
+                        <p class="aside-card__title">貸切体験ダイビング</p>
+                      <div class="aside-card__sub">
+                        <p class="aside-card__text">全部コミコミ(お一人様)</p>
+                        <div class="aside-card__price">
+                          <div class="aside-card__discount">¥24,000</div>
+                          <div class="aside-card__cost">¥18,000</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -377,16 +377,16 @@
               <div class="caption__img"><img src="./assets/images/common/whale-black.svg" alt="黒鯨"></div>
               <h2 class="caption__text">アーカイブ</h2>
             </div>
-            <div class="aside__accordion">
-              <details open>
-                <summary><a href="#">2023</a></summary>
-                  <a href="#" class="accordion__toggle"><div class="accordion__triangle"></div><div class="accordion__month">3月</div></a>
-                  <a href="#" class="accordion__toggle"><div class="accordion__triangle"></div><div class="accordion__month">2月</div></a>
-                  <a href="#" class="accordion__toggle"><div class="accordion__triangle"></div><div class="accordion__month">1月</div></a>
-              </details>
-              <details>
-                <summary>2022</summary>
-              </details>
+            <div class="aside__toggle toggle">
+              <div class="toggle__header js-toggle"><div class="toggle__triangle"></div>2023</div>
+              <div class="toggle__content">
+                <a href="#" class="toggle__inner"><div class="toggle__triangle2"></div>3月</a>
+                <a href="#" class="toggle__inner"><div class="toggle__triangle2"></div>2月</a>
+                <a href="#" class="toggle__inner"><div class="toggle__triangle2"></div>1月</a>
+              </div>
+              <div class="toggle__header js-toggle"><div class="toggle__triangle"></div>2022</div>
+              <div class="toggle__content">
+              </div>
             </div>
           </div>
         </aside>
@@ -460,9 +460,9 @@
                   <img src="./assets/images/common/hitode.png" alt="ヒトデアイコン" class="category__hitode">
                   <a href="page-information.html" class="category__main">ダイビング情報</a>
                 </div>
-                <a href="page-information.html#license-cource" class="category__link" data-target="license-course"><p class="category__sub">ライセンス講習</p></a>
-                <a href="page-information.html#fan-diving" class="category__link" data-target="fan-diving"><p class="category__sub">ファンダイビング</p></a>
-                <a href="page-information.html#experience-diving" class="category__link" data-target="experience-diving"><p class="category__sub">体験ダイビング</p></a>
+                <a href="page-information.html?tab=license-course" class="category__link"><p class="category__sub">ライセンス講習</p></a>
+                <a href="page-information.html?tab=fan-diving" class="category__link"><p class="category__sub">ファンダイビング</p></a>
+                <a href="page-information.html?tab=experience-diving" class="category__link"><p class="category__sub">体験ダイビング</p></a>
               </div>
               <div class="category__contain">
                 <div class="category__title">

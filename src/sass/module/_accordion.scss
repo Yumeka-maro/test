@@ -24,7 +24,7 @@
 }
 
 .accordion__title::before,
-.accordion__title::after {
+.accordion__title.is-open::after {
     position: absolute;
     top: 50%;
     right: rem(16);
@@ -40,16 +40,16 @@
     }
 }
 
-.accordion__title::before {
+.accordion__title.is-open::before {
     transform: rotate(90deg);
 }
 
-.accordion__title.is-open::before {
+.accordion__title::before {
     transform: rotate(180deg);
 }
 
-.accordion__title.is-open::after {
-    opacity: 0;
+.accordion__title::after {
+    opacity: 1;
 }
 
 .accordion__title-text {
@@ -64,10 +64,10 @@
 }
 
 .accordion__content {
-    display: none;
+    display: block;
     padding: rem(24) rem(16);
     border: solid rem(1) $green-accent;
-    transition: all 0.5s ease;
+    transition: color 0.5s ease;
     @include mq("md"){
         padding: rem(40);
         margin-top: rem(16);

@@ -29,6 +29,7 @@
         gap: rem(5);
         grid-auto-flow: dense;
         grid-template-columns: repeat(11, 1fr);
+        grid-auto-rows: 1fr;
     }
 }
 

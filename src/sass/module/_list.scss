@@ -1,0 +1,87 @@
+@use 'global' as *;
+
+.list {
+    font-size: rem(16);
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    margin-top: rem(40);
+    @include mq("md"){
+        display: flex;
+        margin-top: rem(83);
+    }
+}
+
+.list__main {
+    background-color: $green-accent;
+    text-align: center;
+    padding: rem(8) rem(77);
+    display: flex;
+    justify-content: center;
+    @include mq("md"){
+        flex-direction: column-reverse;
+        padding: 0 rem(20);
+        width: 29%;
+    }
+}
+
+.list__img {
+    display: inline-block;
+    width: rem(24);
+    height: rem(24);
+    @include mq("md"){
+        width: rem(64);
+        height: rem(64);
+        display: block;
+        margin-inline: auto;
+        margin-top: rem(8);
+    }
+}
+
+.list__title {
+    margin-left: rem(8);
+    color: $white;
+    font-weight: $bold;
+    font-size: rem(16);
+    @include mq("md"){
+        margin-left: 0;
+    }
+}
+
+.list__inner {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq("md"){
+        width: 70%;
+        border-top: rem(1) solid $green-accent;
+    }
+}
+
+.list__name,
+.list__cost {
+    border-right: solid rem(1) $green-accent;
+    border-bottom: solid rem(1) $green-accent;
+    color: $green;
+}
+
+.list__name {
+    border-left: solid rem(1) $green-accent;
+    padding: rem(14);
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include mq("md"){
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+.list__cost {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: rem(16) rem(15);
+}

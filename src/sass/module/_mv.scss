@@ -54,17 +54,22 @@
 .mv__title-sub--loading1,
 .mv__title-sub--loading2 {
     color: $green-accent;
+    font-weight: $normal;
 }
 .mv__title--loading1,
 .mv__title-sub--loading1 {
     text-align: right;
-    font-weight: $normal;
 }
+
+.mv__title--loading1 {
+    margin-right: -0.27em;
+}
+
+.mv__title--loading2 {
+    margin-left: -0.27em;
+}
+
 .mv__title--loading2,
 .mv__title-sub--loading2 {
     text-align: left;
-}
-.mv__title--loading2 {
-    margin-left: rem(-30);
-    font-weight: $normal;
 }

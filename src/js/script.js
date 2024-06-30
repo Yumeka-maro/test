@@ -63,7 +63,7 @@ $(function () {
 //ローディングアニメーション
 let op = gsap.timeline();
 op.fromTo(
-    ".loader__text--loader",
+    ".loader__text--loading",
     {
         opacity: 1,
     },
@@ -91,7 +91,8 @@ op.fromTo(
         display: "none",
     },
     ">"
-);
+  );
+
 
     //メインビュースワイパー
     const mv__swiper = new Swiper(".js-mv-swiper", {
@@ -177,13 +178,10 @@ $(function () {
 
 //アコーディオン
 $(function () {
-  $(".js-accordion__item .js-accordion__content").show();
-  $(".js-accordion__item .js-accordion__title").addClass("is-open");
-
-  $(".js-accordion__title").on("click", function () {
+  $(".js-accordion-title,.js-toggle").on("click", function () {
     $(this).toggleClass("is-open");
     // 隣接するアコーディオンコンテンツのスライドトグル
-    $(this).next().slideToggle(300);
+    $(this).next().slideToggle(500);
   });
 });
 
@@ -204,121 +202,58 @@ $("#grayDisplay").click(function () {
 
 
 //タブ
-$(function () {
-  const tabButton = $(".js-tab-button"),
-        tabContent = $(".js-tab-content");
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.js-tab-button');
+  const tabContents = document.querySelectorAll('.js-tab-content');
 
-  // タブの切り替えを行う関数
-  function activateTab(targetId) {
-    let targetButton = $("#" + targetId);
-    let index = tabButton.index(targetButton);
+  // 現在のURLからクエリパラメータを取得して初期タブを設定
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialTabId = urlParams.get('tab') || 'license-course';
+  activateTab(initialTabId);
+  scrollToTab(initialTabId);
 
-    tabButton.removeClass("is-action");
-    targetButton.addClass("is-action");
-    tabContent.removeClass("is-action");
-    tabContent.eq(index).addClass("is-action");
+  // タブボタンがクリックされたときの処理
+  tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const tabId = button.id;
+          activateTab(tabId);
+          scrollToTab(tabId);
+      });
+  });
+
+  // タブをアクティブにする関数
+  function activateTab(tabId) {
+      tabButtons.forEach(button => {
+          button.classList.toggle('is-action', button.id === tabId);
+      });
+      tabContents.forEach(content => {
+          const contentClass = `${tabId}-content`;
+          if (content.classList.contains(contentClass)) {
+              content.classList.add('is-action');
+          } else {
+              content.classList.remove('is-action');
+          }
+      });
   }
 
-  // タブボタンのクリックイベント
-  tabButton.on("click", function () {
-    let index = tabButton.index(this);
+  // タブまでスクロールする関数（100px上に余白を空ける）
+  function scrollToTab(tabId) {
+      const element = document.getElementById(tabId);
+      if (element) {
+          const offset = 100;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
 
-    tabButton.removeClass("is-action");
-    $(this).addClass("is-action");
-    tabContent.removeClass("is-action");
-    tabContent.eq(index).addClass("is-action");
-  });
-
-  // ページ読み込み時にハッシュをチェックしてタブを切り替える
-  $(window).on("load", function () {
-    let hash = window.location.hash;
-    if (hash) {
-      activateTab(hash.substring(1)); // '#'を取り除いてIDを取得
-    }
-  });
-
-  // ドロワーメニューのリンクのクリックイベント
-  $(".category__link").on("click", function (e) {
-    e.preventDefault(); // デフォルトのリンク動作を防止
-    let targetId = $(this).data("target");
-    activateTab(targetId);
-    window.location.href = $(this).attr("href"); // ターゲットの位置にスクロール
-  });
+          window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+          });
+      }
+  }
 });
 
-
-
-
-
-
-
-
-// $(window).on("hashchange", function () {
-//             activateTabFromHash();
-//         });
-//         function activateTabFromHash() {
-//             var hash = window.location.hash;
-//             var index = getIndexFromHash(hash);
-//             $(".js-tab-button").removeClass("is-action");
-//             $(".js-tab-button").removeClass("is-action");
-//             if (hash) {
-//                 $("#tab-" + hash.replace("#", "")).addClass("is-action");
-//                 $(hash).addClass("is-action");
-//                 var contentId = hash.replace("#tab-", "#");
-//                 $(contentId).addClass("is-action");
-//                 var index = getIndexFromHash(hash);
-//             } else {
-//               $(".js-tab-button:first").addClass("is-action");
-//               $(".js-tab-content:first").addClass("is-action");
-//             }
-//         }
-//         $(window).on("load", function () {
-//             var hash = window.location.hash;
-//             var index = getIndexFromHash(hash);
-//         });
-//         $(".js-tab-content:first-of-type").css("display", "block");
-//         var hash = window.location.hash;
-//         var index = getIndexFromHash(hash);
-//         showCategory(index);
-//         $(".js-tab-button").on("click", function () {
-//             var index = $(this).index();
-//             showCategory(index);
-//         });
-// function showCategory(index) {
-//             $(".js-tab-button").removeClass("is-action");
-//             $(".js-tab-button").eq(index).addClass("is-action");
-//             $(".js-tab-content").hide().eq(index).fadeIn(300);
-//         }
-//         function getIndexFromHash(hash) {
-//             var defaultIndex = 0;
-//             if (!hash.startsWith("#info")) {
-//                 return defaultIndex;
-//             }
-//             var index = parseInt(hash.replace("#info", ""), 10) - 1;
-//             if (isNaN(index) || index < 0 index >= $(".js-tab-button").length) {
-//                 return defaultIndex;
-//             }
-//             return index;
-//         }
-//         $('a[href^="#"]').click(function () {
-//             const speed = 600;
-//             let href = $(this).attr("href");
-//             let target = $(href == "#" || href == "" ? "html" : href);
-//             $("html, body").animate(
-//                 {
-//                     scrollTop: target.offset().top,
-//                 },
-//                 speed
-//             );
-//             return false;
-//         });
-//         function scrollToSection(index) {
-//             const headerHeight = $(".js-header").height();
-//             let target = $(".js-tab-button").eq(index);
-//             let targetTop = target.offset().top;
-//             let position = targetTop - headerHeight;
-//             $("body,html").animate({ scrollTop: position }, 500, "swing");
-//         }
 
 //入力なしエラーコンタクトページ
 document.getElementById('submitBtn').addEventListener('click', function(event) {
@@ -377,6 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
 
 });
 

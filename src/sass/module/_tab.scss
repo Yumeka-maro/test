@@ -90,19 +90,19 @@
 
 .license-course span::before {
     @include mq("md"){
-        left: rem(29);
+        left: 7%;
     }
 }
 
 .fan-diving span::before {
     @include mq("md"){
-        left: rem(18);
+        left: 5%;
     }
 }
 
 .experience-diving span::before {
     @include mq("md"){
-        left: rem(29);
+        left: 7%;
     }
 }
 
@@ -142,7 +142,8 @@
     display: none;
     padding: rem(16);
     border: solid rem(1) $green-accent;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
     @include mq("md"){
         justify-content: center;
         align-items: center;
@@ -153,6 +154,7 @@
 
 .tab__content.is-action {
     display: block;
+    opacity: 1;
     @include mq("md"){
         display: flex;
     }
