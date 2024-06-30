@@ -210,14 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const initialTabId = urlParams.get('tab') || 'license-course';
   activateTab(initialTabId);
-  scrollToTab(initialTabId);
 
   // タブボタンがクリックされたときの処理
   tabButtons.forEach(button => {
       button.addEventListener('click', () => {
           const tabId = button.id;
           activateTab(tabId);
-          scrollToTab(tabId);
       });
   });
 
@@ -235,24 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }
       });
   }
-
-  // タブまでスクロールする関数（100px上に余白を空ける）
-  function scrollToTab(tabId) {
-      const element = document.getElementById(tabId);
-      if (element) {
-          const offset = 100;
-          const bodyRect = document.body.getBoundingClientRect().top;
-          const elementRect = element.getBoundingClientRect().top;
-          const elementPosition = elementRect - bodyRect;
-          const offsetPosition = elementPosition - offset;
-
-          window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-          });
-      }
-  }
 });
+
 
 
 //入力なしエラーコンタクトページ
