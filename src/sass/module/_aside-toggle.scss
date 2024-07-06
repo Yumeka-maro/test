@@ -26,6 +26,11 @@
     align-items: center;
     margin-left: rem(24);
     overflow: hidden;
+    transition: .3s;
+}
+
+.toggle__inner:hover {
+    padding-left: rem(8);
 }
 
 .toggle__triangle {

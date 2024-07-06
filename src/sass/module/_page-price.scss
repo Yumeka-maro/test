@@ -27,6 +27,14 @@
     }
 }
 
+.page-price__lists {
+    display: grid;
+    gap: rem(40);
+    @include mq("md"){
+        gap: rem(83);
+    }
+}
+
 
 
 
