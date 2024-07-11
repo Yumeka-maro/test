@@ -160,116 +160,116 @@ jQuery(function ($) {
       return false;
     });
   });
-});
 
-//アコーディオン
-$(function () {
-  $(".js-accordion-title,.js-toggle").on("click", function () {
-    $(this).toggleClass("is-open");
-    // 隣接するアコーディオンコンテンツのスライドトグル
-    $(this).next().slideToggle(500);
-  });
-});
-
-//モーダル
-$(".gallery__img").click(function () {
-  $("#grayDisplay").html($(this).prop("outerHTML"));
-  $("#grayDisplay").fadeIn(200);
-  $("body").addClass('no-scroll');
-  return false;
-});
-$("#grayDisplay").click(function () {
-  $("#grayDisplay").fadeOut(200);
-  $("body").removeClass('no-scroll');
-  return false;
-});
-
-//タブ
-document.addEventListener('DOMContentLoaded', function () {
-  var tabButtons = document.querySelectorAll('.js-tab-button');
-  var tabContents = document.querySelectorAll('.js-tab-content');
-
-  // 現在のURLからクエリパラメータを取得して初期タブを設定
-  var urlParams = new URLSearchParams(window.location.search);
-  var initialTabId = urlParams.get('tab') || 'license-course';
-  activateTab(initialTabId);
-
-  // タブボタンがクリックされたときの処理
-  tabButtons.forEach(function (button) {
-    button.addEventListener('click', function () {
-      var tabId = button.id;
-      activateTab(tabId);
+  //アコーディオン
+  $(function () {
+    $(".js-accordion-title,.js-toggle").on("click", function () {
+      $(this).toggleClass("is-open");
+      // 隣接するアコーディオンコンテンツのスライドトグル
+      $(this).next().slideToggle(500);
     });
   });
 
-  // タブをアクティブにする関数
-  function activateTab(tabId) {
+  //モーダル
+  $(".gallery__img").click(function () {
+    $("#grayDisplay").html($(this).prop("outerHTML"));
+    $("#grayDisplay").fadeIn(200);
+    $("body").addClass('no-scroll');
+    return false;
+  });
+  $("#grayDisplay").click(function () {
+    $("#grayDisplay").fadeOut(200);
+    $("body").removeClass('no-scroll');
+    return false;
+  });
+
+  //タブ
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabButtons = document.querySelectorAll('.js-tab-button');
+    var tabContents = document.querySelectorAll('.js-tab-content');
+
+    // 現在のURLからクエリパラメータを取得して初期タブを設定
+    var urlParams = new URLSearchParams(window.location.search);
+    var initialTabId = urlParams.get('tab') || 'license-course';
+    activateTab(initialTabId);
+
+    // タブボタンがクリックされたときの処理
     tabButtons.forEach(function (button) {
-      button.classList.toggle('is-action', button.id === tabId);
+      button.addEventListener('click', function () {
+        var tabId = button.id;
+        activateTab(tabId);
+      });
     });
-    tabContents.forEach(function (content) {
-      var contentClass = "".concat(tabId, "-content");
-      if (content.classList.contains(contentClass)) {
-        content.classList.add('is-action');
-      } else {
-        content.classList.remove('is-action');
-      }
-    });
-  }
-});
 
-//入力なしエラーコンタクトページ
-document.getElementById('submitBtn').addEventListener('click', function (event) {
-  var inputs = document.querySelectorAll('.page-contact__input, .page-contact__textarea');
-  var emailInput = document.querySelector('input[type="email"]');
-  var phoneInput = document.querySelector('input[type="tel"]');
-  var errorMessageDiv = document.getElementById('error-message');
-  var isValid = true;
-
-  // 入力項目のバリデーション
-  inputs.forEach(function (input) {
-    if (!input.value.trim()) {
-      input.classList.add('input-error');
-      isValid = false;
-    } else {
-      input.classList.remove('input-error');
+    // タブをアクティブにする関数
+    function activateTab(tabId) {
+      tabButtons.forEach(function (button) {
+        button.classList.toggle('is-action', button.id === tabId);
+      });
+      tabContents.forEach(function (content) {
+        var contentClass = "".concat(tabId, "-content");
+        if (content.classList.contains(contentClass)) {
+          content.classList.add('is-action');
+        } else {
+          content.classList.remove('is-action');
+        }
+      });
     }
   });
 
-  // メールアドレスのバリデーション
-  if (emailInput && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
-    emailInput.classList.add('input-error');
-    isValid = false;
-  }
-
-  // 電話番号のバリデーション
-  if (phoneInput && !/^\+?(\d{1,3})?[-. ]?\(?\d{1,3}\)?[-. ]?\d{3,4}[-. ]?\d{4}$/.test(phoneInput.value)) {
-    phoneInput.classList.add('input-error');
-    isValid = false;
-  }
-
-  // エラーメッセージの表示
-  if (!isValid) {
-    document.querySelector('.error-prefix').textContent = '※必須項目が入力されていません。';
-    document.querySelector('.error-main').textContent = '入力してください。';
-    errorMessageDiv.style.display = 'block';
-    event.preventDefault();
-  } else {
-    document.querySelector('.error-prefix').textContent = '';
-    document.querySelector('.error-main').textContent = '';
-    errorMessageDiv.style.display = 'none';
-  }
-
-  //入力したとき文字色変更
-  document.addEventListener('DOMContentLoaded', function () {
+  //入力なしエラーコンタクトページ
+  document.getElementById('submitBtn').addEventListener('click', function (event) {
     var inputs = document.querySelectorAll('.page-contact__input, .page-contact__textarea');
+    var emailInput = document.querySelector('input[type="email"]');
+    var phoneInput = document.querySelector('input[type="tel"]');
+    var errorMessageDiv = document.getElementById('error-message');
+    var isValid = true;
+
+    // 入力項目のバリデーション
     inputs.forEach(function (input) {
-      input.addEventListener('input', function () {
-        if (this.value.trim() !== '') {
-          this.style.color = '$green';
-        } else {
-          this.style.color = '';
-        }
+      if (!input.value.trim()) {
+        input.classList.add('input-error');
+        isValid = false;
+      } else {
+        input.classList.remove('input-error');
+      }
+    });
+
+    // メールアドレスのバリデーション
+    if (emailInput && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailInput.value)) {
+      emailInput.classList.add('input-error');
+      isValid = false;
+    }
+
+    // 電話番号のバリデーション
+    if (phoneInput && !/^\+?(\d{1,3})?[-. ]?\(?\d{1,3}\)?[-. ]?\d{3,4}[-. ]?\d{4}$/.test(phoneInput.value)) {
+      phoneInput.classList.add('input-error');
+      isValid = false;
+    }
+
+    // エラーメッセージの表示
+    if (!isValid) {
+      document.querySelector('.error-prefix').textContent = '※必須項目が入力されていません。';
+      document.querySelector('.error-main').textContent = '入力してください。';
+      errorMessageDiv.style.display = 'block';
+      event.preventDefault();
+    } else {
+      document.querySelector('.error-prefix').textContent = '';
+      document.querySelector('.error-main').textContent = '';
+      errorMessageDiv.style.display = 'none';
+    }
+
+    //入力したとき文字色変更
+    document.addEventListener('DOMContentLoaded', function () {
+      var inputs = document.querySelectorAll('.page-contact__input, .page-contact__textarea');
+      inputs.forEach(function (input) {
+        input.addEventListener('input', function () {
+          if (this.value.trim() !== '') {
+            this.style.color = '$green';
+          } else {
+            this.style.color = '';
+          }
+        });
       });
     });
   });

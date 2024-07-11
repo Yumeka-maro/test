@@ -21,7 +21,7 @@ const webp = require('gulp-webp');//webp変換
 const rename = require('gulp-rename');//ファイル名変更
 const themeName = "WordPressTheme"; // WordPress theme name
 
-// 読み込み先
+// 読み込み元
 const srcPath = {
   css: "../src/sass/**/*.scss",
   js: "../src/js/**/*",

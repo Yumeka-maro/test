@@ -1,3 +1,33 @@
+    <!-- コンタクト -->
+    <section class="contact layout-contact">
+      <div class="contact__inner inner">
+        <div class="contact__contents">
+          <div class="contact__map">
+            <h3 class="contact__logo-wrap"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-green.svg" class="contact__logo" alt="ロゴ"></h3>
+            <div class="contact__text-wrap">
+              <div class="contact__text">
+                <p>沖縄県那覇市1-1</p>
+                <p>TEL:0120-000-0000</p>
+                <p>営業時間:8:30-19:00</p>
+                <p>定休日:毎週火曜日</p>
+              </div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57272.98530030893!2d127.64350223082273!3d26.21093643736236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1714199998793!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="contact__title-wrap">
+            <div class="contact__title section-header">
+              <p class="section-header__en-title section-header__en-title--large">Contact</p>
+              <h2 class="section-header__ja-title section-header__ja-title--sub1">お問合せ</h2>
+              <p class="section-header__ja-title section-header__ja-title--sub2">ご予約・お問合せはコチラ</p>
+              <div class="contact__button"><a href="page-contact.html" class="button">Contact us<span></span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
   <!-- フッター -->
   <footer class="footer layout-footer">
     <div class="footer__inner inner">

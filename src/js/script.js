@@ -174,7 +174,7 @@ $(function () {
 });
 
 
-})
+
 
 //アコーディオン
 $(function () {
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
+});
 
 
 
