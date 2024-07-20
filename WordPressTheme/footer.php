@@ -40,7 +40,8 @@ $sitemap = esc_url( home_url('/sitemap/'));
           <p class="section-header__en-title section-header__en-title--large">Contact</p>
           <h2 class="section-header__ja-title section-header__ja-title--sub1">お問合せ</h2>
           <p class="section-header__ja-title section-header__ja-title--sub2">ご予約・お問合せはコチラ</p>
-          <div class="contact__button"><a href="page-contact.html" class="button">Contact us<span></span></a></div>
+          <div class="contact__button"><a href="<?php echo $contact; ?>" class="button">Contact us<span></span></a>
+          </div>
         </div>
       </div>
     </div>
@@ -75,13 +76,16 @@ $sitemap = esc_url( home_url('/sitemap/'));
                 class="category__hitode">
               <a href="<?php echo $campaign; ?>" class="category__main">キャンペーン</a>
             </div>
-            <a href="<?php echo $campaign; ?>" class="category__link">
+            <a href="<?php echo add_query_arg('term', 'license-course_category', get_post_type_archive_link('campaign')); ?>"
+              class="category__link">
               <p class="category__sub">ライセンス取得</p>
             </a>
-            <a href="<?php echo $campaign; ?>" class="category__link">
+            <a href="<?php echo add_query_arg('term', 'experience-diving_category', get_post_type_archive_link('campaign')); ?>"
+              class="category__link">
               <p class="category__sub">貸切体験ダイビング</p>
             </a>
-            <a href="<?php echo $campaign; ?>" class="category__link">
+            <a href="<?php echo add_query_arg('term', 'fan-diving_category', get_post_type_archive_link('campaign')); ?>"
+              class="category__link">
               <p class="category__sub">ナイトダイビング</p>
             </a>
           </div>

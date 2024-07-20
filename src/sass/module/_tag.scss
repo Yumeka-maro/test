@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: rem(16);
-    @include mq("sm"){
+    @include mq("md"){
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: rem(32);
     }

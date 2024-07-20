@@ -27,6 +27,7 @@
         <?php
           $price = SCF::get('price_group');
           foreach ($price as $charts) {
+            $category_slug = sanitize_title($charts['category']);
         ?>
         <li class="list">
           <div class="list__main">

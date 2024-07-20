@@ -11,7 +11,7 @@
       <p class="campaign-card__tag"><?php the_field('campaign_1'); ?></p>
       <p class="campaign-card__title campaign-card__title--page"><?php the_title(); ?></p>
       <div class="campaign-card__sub campaign-card__sub--page">
-        <p class="campaign-card__text"><?php echo $campaign_text; ?></p>
+        <p class="campaign-card__text">全コミコミ(お一人様)</p>
         <div class="campaign-card__price">
           <div class="campaign-card__discount"><?php the_field('campaign_2'); ?></div>
           <div class="campaign-card__cost campaign-card__cost--page"><?php the_field('campaign_3'); ?></div>

@@ -171,7 +171,7 @@ jQuery(function ($) {
   });
 
   //モーダル
-  $(".gallery__img").click(function () {
+  $(".js-gallery").click(function () {
     $("#grayDisplay").html($(this).prop("outerHTML"));
     $("#grayDisplay").fadeIn(200);
     $("body").addClass('no-scroll');
@@ -184,37 +184,24 @@ jQuery(function ($) {
   });
 
   //タブ
-  document.addEventListener('DOMContentLoaded', function () {
-    var tabButtons = document.querySelectorAll('.js-tab-button');
-    var tabContents = document.querySelectorAll('.js-tab-content');
+  $(function () {
+    var tabButton = $(".js-tab-button"),
+      tabContent = $(".js-tab-content");
+    function activateTab(tabId) {
+      tabButton.removeClass("is-action");
+      tabContent.removeClass("is-action");
+      $("#" + tabId).addClass("is-action");
+      $("." + tabId + "-content").addClass("is-action");
+    }
 
-    // 現在のURLからクエリパラメータを取得して初期タブを設定
+    // URLのクエリパラメータを取得して初期タブを設定
     var urlParams = new URLSearchParams(window.location.search);
     var initialTabId = urlParams.get('tab') || 'license-course';
     activateTab(initialTabId);
-
-    // タブボタンがクリックされたときの処理
-    tabButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        var tabId = button.id;
-        activateTab(tabId);
-      });
+    tabButton.on("click", function () {
+      var tabId = this.id;
+      activateTab(tabId);
     });
-
-    // タブをアクティブにする関数
-    function activateTab(tabId) {
-      tabButtons.forEach(function (button) {
-        button.classList.toggle('is-action', button.id === tabId);
-      });
-      tabContents.forEach(function (content) {
-        var contentClass = "".concat(tabId, "-content");
-        if (content.classList.contains(contentClass)) {
-          content.classList.add('is-action');
-        } else {
-          content.classList.remove('is-action');
-        }
-      });
-    }
   });
 
   //入力なしエラーコンタクトページ

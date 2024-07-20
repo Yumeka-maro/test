@@ -1,3 +1,19 @@
+<?php
+$home = esc_url( home_url('/'));
+$campaign = esc_url( home_url('/campaign/'));
+$about = esc_url( home_url('/about/'));
+$information = esc_url( home_url('/information/'));
+$blog = esc_url( home_url('/blog/'));
+$voice = esc_url( home_url('/voice/'));
+$price = esc_url( home_url('/price/'));
+$faq = esc_url( home_url('/faq/'));
+$privacypolicy = esc_url( home_url('/privacypolicy/'));
+$terms = esc_url( home_url('/terms/'));
+$contact = esc_url( home_url('/contact/'));
+$thanks = esc_url( home_url('/thanks/'));
+$sitemap = esc_url( home_url('/sitemap/'));
+?>
+
 <?php get_header(); ?>
 <main>
   <!-- メインビュー -->
@@ -142,7 +158,7 @@
           <div class="swiper-button-prev"></div>
         </div>
       </div>
-      <div class="campaign__button"><a href="page-campaign.html" class="button">View more<span></span></a></div>
+      <div class="<?php echo $campaign; ?>"><a href="page-campaign.html" class="button">View more<span></span></a></div>
     </div>
   </section>
 
@@ -167,7 +183,7 @@
           <div class="about__text">
             <p class="about__sub">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-            <div class="about__button"><a href="page-about.html" class="button">View more<span></span></a></div>
+            <div class="about__button"><a href="<?php echo $about; ?>" class="button">View more<span></span></a></div>
           </div>
         </div>
       </div>
@@ -190,7 +206,8 @@
           <div class="information__text">
             <p class="information__sub">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
               正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
-            <div class="information__button"><a href="page-information.html" class="button">View more<span></span></a>
+            <div class="information__button"><a href="<?php echo $information; ?>" class="button">View
+                more<span></span></a>
             </div>
           </div>
         </div>
@@ -246,7 +263,7 @@
           </div>
         </a>
       </div>
-      <div class="blog__button"><a href="page-blog.html" class="button">View more<span></span></a></div>
+      <div class="blog__button"><a href="<?php echo $blog; ?>" class="button">View more<span></span></a></div>
     </div>
   </section>
 
@@ -297,7 +314,7 @@
           </div>
         </a>
       </div>
-      <div class="voice__button"><a href="page-voice.html" class="button">View more<span></span></a></div>
+      <div class="voice__button"><a href="<?php echo $voice; ?>" class="button">View more<span></span></a></div>
     </div>
   </section>
 
@@ -338,7 +355,7 @@
           <?php } ?>
         </div>
       </div>
-      <div class="price__button"><a href="page-price.html" class="button">View more<span></span></a></div>
+      <div class="price__button"><a href="<?php echo $price; ?>" class="button">View more<span></span></a></div>
     </div>
   </section>
 

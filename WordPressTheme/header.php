@@ -134,13 +134,16 @@ $sitemap = esc_url( home_url('/sitemap/'));
                       class="category__hitode">
                     <a href="<?php echo $campaign; ?>" class="category__main">キャンペーン</a>
                   </div>
-                  <a href="<?php echo $campaign; ?>" class="category__link">
+                  <a href="<?php echo add_query_arg('term', 'license-course_category', get_post_type_archive_link('campaign')); ?>"
+                    class="category__link">
                     <p class="category__sub">ライセンス取得</p>
                   </a>
-                  <a href="<?php echo $campaign; ?>" class="category__link">
+                  <a href="<?php echo add_query_arg('term', 'experience-diving_category', get_post_type_archive_link('campaign')); ?>"
+                    class="category__link">
                     <p class="category__sub">貸切体験ダイビング</p>
                   </a>
-                  <a href="<?php echo $campaign; ?>" class="category__link">
+                  <a href="<?php echo add_query_arg('term', 'fan-diving_category', get_post_type_archive_link('campaign')); ?>"
+                    class="category__link">
                     <p class="category__sub">ナイトダイビング</p>
                   </a>
                 </div>

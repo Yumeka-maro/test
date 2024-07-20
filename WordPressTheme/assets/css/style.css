@@ -2533,8 +2533,8 @@ a {
 .sitemap__sub {
 	font-size: 1rem;
 	line-height: 1.125;
+	margin-left: 1rem;
 	margin-top: 1.5rem;
-	text-indent: 1em;
 }
 
 .sitemap__hitode {
@@ -2894,6 +2894,10 @@ a {
 	margin-right: 1.875rem;
 }
 
+.wpcf7-list-item {
+	margin-left: 0.625rem;
+}
+
 @media screen and (min-width: 600px) {
 
 .page-campaign__contents {
@@ -2906,11 +2910,6 @@ a {
 .error-message {
 	max-width: 100%;
 	text-align: center;
-}
-
-.tag {
-	gap: 2rem;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 }
@@ -3209,7 +3208,7 @@ html {
 .campaign-card__text {
 	font-size: 1rem;
 	line-height: 1.5;
-	margin-left: 2.375rem;
+	margin-left: 3.375rem;
 }
 
 .campaign-card__discount {
@@ -4054,6 +4053,11 @@ html {
 .tab__img {
 	aspect-ratio: 492/313;
 	margin-top: 0;
+}
+
+.tag {
+	gap: 2rem;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .terms__inner {
