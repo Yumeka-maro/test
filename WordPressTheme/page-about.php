@@ -16,14 +16,7 @@
   </div>
 
   <!-- パンくず -->
-  <div class="breadcrumb">
-    <div class="inner">
-      <div class="breadcrumb__text">
-        <p>TOP</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>私たちについて</p>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('breadcrumb') ?>
 
   <!-- アバウト -->
   <section class="page-about layout-page-about">
@@ -52,18 +45,13 @@
         <h2 class="section-header__ja-title">フォト</h2>
       </div>
       <div class="gallery__contents">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery1.jpg"
-          alt="ターコイズブルーの海の中でサンゴ礁とたくさんの魚が泳いでいる様子" class="gallery__img">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery2.jpg" alt="ターコイズブルーの浜辺と両脇に船がある様子"
-          class="gallery__img">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery3.jpg"
-          alt="海の中で青色とオレンジ色の模様の魚が２尾泳いでいる様子" class="gallery__img">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery4.jpg" alt="黄色い魚が泳いでいる様子"
-          class="gallery__img">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery5.jpg" alt="青い海と大量の魚が泳いでいる様子"
-          class="gallery__img">
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery6.jpg"
-          alt="海の中でサンゴ礁の近くでオレンジ色の魚が泳いでいる様子" class="gallery__img">
+        <?php
+          $gallery = SCF::get('gallery_group');
+          foreach ($gallery as $images) {
+            $image = wp_get_attachment_image_src($images['gallery_img'] , 'full');
+        ?>
+        <img src="<?php echo $image[0]; ?>" alt="ギャラリー画像" class="gallery__img js-gallery">
+        <?php } ?>
       </div>
     </div>
     <div id="grayDisplay"></div>

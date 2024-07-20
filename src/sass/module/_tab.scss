@@ -143,7 +143,6 @@
     padding: rem(16);
     border: solid rem(1) $green-accent;
     transition: opacity 0.5s ease-in-out;
-    opacity: 0;
     @include mq("md"){
         justify-content: center;
         align-items: center;
@@ -154,7 +153,6 @@
 
 .tab__content.is-action {
     display: block;
-    opacity: 1;
     @include mq("md"){
         display: flex;
     }

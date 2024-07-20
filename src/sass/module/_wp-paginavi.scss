@@ -1,13 +1,13 @@
 @use 'global' as *;
 
-.pagination {
+.wp-pagenavi {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-.pagination-item-link {
+.wp-pagenavi a,
+.wp-pagenavi span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,29 +23,31 @@
     transition: all 0.15s linear;
 }
 
-.pagination-item-link-icon {
-    width: rem(20);
-}
-
-.pagination-item-link.isActive {
+.wp-pagenavi .current {
     background: $green-accent;
     color: $white;
     pointer-events: none;
 }
 
-.pagination-item-link:not(.isActive):hover {
+.wp-pagenavi a:hover {
     background: $green-accent;
     color: $white;
 }
 
-.pagination > * + * {
+.wp-pagenavi > * + * {
     margin-left: rem(12);
 }
 
-.pagination-item--first-item {
+.wp-pagenavi .first {
     margin-right: rem(28);
 }
 
-.pagination-item--last-item {
+.wp-pagenavi .last {
     margin-left: rem(40);
+}
+
+.wp-pagenavi-item {
+    margin-right: rem(30);
+    margin-left: rem(30);
+    list-style: none;
 }

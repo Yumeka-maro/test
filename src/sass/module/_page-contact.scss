@@ -65,7 +65,7 @@
     }
 }
 
-.page-contact__item span {
+.page-contact__require {
     color: $white;
     background-color: $red;
     font-size: rem(12);
@@ -138,7 +138,10 @@
     gap: 0 .5em;
     position: relative;
     cursor: pointer;
-    margin-left: rem(16);
+}
+
+.wpcf7-list-item {
+    margin-left: 0;
 }
 
 .page-contact__checkbox label::before {
@@ -184,8 +187,7 @@
 }
 
 .page-contact__selectbox {
-    display: inline-flex;
-    align-items: center;
+    display: block;
     position: relative;
     width: 100%;
     margin-top: rem(16);
@@ -194,11 +196,13 @@
     }
 }
 
+
 .page-contact__selectbox::after {
     position: absolute;
     right: rem(15);
     width: rem(10);
     height: rem(7);
+    top: 40%;
     background-color: $green-accent;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     content: '';

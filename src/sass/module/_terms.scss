@@ -35,22 +35,26 @@
     }
 }
 
-.terms__contents {
+.terms__wrapper {
     margin-top: rem(35);
 }
 
-.terms__text,
-.terms__text-indent {
+.terms__wrapper p,
+.terms__wrapper ul {
+    margin-top: rem(35);
     font-size: rem(16);
     line-height: 2;
     font-weight: $regular;
     font-family: $base-font-family;
     color: $green;
     text-align: justify;
-    letter-spacing: 0.02em;
 }
 
-.terms__text-indent {
+.terms__wrapper ul {
     padding-left: rem(17);
     text-indent: rem(-17);
+}
+
+.terms__wrapper p:nth-of-type(2) {
+    margin-top: 0;
 }

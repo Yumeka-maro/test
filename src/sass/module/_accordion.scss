@@ -55,8 +55,7 @@
 .accordion__title-text {
     color: $white;
     font-size: rem(16);
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-right: 1em;
     font-weight: $regular;
     @include mq("md"){
         font-size: rem(20);

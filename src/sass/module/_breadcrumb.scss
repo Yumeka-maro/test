@@ -17,11 +17,20 @@
     color: $white;
 }
 
-.breadcrumb img {
-    width: rem(4);
-    height: rem(8);
-    margin: 0 rem(8);
-    display: block;
+.breadcrumb__text a:not(:last-child)::after {
+    margin-left: 1px;
+    margin-right: 1px;
+    color: inherit;
 }
+
+.breadcrumbs .separator {
+    padding-left: rem(8);
+    padding-right: rem(8);
+}
+
+
+
+
+
 
 

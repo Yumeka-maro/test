@@ -16,15 +16,7 @@
   </div>
 
   <!-- パンくず -->
-  <div class="breadcrumb">
-    <div class="inner">
-      <div class="breadcrumb__text">
-        <p>TOP</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>お問い合わせ</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>送信完了</p>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('breadcrumb') ?>
 
   <!-- サンクスページ -->
   <div class="thanks layout-thanks">

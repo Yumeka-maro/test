@@ -7,6 +7,7 @@
     }
 }
 
+
 .privacypolicy__inner::before {
     content: "";
     position: absolute;
@@ -42,17 +43,19 @@
     }
 }
 
-.privacypolicy__contents {
-    margin-top: rem(32);
-}
+// .privacypolicy__contents {
+//     margin-top: rem(32);
+// }
 
-.privacypolicy__contents:nth-child(5) {
-    margin-top: 0;
-}
+// .privacypolicy__contents:nth-child(5) {
+//     margin-top: 0;
+// }
 
 
-.privacypolicy__text,
-.privacypolicy__text-indent {
+// .privacypolicy__text,
+// .privacypolicy__text-indent
+.privacypolicy__wrapper p,
+.privacypolicy__wrapper ul {
     font-size: rem(16);
     line-height: 2;
     font-weight: $regular;
@@ -61,16 +64,30 @@
     text-align: justify;
 }
 
-.privacypolicy__text {
-    letter-spacing: 0.01em;
+.privacypolicy__wrapper p {
+    margin-top: rem(32);
 }
 
-.privacypolicy__text-indent {
-    letter-spacing: 0.04em;
-}
+// .privacypolicy__text {
+//     letter-spacing: 0.01em;
+// }
 
-.privacypolicy__text-indent {
+// .privacypolicy__text-indent {
+//     letter-spacing: 0.04em;
+// }
+
+// .privacypolicy__text-indent {
+//     padding-left: rem(17);
+//     text-indent: rem(-17);
+// }
+
+.privacypolicy__wrapper ul {
     padding-left: rem(17);
     text-indent: rem(-17);
+}
+
+.privacypolicy__wrapper ul:first-of-type {
+    margin-top: rem(32);
+
 }
 

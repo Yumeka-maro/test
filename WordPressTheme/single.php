@@ -15,20 +15,15 @@
   </div>
 
   <!-- パンくず -->
-  <div class="breadcrumb">
-    <div class="inner">
-      <div class="breadcrumb__text">
-        <p>TOP</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>ブログ一覧</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>ブログ詳細</p>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('breadcrumb') ?>
 
   <!-- ブログ -->
   <div class="page-blog layout-page-blog">
     <div class="page-blog__inner inner">
       <div class="page-blog__main detail">
+        <?php if (have_posts()) :
+          while (have_posts()) :
+            the_post(); ?>
         <time class="detail__date" datetime="<?php the_time('c') ?>"><?php the_time('Y.m.d') ?></time>
         <h1 class="detail__title"><?php the_title(); ?></h1>
         <?php if (get_the_post_thumbnail()) : ?>
@@ -36,32 +31,23 @@
         <?php else : ?>
         <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/noimage.jpg" alt="noimage">
         <?php endif; ?>
-        <?php if (have_posts()) :
-          while (have_posts()) :
-            the_post(); ?>
         <div class="detail__content">
           <?php the_content(); ?>
         </div>
+        <div class="page-blog__pagination wp-pagenavi">
+          <?php if (get_previous_post()) : ?>
+          <li class="wp-pagenavi-item">
+            <?php previous_post_link('%link', '<svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" width="24" height="34" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 19l-7-7 7-7" /></svg>'); ?>
+          </li>
+          <?php endif; ?>
+          <?php if (get_next_post()) : ?>
+          <li class="wp-pagenavi-item">
+            <?php next_post_link('%link', '<svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24" width="24" height="34" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 5l7 7-7 7" /></svg>'); ?>
+          </li>
+          <?php endif; ?>
+        </div>
         <?php endwhile;
         endif; ?>
-        <ul class="detail__pagination pagination">
-          <li class="pagination-item pagination-item--first-item">
-            <a class="pagination-item-link" href="/pages/1/">
-              <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M14 19l-7-7 7-7" />
-              </svg>
-            </a>
-          </li>
-          <li class="pagination-item pagination-item--last-item">
-            <a class="pagination-item-link" href="/pages/5/">
-              <svg xmlns="http://www.w3.org/2000/svg" class="pagination-item-link-icon" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10 5l7 7-7 7" />
-              </svg>
-            </a>
-          </li>
-        </ul>
       </div>
       <?php get_sidebar(); ?>
     </div>

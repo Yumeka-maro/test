@@ -17,14 +17,7 @@
   </div>
 
   <!-- パンくず -->
-  <div class="breadcrumb">
-    <div class="inner">
-      <div class="breadcrumb__text">
-        <p>TOP</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>ダイビング情報</p>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('breadcrumb') ?>
 
   <!-- インフォメーション -->
   <section class="page-information layout-page-information">
@@ -39,7 +32,7 @@
               class="u-mobile">ダイビング</button>
         </div>
         <div class="tab__contents">
-          <div class="tab__content js-tab-content license-course-content">
+          <div class="tab__content js-tab-content is-action license-course-content">
             <div class="tab__text-wrapper">
               <h3 class="tab__title">ライセンス講習</h3>
               <p class="tab__text">

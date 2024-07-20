@@ -16,14 +16,7 @@
   </div>
 
   <!-- パンくず -->
-  <div class="breadcrumb">
-    <div class="inner">
-      <div class="breadcrumb__text">
-        <p>TOP</p><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/breadcrumb.svg" alt="矢印">
-        <p>サイトマップ</p>
-      </div>
-    </div>
-  </div>
+  <?php get_template_part('breadcrumb') ?>
 
   <!-- サイトマップ -->
   <div class="sitemap layout-sitemap">
