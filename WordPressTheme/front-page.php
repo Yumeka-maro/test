@@ -158,7 +158,7 @@ $sitemap = esc_url( home_url('/sitemap/'));
           <div class="swiper-button-prev"></div>
         </div>
       </div>
-      <div class="<?php echo $campaign; ?>"><a href="page-campaign.html" class="button">View more<span></span></a></div>
+      <div class="campaign__button"><a href="<?php echo $campaign; ?>" class="button">View more<span></span></a></div>
     </div>
   </section>
 
